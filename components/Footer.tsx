@@ -17,7 +17,7 @@ const SocialIcons = styled.div`
 `;
 
 const FooterSection = styled(Section)`
-  background-color: ${(props) => props.theme.dark};
+  background-color: ${(props) => props.theme.blu};
   img {
     height: 20px;
     vertical-align: middle;
@@ -36,7 +36,7 @@ const FooterSection = styled(Section)`
 
   p {
     font-family: "AmericaRegular", sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 25px;
     color: hsla(0, 0%, 100%, 0.84);
     letter-spacing: -0.2px;
@@ -156,7 +156,7 @@ export default function Footer() {
     <>
       <FooterSection>
         <h2>👋 I’m available for freelance work, please contact me 
-            <a style={{fontFamily: "Druk Wide Bold", color: "#42a1f5"}}href="mailto:cartercote06@gmail.com">here</a>.
+            <a style={{fontSize: "42px"}} href="mailto:cartercote06@gmail.com"> here</a>.
         </h2>
         <p>
         If you have a website or mobile app idea in mind, or if you're interested in my work, feel free to contact me. 

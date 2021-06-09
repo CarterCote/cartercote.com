@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   }
   /* Global body styling */
   body {
-    background-color: #f7faff;
+    background-color: #060606;
     margin: 0px;
   }
 `;

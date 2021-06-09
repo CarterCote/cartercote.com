@@ -36,11 +36,11 @@ const AboutSection = styled(Section)`
     font-family: "AmericaRegular", sans-serif;
     font-size: 19px;
     letter-spacing: -0.2px;
-    color: ${(props) => props.theme.header.decoration};
+    color: ${(props) => props.theme.header.main};
     line-height: 32px;
   }
   div p a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     padding-bottom: 2px;
     border-bottom: 2px solid ${(props) => props.theme.accent};
@@ -128,8 +128,7 @@ export default function About() {
       <div>
         <AboutImage>
           <picture>
-            <source srcSet="about/me.webp" type="image/webp" />
-            <source srcSet="about/me.jpg" type="image/jpeg" />
+            <source srcSet="about/carter.png" type="image/png" />
             <img src="about/carter.png" alt="Carter Cote" />
           </picture>
         </AboutImage>

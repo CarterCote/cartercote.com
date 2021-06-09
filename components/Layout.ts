@@ -23,12 +23,13 @@ export const theme = {
     background: "#060606",
     semidark: "rgba(6,8,10,.96)",
     dark: "#06080a",
+    blu: "#0d1f68",
     accent: "#ffb41f",
     header: {
-      main: "#06090e",
-      decoration: "rgba(6,9,14,.84)",
+      main: "#fff",
+      decoration: "#111111",
     },
     text: {
-      light: "rgba(6,9,14,.64)",
+      light: "#fff",
     },
   };

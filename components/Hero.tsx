@@ -69,7 +69,7 @@ const IntroSub = styled.div`
     letter-spacing: 1.5px;
     line-height: 24px;
     margin-bottom: 6px;
-    color: ${(props) => props.theme.header.decoration};
+    color: ${(props) => props.theme.header.main};
   }
 
   h2 {
