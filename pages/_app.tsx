@@ -1,5 +1,6 @@
 // Initial setup
 import React from "react";
+import { useEffect } from "react"; 
 import Head from "next/head";
 import type { AppProps } from "next/app";
 
@@ -10,26 +11,20 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   /* Custom fonts */
   @font-face {
-    font-family: 'Bluu';
-    src: url('/fonts/CircularStd-Black.ttf');
+    font-family: 'DrukWide';
+    src: url('/fonts/DrukWideBold.ttf');
     font-style: normal;
     font-display: swap;
   }
   @font-face {
-    font-family: "AmericaRegular";
-    src: url('/fonts/CircularStd-Black.ttf');
+    font-family: "GraebenbachMonoMedium";
+    src: url('/fonts/GraebenbachMonoMedium.ttf');
     font-style: normal;
     font-display: swap;
   }
   @font-face {
-    font-family: "AmericaBold";
-    src: url('/fonts/CircularStd-Black.ttf');
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "AmericaMono";
-    src: url('/fonts/CircularStd-Black.ttf');
+    font-family: "GraebenbachMonoRegular";
+    src: url('/fonts/GraebenbachMonoRegular.ttf');
     font-style: normal;
     font-display: swap;
   }
@@ -38,56 +33,73 @@ const GlobalStyle = createGlobalStyle`
     background-color: #060606;
     margin: 0px;
   }
+  h1,
+  h2,
+  h3,
+  p {
+    color: #fff;
+  }
 `;
 
 export default function Portfolio({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    const threeScript = document.createElement("script")
+    threeScript.setAttribute("id", "threeScript")
+    threeScript.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js")
+    document.getElementsByTagName("head")[0].appendChild(threeScript);
+    return () => {
+      if (threeScript) {
+        threeScript.remove();
+      }
+    };
+  }, []);
   return (
     <React.Fragment>
       <Head>
-        <title>Anish Agnihotri</title>
-        <meta name="title" content="Anish Agnihotri" />
+        <title>CARTER COTE'S DIGITAL PLAYGROUND</title>
+        <meta name="title" content="CARTER COTE'S DIGITAL PLAYGROUNDi" />
         <meta
           name="description"
-          content="Anish Agnihotri is an 18 y/o developer from Toronto, Canada who likes to build software. He's most passionate about Blockchain & Economics."
+          content="Hi, I'm Carter. I'm 19, and I study AI, human-computer interaction, + industrial design at Georgia Tech."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://anishagnihotri.com" />
-        <meta property="og:title" content="Anish Agnihotri" />
+        <meta property="og:url" content="https://cartercote.com" />
+        <meta property="og:title" content="CARTER COTE'S DIGITAL PLAYGROUND" />
         <meta
           property="og:description"
-          content="Anish Agnihotri is an 18 y/o developer from Toronto, Canada who likes to build software. He's most passionate about Blockchain & Economics."
+          content="Hi, I'm Carter. I'm 19, and I study AI, human-computer interaction, + industrial design at Georgia Tech."
         />
         <meta
           property="og:image"
-          content="https://anishagnihotri.com/head/meta.png"
+          content="https://cartercote.com/about/carter.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://metatags.io/" />
-        <meta property="twitter:title" content="Anish Agnihotri" />
+        <meta property="twitter:title" content="Carter Cote" />
         <meta
           property="twitter:description"
-          content="Anish Agnihotri is an 18 y/o developer from Toronto, Canada who likes to build software. He's most passionate about Blockchain & Economics."
+          content="Hi, I'm Carter. I'm 19, and I study AI, human-computer interaction, + industrial design at Georgia Tech."
         />
         <meta
           property="twitter:image"
-          content="https://anishagnihotri.com/head/meta.png"
+          content="https://cartercote.com/about/carter.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/head/apple-touch-icon.png"
+          href="/head/favicon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/head/favicon-32x32.png"
+          href="/head/favicon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/head/favicon-16x16.png"
+          href="/head/favicon.png"
         />
         <link rel="manifest" href="/head/site.webmanifest" />
         <link
@@ -95,7 +107,7 @@ export default function Portfolio({ Component, pageProps }: AppProps) {
           href="/head/safari-pinned-tab.svg"
           color="#ffb41f"
         />
-        <link rel="shortcut icon" href="/head/favicon.ico" />
+        <link rel="shortcut icon" href="/head/favicon.png" />
         <meta name="msapplication-TileColor" content="#f7faff" />
         <meta name="msapplication-config" content="/head/browserconfig.xml" />
         <meta name="theme-color" content="#f7faff" />

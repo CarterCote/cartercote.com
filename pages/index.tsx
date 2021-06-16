@@ -1,20 +1,24 @@
 import { ThemeProvider } from "styled-components";
 import { Container, theme } from "../components/Layout";
 
+
 // Page components
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 
 // Export Home page
 export default function Home() {
+
   return (
     // Provide global theme styling via HOC
     <ThemeProvider theme={theme}>
+    <Navbar />
       <Container>
         <Hero />
-        <About />
         <Projects />
         <Footer />
       </Container>

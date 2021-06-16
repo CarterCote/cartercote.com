@@ -33,7 +33,7 @@ const AboutSection = styled(Section)`
     }
   }
   div p {
-    font-family: "AmericaRegular", sans-serif;
+    font-family: "GraebenbachMonoRegular", sans-serif;
     font-size: 19px;
     letter-spacing: -0.2px;
     color: ${(props) => props.theme.header.main};

@@ -3,7 +3,7 @@ import { Section } from "./Layout";
 
 // Projects layout section
 const ProjectLayout = styled.div`
-  margin-top: 50px;
+  margin-top: 80px;
   text-align: left;
   display: block;
 `;
@@ -12,7 +12,7 @@ const ProjectLayout = styled.div`
 const ProjectsSection = styled(Section)`
   h3 {
     font-size: 30px;
-    font-family: "Bluu", serif;
+    font-family: "DrukWide", serif;
     letter-spacing: -0.4px;
     line-height: 1.25em;
     margin-bottom: 15px;
@@ -20,7 +20,7 @@ const ProjectsSection = styled(Section)`
 
   p {
     font-size: 17px;
-    font-family: "AmericaRegular", sans-serif;
+    font-family: "GraebenbachMonoMedium", sans-serif;
     letter-spacing: -0.3px;
     line-height: 24px;
     margin: 0px;
@@ -30,7 +30,15 @@ const ProjectsSection = styled(Section)`
 
 // Project showcase section
 const ProjectShowcase = styled(Section)`
-  margin-top: 20px;
+  p {
+    font-size: 17px;
+    font-family: "GraebenbachMonoMedium", sans-serif;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+    margin: 0px;
+    color: ${(props) => props.theme.text.light};
+  }
+  margin-top: 90px;
 `;
 
 // Project item
@@ -106,10 +114,9 @@ export default function Projects() {
   return (
     <ProjectLayout>
       <ProjectsSection>
-        <h3>Showcase Projects</h3>
-        <p>Selected hacks that are my favorite:</p>
       </ProjectsSection>
       <ProjectShowcase>
+        <p>WELCOME TO MY PLAYGROUND</p>
         <Project
           href="https://google.com"
           target="_blank"
