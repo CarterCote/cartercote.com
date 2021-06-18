@@ -1,10 +1,14 @@
 // Initial setup
 import React from "react";
+import { NextPageContext } from "next";
 import Head from "next/head";
+// import App from "next/app";
 import type { AppProps } from "next/app";
 
-// Styled components
+// Styled components & context
 import { createGlobalStyle } from "styled-components";
+// import getProjects from "../getProjects";
+import ProjectContext from '../Projects.Context';
 
 // Global styling
 const GlobalStyle = createGlobalStyle`
@@ -33,10 +37,19 @@ const GlobalStyle = createGlobalStyle`
     margin: 0px;
   }
 `;
+// class Portfolio extends App {
+//   static async getInitialProps({ req }: NextPageContext) {
+//     const appProps = await App.getInitialProps({ req }: NextPageContext)
+//     const projects = await getProjects()
+//     return { ...appProps, projects }
+//   }
+   
+//   render() {
+//     const { Component, pageProps, projects } = this.props
 export default function Portfolio({ Component, pageProps }: AppProps) {
-
   return (
     <React.Fragment>
+      {/* SEO */}
       <Head>
         <title>CARTER COTE'S DIGITAL PLAYGROUND</title>
         <meta name="title" content="CARTER COTE'S DIGITAL PLAYGROUNDi" />
@@ -104,8 +117,14 @@ export default function Portfolio({ Component, pageProps }: AppProps) {
           }}
         ></script>
       </Head>
-      <Component {...pageProps} />
+{/* 
+      <ProjectContext.Provider value={projects}>
+        <> */}
+          <Component {...pageProps} />
+        {/* </>
+      </ProjectContext.Provider> */}
       <GlobalStyle />
     </React.Fragment>
   );
 }
+// export default Portfolio

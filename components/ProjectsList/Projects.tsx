@@ -1,5 +1,55 @@
+// Lol failed attempt at dynamically mapping data. Fml
+// import React, { useContext } from 'react';
+
+// import ProjectContext from '../../Projects.Context';
+// import ProjectCard from './ProjectCard';
+// import styled from 'styled-components';
+
+// const ProjectContainer = styled.div`
+//   margin-bottom: 100px;
+//   @media screen and (max-width: 880px) {
+//     padding: 0 30px;
+//   }
+//   @media screen and (max-width: 600px) {
+//     padding: 0 20px;
+//   }
+// `;
+
+// const ProjectTitle = styled.h1`
+//   margin-bottom: 30px;
+//   margin-top: 0;
+//   color: #fff;
+// `;
+
+// const ProjectListContainer = styled.div`
+//   margin-bottom: 100px;
+//   @media screen and (max-width: 880px) {
+//     padding: 0 30px;
+//   }
+//   @media screen and (max-width: 600px) {
+//     padding: 0 20px;
+//   }
+// `;
+
+// export default function Projects = () => {
+//   const projects = useContext(ProjectContext).sort(
+//     (a, b) => new Date(b.document.data.date).getTime() - new Date(a.document.data.date).getTime()
+//   )
+
+//   return (
+//     <>
+//       <ProjectContainer>
+//         <ProjectTitle>Recent works</ProjectTitle>
+//         <ProjectListContainer>
+//           {projects && projects.map((p, i) => <ProjectCard key={p.slug} index={i} {...p} />)}
+//         </ProjectListContainer>
+//       </ProjectContainer>
+//     </>
+//   );
+// }
+
 import styled from "styled-components";
-import { Section } from "./Layout";
+import { Section } from "../Layout";
 
 // Projects layout section
 const ProjectLayout = styled.div`
@@ -80,20 +130,30 @@ const Project = styled.a`
       h3 {
         color: white;
         letter-spacing: -1px;
-        font-family: "Bluu", serif;
+        font-family: "DrukWide", serif;
         font-size: 25px;
         margin-block-start: 12.5px;
         margin-block-end: 7.5px;
       }
 
       p {
-        font-family: "AmericaRegular", sans-serif;
+        font-family: "GraebenbachMonoMedium", sans-serif;
         font-size: 15px;
+        font-style: bold;
         line-height: 20px;
         color: hsla(0, 0%, 100%, 0.84);
         letter-spacing: -0.2px;
         margin-block-start: 0px;
         margin-block-end: 20px;
+      }
+      span {
+        font-family: "GraebenbachMonoMedium", sans-serif;
+        font-size: 1rem;
+        font-color: #0c0c0c;
+        letter-spacing: -0.8px;
+        line-height: 32px;
+        margin-bottom: 6px;
+        color: ${(props) => props.theme.header.main};
       }
     }
   }
@@ -129,10 +189,12 @@ export default function Projects() {
             </picture>
           </div>
           <div>
-            <h3>Lorem ipsum </h3>
+            <h3>AOC's Helping Hand</h3>
+            <span>UX & VISUAL DESIGN • STUDENT PROGRAM • 2019-20</span>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            College readiness elective class & web platform that offers career exploration tools & alumni networking. Curated curriculum with alma matter HS for class. Created user journey within 9 different pathways for students to explore alumni career journeys known as "roadmaps."...more
+
+
             </p>
           </div>
         </Project>
@@ -148,10 +210,12 @@ export default function Projects() {
             </picture>
           </div>
           <div>
-            <h3>Lorem ipsum </h3>
+            <h3>Six Feet Supplies</h3>
+            <span>UX DESIGN SPRINT • NONPROFIT • 2020</span>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Designing a web app for a student non-profit that delivers groceries to at-risk individuals, all at zero-cost. Over 17,000+ visitors and 500 deliveries for over $50K worth of groceries. As a member of the director board, I also contributed to the expansion and operation of the nonprofit.
+
+
             </p>
           </div>
         </Project>
@@ -167,10 +231,12 @@ export default function Projects() {
             </picture>
           </div>
           <div>
-            <h3>Lorem ipsum </h3>
+            <h3>Startup Exchange</h3>
+            <span>UX & VISUAL DESIGN • STUDENT ORG • 2021</span>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Rebranded organization's brand identity, including typography, colors, and organization's mission. 
+            Created new user flows and modified site's information architecture. 
+            Designed new website UI via Figma and new marketable assets via Photoshop.
             </p>
           </div>
         </Project>
@@ -186,10 +252,10 @@ export default function Projects() {
             </picture>
           </div>
           <div>
-            <h3>Lorem ipsum </h3>
+            <h3>Global Prep Academy</h3>
+            <span>UX DESIGN & INSTRUCTION • FREELANCE • 2020</span>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            ​Redesigning the user journey, UX/UI, rebuilt information architecture of web app to improve transparency of after school program that educates students to properly navigate our rapidly-changing economy. Net 30% online customer engagement.
             </p>
           </div>
         </Project>
