@@ -1,21 +1,64 @@
 import styled from "styled-components";
 import { Section } from "./Layout";
 import {
-    FaTelegram,
+    FaGithub,
     FaInstagram,
     FaYoutube,
     FaTwitter,
     FaLinkedin
   } from 'react-icons/fa';
+// import dribbbleLogo from 'head/logo.png';
+// import githubLogo from 'head/logo.png';
+// import twitterLogo from 'head/logo.png';
 
-const SocialIcons = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 300px;
-  margin-bottom: 16px;
+const FooterSocials = styled.footer`
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding-right: 30px;
+  a {
+    color: #fff;
+    font-size: 24px;
+    padding-bottom: 10px;
+    transition: 200ms ease-in-out;
+  }
+  a:hover {
+    color: #F5E022;
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
-const FooterSection = styled(Section)`
+
+const NavSocials = styled.nav`
+  margin-left: auto;
+  margin-top: 6px;
+  li {
+  list-style: none;
+  }
+
+  li a + a {
+    margin-left: 14px;
+  }
+
+  li a {
+    margin-left: 14px;
+    display: flex;
+  }
+
+  li a img {
+    width: 20px;
+    opacity: 0.4;
+    transition: opacity ease-in 0.2s;
+  }
+
+  li a:hover img,
+  li a:active img {
+    opacity: 0.8;
+  }
+`;
+
+const FooterInfoSection = styled(Section)`
   background-color: ${(props) => props.theme.blu};
   display: flex;
   flex-direction: row;
@@ -27,12 +70,15 @@ const FooterSection = styled(Section)`
     transform: translateY(-2px);
   }
   h2 {
-    color: white;
-    letter-spacing: -1.8px;
+    color: #fff;
+    letter-spacing: -1px;
     font-family: "DrukWide", serif;
     font-size: 36px;
     margin-block-start: 80px;
     margin-block-end: 20px;
+  }
+  p {
+    color: #fff;
   }
   div:nth-child(1) {
     flex: 2;
@@ -40,7 +86,7 @@ const FooterSection = styled(Section)`
   }
   div:nth-child(2) {
     flex: 1;
-    width: 325px;
+    width: 225px;
     padding-left: 75px;
   }
   @media screen and (max-width: 1024px) {
@@ -78,109 +124,6 @@ const FooterSection = styled(Section)`
     padding-bottom: 0px;
   }
 `;
-// const FooterSection = styled(Section)`
-//   background-color: ${(props) => props.theme.blu};
-//   h2 {
-//     color: white;
-//     letter-spacing: -1.8px;
-//     font-family: "DrukWide", serif;
-//     font-size: 36px;
-//     margin-block-start: 80px;
-//     margin-block-end: 20px;
-//   }
-
-//   p {
-//     font-family: "GraebenbachMonoRegular", sans-serif;
-//     font-size: 18px;
-//     line-height: 25px;
-//     color: #fff;
-//     letter-spacing: -0.8px;
-//     margin-block-end: 15px;
-//   }
-
-//   a {
-//     color: ${(props) => props.theme.accent};
-//     font-family: "DrukWide", sans-serif;
-//     letter-spacing: -0.1px;
-//     line-height: 24px;
-//     text-decoration: none;
-//     padding-bottom: 2px;
-//     border-bottom: 1px solid ${(props) => props.theme.accent};
-//     font-size: 18px;
-//   }
-
-//   div:nth-child(1) {
-//     flex: 2;
-//     width: calc(100% - 400px);
-//   }
-
-//   div:nth-child(2) {
-//     flex: 1;
-//     width: 325px;
-//     padding-left: 75px;
-//   }
-
-//   div:nth-child(1) p {
-//     max-width: 520px;
-//     font-family: "GraebenbachMonoRegular", sans-serif;
-//     letter-spacing: -0.2px;
-//     line-height: 1.6em;
-//   }
-
-//   div:nth-child(1) p a {
-//     text-decoration: none;
-//     color: inherit;
-//     padding-bottom: 1px;
-//     border-bottom: 0.5px solid rgba(245, 249, 255, 0.8);
-//   }
-
-//   @media screen and (max-width: 605px) {
-//     h2 {
-//         font-size: 28px;
-//         letter-spacing: -0.8px;
-//         line-height: 36px;
-//       }
-  
-//       p {
-//         font-size: 16px;
-//       }
-  
-//       a {
-//         font-size: 16px;
-//       }
-//     }
-
-//     div:nth-child(1),
-//     div:nth-child(2),
-//     div:nth-child(2) div {
-//       width: 100%;
-//     }
-
-//     div:nth-child(2) {
-//       padding-top: 20px;
-//     }
-
-//     div:nth-child(2) > div:nth-of-type(2) {
-//       padding-top: 20px !important;
-//     }
-//   }
-
-//   @media screen and (min-width: 606px) and (max-width: 970px) {
-//     div:nth-child(1),
-//     div:nth-child(2) {
-//       width: 100%;
-//     }
-
-//     div:nth-child(2) {
-//       padding-top: 30px;
-//     }
-
-//     div:nth-child(2) div {
-//       width: 35%;
-//     }
-//   }
-// `;
-
 const FooterImage = styled.div`
   position: relative;
   transform: translateY(75px);
@@ -216,7 +159,7 @@ const FooterImage = styled.div`
 export default function Footer() {
   return (
     <>
-      <FooterSection>
+      <FooterInfoSection>
         <div>
           <h2>Currently, I'm a CS and Industrial Design student at Georgia Tech.  
           </h2>
@@ -242,40 +185,38 @@ export default function Footer() {
           </picture>
         </FooterImage>
       </div>
-      <div>
-
-      </div>
-          {/* <SocialIcons>
-              <a href='//www.linkedin.com/in/carter-cote-960a55179/' target='_blank' aria-label='Linkedin'>
-                <FaLinkedin />
-              </a>
-              <a href='//www.instagram.com/carter.cote' target='_blank' aria-label='Instagram'>
-                <FaInstagram />
-              </a>
-              <a
-                href={
-                  '//www.youtube.com/channel/UCo-DJjksl3U0kizae-nDERw'
-                }
-                rel='noopener noreferrer'
-                target='_blank'
-                aria-label='Youtube'
-              >
-                <FaYoutube />
-              </a>
-              <a href='/' target='_blank' aria-label='Twitter'>
-                <FaTwitter />
-              </a>
-              <a href='//t.me/cartercote' target='_blank' aria-label='LinkedIn'>
-                <FaTelegram />
-              </a>
-            </SocialIcons> */}
-      </FooterSection>
-      <FooterSection style={{marginTop: "0px"}}>
+      </FooterInfoSection>
+      <FooterInfoSection style={{marginTop: "0px"}}>
       <p style={{fontFamily: "GraebenbachMonoMedium"}}>
           {/* <img class="logo" src="head/favicon.png" alt="Carter Cote logo" />  */}
              © 2021 ALL RIGHTS RESERVED. — Designed and Coded by Carter Cote
           </p>
-      </FooterSection>
+      </FooterInfoSection>
+      <FooterSocials>
+        <NavSocials>
+          <ul>
+            <li >
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="//www.linkedin.com/in/carter-cote"
+              >
+                <FaLinkedin/>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="//www.instagram.com/carter.cote"
+              >
+                <FaInstagram/>
+              </a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/wunnle">
+                <FaGithub/>
+              </a>
+            </li>
+          </ul>
+        </NavSocials>
+      </FooterSocials>
     </>
   );
 }

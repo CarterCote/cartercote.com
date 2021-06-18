@@ -1,183 +1,111 @@
-import { FaBars, FaTimes, FaMagento } from 'react-icons/fa';
-import { IconContext } from 'react-icons/lib';
-import { Container } from "./Layout";
-import Progress from "./Progress";
-// import logo from "../../assets/images/logo2.png";
+import Link from 'next/link';
+// import logo from "head/logo.png";
 import styled from 'styled-components';
+
+const NavHeader = styled.header`
+  width: 136px;
+  @media screen and (min-width: 1300px) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0px 16px;
+    height: 50px;
+    width: 92%;
+
+    img {
+      width: 66px;
+    }
+  }
+`;
+
+const NavLogo  = styled.img`
+  width: 66px;
+`;
+
+const NavHeaderInner = styled.div`
+  width: 1300px;
+  max-width: 100%;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+  @media screen and (min-width: 1300px) {
+    width: 100%;
+    margin: auto;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
+`;
 
 const Nav = styled.nav`
   background: transparent;
-  height: 50px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 5px;
+  // font-size: 1.2rem;
   font-family: "GraebenbachMonoMedium";
   position: sticky;
-  top: 0;
-  z-index: 999;
-`;
 
-const NavbarContainer = styled(Container)`
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  margin: 40px 0 20px 0;
-  z-index: 1;
-  width: 100%;
-  max-width: 10%;
-  margin-right: 0;
-  margin-left: auto;
-  padding-right: 0px;
-  padding-left: 0px;
-
-`;
-
-
-const NavIcon = styled(FaMagento)`
-  margin-right: 0.5rem;
-`;
-
-const MobileIcon = styled.div`
-  display: none;
-  @media screen and (max-width: 960px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-`;
-
-const NavMenu = styled.ul`
-  ${'' /* display: flex; */}
-  align-items: right;
-  list-style: none;
-  margin-top: 10px;
-  text-align: right;
-  @media screen and (max-width: 960px) {
+  a {
+    text-decoration: none;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 80px;
-    left: ${({ click }) => (click ? 0 : '-100%')};
-    opacity: 1;
-    transition: all 0.5s ease;
-    background: #0d1f68;
+    line-height: 22px;
+    color: #fff;
+    opacity: 0.9;
+    transition: 200ms ease-in-out;
+    font-size: 16px;
   }
-`;
-
-const NavItem = styled.li`
-  height: 25px;
-
-  border-bottom: 2px solid transparent;
-  &:hover {
-    ${'' /* border-bottom: 1px solid #4b59f7; */}
+  a:hover {
+    color: #F5E022;
   }
-  @media screen and (max-width: 960px) {
-    width: 100%;
-    &:hover {
-      border: none;
+  a + a {
+    margin-left: 28px;
+    // margin-right: 0px;
+  }
+  @media screen and (max-width: 600px) {
+
+    a + a {
+      margin-left: 38px;
     }
   }
-`;
-
-const NavLinks = styled.a`
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  height: 100%;
-  @media screen and (max-width: 960px) {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-    &:hover {
-      color: #4b59f7;
-      transition: all 0.3s ease;
-    }
-  }
-`;
-
-const NavBtnLink = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 8px 16px;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
 `;
 
 export default function Navbar() {
-//   const [click, setClick] = useState(false);
-//   const [button, setButton] = useState(true);
-
-//   const handleClick = () => setClick(!click);
-//   const closeMobileMenu = () => setClick(false);
-
-//   const showButton = () => {
-//     if (window.innerWidth <= 960) {
-//       setButton(false);
-//     } else {
-//       setButton(true);
-//     }
-//   };
-
-//   useEffect(() => {
-//     showButton();
-//   }, []);
-
-//   window.addEventListener('resize', showButton);
-
   return (
-    <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+    <NavHeader>
+      <NavHeaderInner>
+        <Link href="/">
+          <a>
+            <NavLogo src="head/favicon.png" width="150" alt="" />
+          </a>
+        </Link>
         <Nav>
-          <NavbarContainer>
-            {/* <NavLogo to='/' onClick={closeMobileMenu}>
-              <img src={logo} alt="" style={{width: "6%"}}/>
-            </NavLogo> */}
-            {/* <MobileIcon onClick={handleClick}> */}
-            <MobileIcon>
-
-              {/* {click ? <FaTimes /> : <FaBars />} */}
-            </MobileIcon>
-            {/* <NavMenu onClick={handleClick} click={click} class="flex-column"> */}
-            <NavMenu>
-              <NavItem>
-                {/* <NavLinks to='/' onClick={closeMobileMenu}> */}
-                <NavLinks to='/' >
-                  EXPERIENCE
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                    <NavLinks to='/designs' >
-                  MY DESIGNS
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to='/contact' >
-                  ABOUT ME
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to='/contact' >
-                  CONTACT ME
-                </NavLinks>
-              </NavItem>
-            </NavMenu>
-          </NavbarContainer>
+          <div>
+            <a href="/"> EXPERIENCE</a>
+            <a href="https://cartercote.com/">DESIGNS</a>
+            <a href="/">ABOUT</a>
+            <a
+              href="mailto:cartercote06@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CONTACT
+            </a>
+          </div>
         </Nav>
-      </IconContext.Provider>
-    </>
+      </NavHeaderInner>
+    </NavHeader>
   );
 }

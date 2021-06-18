@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { Section } from "./Layout";
 import Typewriter from 'typewriter-effect';
-// import { useEffect, useRef, useState } from "react";
-// import WAVES from "vanta/dist/vanta.trunk.min";
-// import * as THREE from "three";
 
 // Hero section
 const HeroSection = styled(Section)`
@@ -152,6 +149,7 @@ const HeroSub = styled.div`
 
   }
   a:hover {
+    font-size: 22px;
     color: #F5E022;
     // color: #023178;
   }
@@ -196,21 +194,6 @@ const HeroImage = styled.div`
 `;
 
 export default function Hero() {
-  // const [vantaEffect, setVantaEffect] = useState(0);
-  // const vantaRef = useRef(null);
-  // useEffect(() => {
-  //   if (!vantaEffect) {
-  //     setVantaEffect(
-  //       WAVES({
-  //         el: vantaRef.current,
-  //         THREE
-  //       })
-  //     );
-  //   }
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy()
-  //   };
-  // }, [vantaEffect]);
   return (
     <HeroSection>
       <div>

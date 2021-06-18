@@ -1,6 +1,5 @@
 // Initial setup
 import React from "react";
-import { useEffect } from "react"; 
 import Head from "next/head";
 import type { AppProps } from "next/app";
 
@@ -33,26 +32,9 @@ const GlobalStyle = createGlobalStyle`
     background-color: #060606;
     margin: 0px;
   }
-  h1,
-  h2,
-  h3,
-  p {
-    color: #fff;
-  }
 `;
-
 export default function Portfolio({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    const threeScript = document.createElement("script")
-    threeScript.setAttribute("id", "threeScript")
-    threeScript.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js")
-    document.getElementsByTagName("head")[0].appendChild(threeScript);
-    return () => {
-      if (threeScript) {
-        threeScript.remove();
-      }
-    };
-  }, []);
+
   return (
     <React.Fragment>
       <Head>
