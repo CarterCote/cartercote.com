@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { Section } from "./Layout";
-import styled from "styled-components";
+import { useEffect, useState } from "react"
+import { Section } from "./Layout"
+import styled from "styled-components"
 
 // About section
 const AboutSection = styled(Section)`
@@ -84,29 +84,8 @@ const AboutImage = styled.div`
   }
 `;
 
-export default function About() {
-  // Set initial pageY position to 0
-  const [y, setY] = useState<number>(0);
-
-  // Check for pageY position
-  function animateScroll(): void {
-    // Set Y == pageY position
-    setY(window.scrollY);
-  }
-
-  // On page load and until exit
-  useEffect(() => {
-    // Add event listener to scroll to check for pageY position
-    window.addEventListener("scroll", animateScroll);
-
-    // On page exit:
-    return () => {
-      // Remove event listener
-      window.removeEventListener("scroll", animateScroll);
-    };
-  }, []);
-
-  return (
+const About = () => (
+  <>
     <AboutSection>
       <div>
         <p>👋Hi, I'm Carter.</p>
@@ -134,5 +113,7 @@ export default function About() {
         </AboutImage>
       </div>
     </AboutSection>
-  );
-}
+  </>
+)
+
+export default About

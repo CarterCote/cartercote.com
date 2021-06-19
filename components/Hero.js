@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Section } from "./Layout";
-import Typewriter from 'typewriter-effect';
+import styled from "styled-components"
+import { Section } from "./Layout"
+import Typewriter from 'typewriter-effect'
 
 // Hero section
 const HeroSection = styled(Section)`
@@ -193,8 +193,7 @@ const HeroImage = styled.div`
   }
 `;
 
-export default function Hero() {
-  return (
+const Hero = () => (
     <HeroSection>
       <div>
       {/* <HeroTopline>CARTER COTE'S DIGITAL PORTFOLIO</HeroTopline> */}
@@ -262,5 +261,5 @@ export default function Hero() {
         </HeroImage>
         </div>
     </HeroSection>
-  );
-}
+)
+export default Hero

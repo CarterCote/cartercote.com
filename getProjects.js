@@ -1,6 +1,6 @@
 import matter from 'gray-matter'
 
-export default async function getProjects() {
+async function getProjects() {
   return new Promise(resolve => {
     function getPages(indexCtx, imagesCtx) {
       const keys = indexCtx.keys()
@@ -28,3 +28,4 @@ export default async function getProjects() {
     resolve(pages)
   })
 }
+export default getProjects

@@ -1,16 +1,11 @@
 
 // Initial setup
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document"
 
 // Styled components SSR
-import { ServerStyleSheet } from "styled-components";
+import { ServerStyleSheet } from "styled-components"
 
-// Custom interface to support style tag injection in head
-interface MyDocumentProps {
-  styleTags: string;
-}
-
-export default class MyDocument extends Document<MyDocumentProps> {
+class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     // Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();
@@ -26,7 +21,6 @@ export default class MyDocument extends Document<MyDocumentProps> {
     // Step 4: Pass styleTags as a prop
     return { ...page, styleTags };
   }
-
   render() {
     return (
       <Html lang="en">
@@ -66,6 +60,8 @@ export default class MyDocument extends Document<MyDocumentProps> {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
+
+export default MyDocument

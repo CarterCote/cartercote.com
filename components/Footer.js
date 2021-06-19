@@ -1,12 +1,10 @@
-import styled from "styled-components";
-import { Section } from "./Layout";
+import styled from "styled-components"
+import { Section } from "./Layout"
 import {
     FaGithub,
     FaInstagram,
-    FaYoutube,
-    FaTwitter,
     FaLinkedin
-  } from 'react-icons/fa';
+  } from 'react-icons/fa'
 // import dribbbleLogo from 'head/logo.png';
 // import githubLogo from 'head/logo.png';
 // import twitterLogo from 'head/logo.png';
@@ -156,67 +154,66 @@ const FooterImage = styled.div`
   }
 `;
 
-export default function Footer() {
-  return (
-    <>
-      <FooterInfoSection>
-        <div>
-          <h2>Currently, I'm a CS and Industrial Design student at Georgia Tech.  
-          </h2>
-          <p>
-          Hi, I'm Carter. I started my design journey by developing video game textures and making videos about them on the internet. 
-          That led to over 2 million downloads of my work, in addition to over 1.5 million views of my YouTube videos.
-          </p>
-          <p>
-          Now, I’m a creative developer and designer who enjoys pro bono work. I never leave things half-done, and I obsess over the details.
-          I like problem-solving in a creative, value-oriented way. I don’t try to change THE world, but I constantly strive to change A world.
-          </p>
-          <p>
-          I believe in spreading opportunity for all, and accounting for those that are forgotten or silenced. 
-          I hope to develop innovative products in an altruistic, ethical way that allows me to utilize my creativity and to help others.
-          </p>
-        </div>
-
-          <div>
-        <FooterImage>
-          <picture>
-            <source srcSet="about/profile.jpg" type="image/jpg" />
-            <img src="about/profile.jpg" alt="Carter Cote" />
-          </picture>
-        </FooterImage>
+const Footer = () => (
+  <>
+    <FooterInfoSection>
+      <div>
+        <h2>Currently, I'm a CS and Industrial Design student at Georgia Tech.  
+        </h2>
+        <p>
+        Hi, I'm Carter. I started my design journey by developing video game textures and making videos about them on the internet. 
+        That led to over 2 million downloads of my work, in addition to over 1.5 million views of my YouTube videos.
+        </p>
+        <p>
+        Now, I’m a creative developer and designer who enjoys pro bono work. I never leave things half-done, and I obsess over the details.
+        I like problem-solving in a creative, value-oriented way. I don’t try to change THE world, but I constantly strive to change A world.
+        </p>
+        <p>
+        I believe in spreading opportunity for all, and accounting for those that are forgotten or silenced. 
+        I hope to develop innovative products in an altruistic, ethical way that allows me to utilize my creativity and to help others.
+        </p>
       </div>
-      </FooterInfoSection>
-      <FooterInfoSection style={{marginTop: "0px"}}>
-      <p style={{fontFamily: "GraebenbachMonoMedium"}}>
-          {/* <img class="logo" src="head/favicon.png" alt="Carter Cote logo" />  */}
-             © 2021 ALL RIGHTS RESERVED. — Designed and Coded by Carter Cote
-          </p>
-      </FooterInfoSection>
-      <FooterSocials>
-        <NavSocials>
-          <ul>
-            <li >
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="//www.linkedin.com/in/carter-cote"
-              >
-                <FaLinkedin/>
-              </a>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="//www.instagram.com/carter.cote"
-              >
-                <FaInstagram/>
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/wunnle">
-                <FaGithub/>
-              </a>
-            </li>
-          </ul>
-        </NavSocials>
-      </FooterSocials>
-    </>
-  );
-}
+
+        <div>
+      <FooterImage>
+        <picture>
+          <source srcSet="about/profile.jpg" type="image/jpg" />
+          <img src="about/profile.jpg" alt="Carter Cote" />
+        </picture>
+      </FooterImage>
+    </div>
+    </FooterInfoSection>
+    <FooterInfoSection style={{marginTop: "0px"}}>
+    <p style={{fontFamily: "GraebenbachMonoMedium"}}>
+        {/* <img class="logo" src="head/favicon.png" alt="Carter Cote logo" />  */}
+            © 2021 ALL RIGHTS RESERVED. — Designed and Coded by Carter Cote
+        </p>
+    </FooterInfoSection>
+    <FooterSocials>
+      <NavSocials>
+        <ul>
+          <li >
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="//www.linkedin.com/in/carter-cote"
+            >
+              <FaLinkedin/>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="//www.instagram.com/carter.cote"
+            >
+              <FaInstagram/>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/wunnle">
+              <FaGithub/>
+            </a>
+          </li>
+        </ul>
+      </NavSocials>
+    </FooterSocials>
+  </>
+)
+export default Footer

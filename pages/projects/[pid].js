@@ -9,7 +9,7 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Sidebar from '../../components/ProjectSidebar'
 import ProjectsContext from '../../Projects.Context'
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
 const Project = styled.article`
   width: 100%;
@@ -283,16 +283,12 @@ const Post = () => {
     }, 0)
   }, [wid])
 
-  const works = useContext(ProjectsContext)
-
-  const currentIndex = works.findIndex(w => w.slug === wid)
+  const projects = useContext(ProjectsContext)
 
   const {
     document: { data, content },
     images
-  } = works.find(w => w.slug === wid)
-
-  const nextWork = works[currentIndex + 1] ? works[currentIndex + 1] : works[0]
+  } = projects.find(w => w.slug === wid)
 
   return (
     <>

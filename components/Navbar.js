@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import Link from 'next/link'
 // import logo from "head/logo.png";
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const NavHeader = styled.header`
   width: 136px;
@@ -82,30 +82,29 @@ const Nav = styled.nav`
   }
 `;
 
-export default function Navbar() {
-  return (
-    <NavHeader>
-      <NavHeaderInner>
-        <Link href="/">
-          <a>
-            <NavLogo src="head/favicon.png" width="150" alt="" />
+const Navbar = () => (
+  <NavHeader>
+    <NavHeaderInner>
+      <Link href="/">
+        <a>
+          <NavLogo src="head/favicon.png" width="150" alt="" />
+        </a>
+      </Link>
+      <Nav>
+        <div>
+          <a href="/"> EXPERIENCE</a>
+          <a href="https://cartercote.com/">DESIGNS</a>
+          <a href="/">ABOUT</a>
+          <a
+            href="mailto:cartercote06@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CONTACT
           </a>
-        </Link>
-        <Nav>
-          <div>
-            <a href="/"> EXPERIENCE</a>
-            <a href="https://cartercote.com/">DESIGNS</a>
-            <a href="/">ABOUT</a>
-            <a
-              href="mailto:cartercote06@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CONTACT
-            </a>
-          </div>
-        </Nav>
-      </NavHeaderInner>
-    </NavHeader>
-  );
-}
+        </div>
+      </Nav>
+    </NavHeaderInner>
+  </NavHeader>
+)
+export default Navbar
