@@ -82,7 +82,16 @@ const Nav = styled.nav`
   }
 `;
 
-const Navbar = () => (
+function Navbar() {
+  const scrollToProjs = () => {
+    const projEle = document.getElementById("proj-id");
+    projEle.scrollIntoView({ behavior: "smooth" });
+  }
+  const scrollToAbout = () => {
+    const aboutEle = document.getElementById("about-id");
+    aboutEle.scrollIntoView({ behavior: "smooth" });
+  }
+  return (
   <NavHeader>
     <NavHeaderInner>
       <Link href="/">
@@ -92,9 +101,9 @@ const Navbar = () => (
       </Link>
       <Nav>
         <div>
-          <a href="/"> EXPERIENCE</a>
+          <a style={{cursor: "pointer"}} onClick={scrollToProjs}> EXPERIENCE</a>
           <a href="https://cartercote.com/">DESIGNS</a>
-          <a href="/">ABOUT</a>
+          <a style={{cursor: "pointer"}} onClick={scrollToAbout}>ABOUT</a>
           <a
             href="mailto:cartercote06@gmail.com"
             target="_blank"
@@ -106,5 +115,6 @@ const Navbar = () => (
       </Nav>
     </NavHeaderInner>
   </NavHeader>
-)
+  );
+}
 export default Navbar

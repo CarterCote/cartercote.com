@@ -158,7 +158,7 @@ const Footer = () => (
   <>
     <FooterInfoSection>
       <div>
-        <h2>Currently, I'm a CS and Industrial Design student at Georgia Tech.  
+        <h2 id="about-id">Currently, I'm a CS and Industrial Design student at Georgia Tech.  
         </h2>
         <p>
         Hi, I'm Carter. I started my design journey by developing video game textures and making videos about them on the internet. 
@@ -184,7 +184,7 @@ const Footer = () => (
     </div>
     </FooterInfoSection>
     <FooterInfoSection style={{marginTop: "0px"}}>
-    <p style={{fontFamily: "GraebenbachMonoMedium"}}>
+    <p style={{fontFamily: "GraebenbachMonoMedium", marginBottom: "20px"}}>
         {/* <img class="logo" src="head/favicon.png" alt="Carter Cote logo" />  */}
             © 2021 ALL RIGHTS RESERVED. — Designed and Coded by Carter Cote
         </p>
@@ -207,7 +207,7 @@ const Footer = () => (
             >
               <FaInstagram/>
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/wunnle">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/CarterCote">
               <FaGithub/>
             </a>
           </li>

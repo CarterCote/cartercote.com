@@ -40,7 +40,7 @@ const Projects = () => {
   return (
     <>
       <ProjectContainer>
-        <ProjectTitle>Recent works</ProjectTitle>
+        <ProjectTitle id="proj-id">Recent works</ProjectTitle>
         <ProjectListContainer>
           {projects && projects.map((p, i) => <ProjectCard key={p.slug} index={i} {...p} />)}
         </ProjectListContainer>
@@ -50,6 +50,7 @@ const Projects = () => {
 }
 export default Projects
 
+//OLD PROJECT CARD LAYOUT
 // import styled from "styled-components";
 // import { Section } from "../Layout";
 
