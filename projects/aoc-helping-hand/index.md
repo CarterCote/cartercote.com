@@ -6,7 +6,7 @@ services: 'Front-end development, UI/UX design'
 duration: 'NOVEMBER 2019 - AUGUST 2020'
 tech: 'React, Redux, HTML5, CSS3, Figma'
 website: 'https://dashboard.swaypay.io/messaging'
-featuredImg: '/aoc-helping-hand/helpinghand.jpg'
+featuredImg: '/projects/aoc-helping-hand/helpinghand.jpg'
 ---
 
 This is a chat service for hoteliers to communicate with their guests instantly & seamlessly. AutoInvite Chat is designed with both guests’ and hotel agents’ ease of use in mind:  Guests can just send a text message, and hoteliers will be able to manage and reply to all requests and questions from a single screen, in real-time.

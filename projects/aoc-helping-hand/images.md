@@ -1,4 +1,4 @@
-![chat-3](/autoinvite-chat/chat-3.jpg)
-![chat-1](/autoinvite-chat/chat-1.jpg)
+![chat-3](/projects/aoc-helping-hand/helpinghand.jpg)
+![chat-1](/projects/aoc-helping-hand/helpinghand.jpg)
 
-![chat-2](/autoinvite-chat/chat-2.jpg)
+![chat-2](/projects/aoc-helping-hand/helpinghand.jpg)

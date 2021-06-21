@@ -6,9 +6,10 @@ import { useInView } from 'react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
 import Footer from '../../components/Footer'
+import Layout from '../../components/Layout'
 import Navbar from '../../components/Navbar'
 import Sidebar from '../../components/ProjectSidebar'
-import ProjectsContext from '../../Projects.Context'
+import ProjectContext from '../../Projects.Context'
 import styled, { keyframes } from 'styled-components'
 
 const Project = styled.article`
@@ -243,6 +244,7 @@ const WebsiteLink = styled.a`
 
 const ProjectInfo = ({ data, data: { title, website }, content }) => {
   return (
+    <Layout>
       <ProjectWrapper>
         <ContentInfo>
           <TopContainer>
@@ -269,6 +271,7 @@ const ProjectInfo = ({ data, data: { title, website }, content }) => {
           </TopContainer>
         </ContentInfo>
       </ProjectWrapper>
+    </Layout>
   )
 }
 const Post = () => {
@@ -283,7 +286,7 @@ const Post = () => {
     }, 0)
   }, [wid])
 
-  const projects = useContext(ProjectsContext)
+  const projects = useContext(ProjectContext)
 
   const {
     document: { data, content },

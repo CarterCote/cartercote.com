@@ -1,7 +1,10 @@
+import PropTypes from 'prop-types'
+import React from 'react'
+
 import styled from "styled-components"
 
 export const Container = styled.div`
-    text-align: center;
+      text-align: center;
 `;
 
 export const Section = styled.div`
@@ -33,3 +36,13 @@ export const theme = {
       light: "#fff",
     },
 }
+const Layout = ({ children }) => {
+
+  return <>{children}</>
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
+export default Layout

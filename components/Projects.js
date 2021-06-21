@@ -1,7 +1,7 @@
 // Lol failed attempt at dynamically mapping data. Fml
 import React, { useContext } from 'react';
 
-import ProjectContext from '../../Projects.Context';
+import ProjectContext from '../Projects.Context';
 import ProjectCard from './ProjectCard';
 import styled from 'styled-components';
 
@@ -16,6 +16,7 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectTitle = styled.h1`
+  font-family: DrukWide;
   margin-bottom: 30px;
   margin-top: 0;
   color: #fff;

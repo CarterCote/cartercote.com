@@ -6,7 +6,6 @@ import Typewriter from 'typewriter-effect'
 const HeroSection = styled(Section)`
   margin-top: 60px;
   margin-bottom: 250px;
-
   display: flex;
   flex-direction: row;
   div:nth-child(1) {
@@ -40,7 +39,7 @@ const HeroSection = styled(Section)`
 // Highlight name section
 const HeroTopline = styled.h3`
   text-transform: uppercase;
-  font-family: "AmericaMono", sans-serif;
+  font-family: "GraebenbachMonoMedium", sans-serif;
   color: ${(props) => props.theme.accent};
   font-size: 20px;
   letter-spacing: 2.2px;

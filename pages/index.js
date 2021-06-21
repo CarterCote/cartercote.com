@@ -5,7 +5,7 @@ import { Container, theme } from "../components/Layout"
 // Page components
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
-import Projects from "../components/ProjectsList/Projects"
+import Projects from "../components/Projects"
 import Footer from "../components/Footer"
 
 // Export Home page
