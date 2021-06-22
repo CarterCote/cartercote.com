@@ -2,7 +2,7 @@
 This is my personal portfolio website, built to showcase my projects, designs, and work experiences!
 
 
-![Site](https://imgur.com/ImpQvxt)
+![Site](https://imgur.com/ImpQvxt.png)
 
 ### Tech Stack
 
