@@ -2,7 +2,7 @@ import Typewriter from 'typewriter-effect'
 import React, { FC } from 'react';
 
 const Hero = () => {
-  // const videoSource = "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
+  const blur = 5;
   const videoSource = "home/static.mp4";
   return (
     <div className="relative h-full overflow-hidden">
@@ -10,12 +10,13 @@ const Hero = () => {
         <video
           className='absolute top-0 left-0 min-w-full min-h-full object-cover'
           style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
-          autoPlay="autoplay"
-          loop="loop"
+          autoPlay={true}
+          loop={true}
           muted
-          id="video-id" >
+          id="video-id"
+        >
           <source src={videoSource} type="video/mp4" />
-            Your browser does not support the video tag.
+          Your browser does not support the video tag.
         </video>
         <div className="absolute top-0 text-white bg-black bg-opacity-10 w-1000 h-full justify-center items-center px-[calc((100%-1000px)/2)] mb-250 flex flex-row">
           <div className="max-w-700 inline-block py-15 transform -translate-y-130">
@@ -46,10 +47,10 @@ const Hero = () => {
               </a>
             </span>
             <br />
-            <button onClick={scrollToProjs} className="bg-transparent text-white mt-20 mr-20 px-36 py-10 border border-white rounded-12 font-sans-serif font-bold text-1rem transition-all duration-300 cursor-pointer">
+            <button onClick={() => {}} className="bg-transparent text-white mt-20 mr-20 px-36 py-10 border border-white rounded-12 font-sans-serif font-bold text-1rem transition-all duration-300 cursor-pointer">
               MY WORK
             </button>
-            <button onClick={scrollToAbout} className="bg-transparent text-white mt-20 mr-20 px-36 py-10 border border-white rounded-12 font-sans-serif font-bold text-1rem transition-all duration-300 cursor-pointer">
+            <button onClick={() => {}} className="bg-transparent text-white mt-20 mr-20 px-36 py-10 border border-white rounded-12 font-sans-serif font-bold text-1rem transition-all duration-300 cursor-pointer">
               ABOUT ME
             </button>
           </div>
@@ -57,7 +58,7 @@ const Hero = () => {
             <picture>
               <source srcSet="head/MYMIND.png" type="image/png" />
               <img src="head/MYMIND.png" alt="Carter Cote" className="w-650 absolute top-50 left-0" />
-            </picture>
+              </picture>
           </div>
         </div>
       </div>

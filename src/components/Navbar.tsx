@@ -1,119 +1,110 @@
-import NextLink from 'next/link'
-// import logo from "head/logo.png";
+"use client";
 
-const NavHeader = styled.header`
-  width: 136px;
-  @media screen and (min-width: 1300px) {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  @media screen and (max-width: 600px) {
-    padding: 0px 16px;
-    height: 50px;
-    width: 92%;
+import NextImage from "next/image";
+import NextLink from "next/link";
+import { useRef } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 
-    img {
-      width: 66px;
-    }
-  }
-`;
+export const navLinks = [
+  {
+    text: "About",
+    link: "/about",
+  },
+  // {
+  //   text: "FAQs",
+  //   link: "/faqs",
+  // },
+  {
+    text: "Blog",
+    link: "/blog",
+  },
+  {
+    text: "Pricing",
+    link: "/pricing",
+  },
+  // {
+  //   text: "Careers",
+  //   link: "/careers",
+  // },
+  {
+    text: "Dashboard",
+    link: "/login",
+  },
+];
 
-const NavLogo  = styled.img`
-  width: 66px;
-`;
+export const ctaLinks = [
+  {
+    text: "Discord",
+    link: "https://discord.gg/hKbvHAHvvU",
+  },
+];
 
-const NavHeaderInner = styled.div`
-  width: 1300px;
-  max-width: 100%;
-  margin: auto;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0 20px;
-  @media screen and (min-width: 1300px) {
-    width: 100%;
-    margin: auto;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 30px;
-  }
+const Navbar = ({ minimal }: { minimal?: boolean }) => {
 
-  @media screen and (max-width: 600px) {
-    padding: 0;
-  }
-`;
+  const navRef = useRef<HTMLDivElement>(null);
+  const showNavBar = () => {
+    navRef.current ? navRef.current.classList.toggle("responsive_nav") : null;
+  };
 
-const Nav = styled.nav`
-  background: transparent;
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: 5px;
-  // font-size: 1.2rem;
-  font-family: "GraebenbachMonoMedium";
-  position: sticky;
-
-  a {
-    text-decoration: none;
-    display: flex;
-    line-height: 22px;
-    color: #fff;
-    opacity: 0.9;
-    transition: 200ms ease-in-out;
-    font-size: 16px;
-  }
-  a:hover {
-    color: #F5E022;
-  }
-  a + a {
-    margin-left: 28px;
-    // margin-right: 0px;
-  }
-  @media screen and (max-width: 600px) {
-
-    a + a {
-      margin-left: 38px;
-    }
-  }
-`;
-
-function Navbar() {
-  const scrollToProjs = () => {
-    const projEle = document.getElementById("proj-id");
-    projEle.scrollIntoView({ behavior: "smooth" });
-  }
-  const scrollToAbout = () => {
-    const aboutEle = document.getElementById("about-id");
-    aboutEle.scrollIntoView({ behavior: "smooth" });
-  }
   return (
-  <NavHeader>
-    <NavHeaderInner>
-      <NextLink href="/">
-        <a>
-          <NavLogo src="head/favicon.png" width="150" alt="" />
-        </a>
-      </NextLink>
-      <Nav>
-        <div>
-          <a style={{cursor: "pointer"}} onClick={scrollToProjs}> EXPERIENCE</a>
-          <a href="https://cartercote.com/">DESIGNS</a>
-          <a style={{cursor: "pointer"}} onClick={scrollToAbout}>ABOUT</a>
-          <a
-            href="mailto:cartercote06@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CONTACT
-          </a>
-        </div>
-      </Nav>
-    </NavHeaderInner>
-  </NavHeader>
+    <>
+      <span className="fixed-header-spacer"></span>
+      <div className="fixed-header-container">
+        <header className="[ launch-header ]">
+          <NextLink href={"/"}>
+            <picture>
+              <source srcSet="/sellrazeBlack.svg" media="(min-width: 600px)" height="48" width="170" />
+              <NextImage src="/sellraze_mark.svg" width="36" height="36" alt="Sellraze landing page" />
+            </picture>
+          </NextLink>
+          <nav className="[ launch-nav transofrm ] absolute right-0" ref={navRef}>
+            {minimal ? null : (
+              <>
+                <NextLink href="/" rel="noopener noreferrer" className="[ landing-link login-nav ]">
+                  Home
+                </NextLink>
+                {navLinks.map((link) => (
+                  <NextLink
+                    className="[ landing-link ] font-sans"
+                    href={link.link}
+                    key={`${link.link} + ${link.text}`}
+                  >
+                    {link.text}
+                  </NextLink>
+                ))}
+                {ctaLinks.map((link) => (
+                  <NextLink
+                    className="[ button ss-large roundedfull ] rounded-full px-4 py-2"
+                    href={link.link}
+                    key={`${link.link} + ${link.text}`}
+                  >
+                    {link.text}
+                  </NextLink>
+                ))}
+
+                <a
+                  href="https://discord.gg/hKbvHAHvvU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="[ landing-link login-nav  ] font-sans"
+                >
+                  Discord
+                </a>
+              </>
+            )}
+            <div onClick={showNavBar} className="[ hamburger close-navbar ] cursor-pointer">
+              <IoMdClose />
+            </div>
+          </nav>
+          <div className="[ flow-row-large full-screen]">
+            <div onClick={showNavBar} className="[ hamburger ] cursor-pointer">
+              <RxHamburgerMenu />
+            </div>
+          </div>
+        </header>
+      </div>
+    </>
   );
-}
-export default Navbar
+};
+export default Navbar;
