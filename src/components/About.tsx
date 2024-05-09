@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import { Section } from "./Layout"
+import React, { useEffect, useState } from "react"
 
 // // About section
 // const AboutSection = styled(Section)`

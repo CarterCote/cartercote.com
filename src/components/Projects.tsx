@@ -1,52 +1,37 @@
-// Lol failed attempt at dynamically mapping data. Fml
-import React, { useContext } from 'react';
+import React, { useContext, FC } from 'react';
 
-import ProjectContext from '../Projects.Context';
-import ProjectCard from './ProjectCard';
+interface ProjectTitleProps {
+  text: string;
+}
 
-const ProjectContainer = styled.div`
-  margin-bottom: 100px;
-  @media screen and (max-width: 880px) {
-    padding: 0 30px;
-  }
-  @media screen and (max-width: 600px) {
-    padding: 0 20px;
-  }
-`;
+const ProjectContainer: FC = ({ children }) => {
+  return(
+    <div className="font-sans mb-24 sm:px-8 xs:px-5 text-white">{children}</div>
+  );
+};
 
-const ProjectTitle = styled.h1`
-  font-family: DrukWide;
-  margin-bottom: 30px;
-  margin-top: 0;
-  color: #fff;
-`;
+const ProjectTitle: FC<ProjectTitleProps> = ({text}) => {
+  return(
+    <h1 className="font-sans mb-8 text-white">{text}</h1>
+  );
+};
 
-const ProjectListContainer = styled.div`
-  margin-bottom: 100px;
-  @media screen and (max-width: 880px) {
-    padding: 0 30px;
-  }
-  @media screen and (max-width: 600px) {
-    padding: 0 20px;
-  }
-`;
+const ProjectListContainer: FC = ({ children }) => {
+  return(
+    <div className="font-sans mb-24 sm:px-8 xs:px-5 text-white">{children}</div>
+  );
+};
 
 const Projects = () => {
-  const projects = useContext(ProjectContext).sort(
-    (a, b) => new Date(b.document.data.date).getTime() - new Date(a.document.data.date).getTime()
-  )
-
   return (
-    <>
       <ProjectContainer>
-        <ProjectTitle id="proj-id">Recent works</ProjectTitle>
+        <ProjectTitle text="Recent works" />
         <ProjectListContainer>
-          {projects && projects.map((p, i) => <ProjectCard key={p.slug} index={i} {...p} />)}
         </ProjectListContainer>
       </ProjectContainer>
-    </>
   );
 }
+
 export default Projects
 
 //OLD PROJECT CARD LAYOUT

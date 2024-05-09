@@ -1,6 +1,6 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import { Container, theme } from "../components/Layout"
+import { Container, theme } from "../app/layout"
 
 // Page components
 import Navbar from "../components/Navbar"
