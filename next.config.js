@@ -1,18 +1,6 @@
-const withImages = require('next-images')
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+};
 
-module.exports = withImages({
-  webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.md$/,
-      use: 'raw-loader'
-    })
-
-    if (!options.isServer) {
-      config.node = {
-        fs: 'empty'
-      }
-    }
-
-    return config
-  }
-})
+module.exports = nextConfig;
