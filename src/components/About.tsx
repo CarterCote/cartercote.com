@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { Section } from "./Layout"
-import styled from "styled-components"
 
 // // About section
 // const AboutSection = styled(Section)`
