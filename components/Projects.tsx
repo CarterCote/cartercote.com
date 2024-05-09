@@ -3,7 +3,6 @@ import React, { useContext } from 'react';
 
 import ProjectContext from '../Projects.Context';
 import ProjectCard from './ProjectCard';
-import styled from 'styled-components';
 
 const ProjectContainer = styled.div`
   margin-bottom: 100px;

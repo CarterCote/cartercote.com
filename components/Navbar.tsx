@@ -1,6 +1,5 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 // import logo from "head/logo.png";
-import styled from 'styled-components'
 
 const NavHeader = styled.header`
   width: 136px;
@@ -94,11 +93,11 @@ function Navbar() {
   return (
   <NavHeader>
     <NavHeaderInner>
-      <Link href="/">
+      <NextLink href="/">
         <a>
           <NavLogo src="head/favicon.png" width="150" alt="" />
         </a>
-      </Link>
+      </NextLink>
       <Nav>
         <div>
           <a style={{cursor: "pointer"}} onClick={scrollToProjs}> EXPERIENCE</a>

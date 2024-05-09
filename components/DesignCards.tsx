@@ -1,8 +1,7 @@
-import { Link } from 'gatsby'
 import React from 'react'
 
-import styled from 'styled-components'
 import { Section } from "./Layout"
+import NextLink from "next/link";
 
 
 const DesignCard = styled.div`
@@ -46,22 +45,22 @@ const DesignCards = () => {
 
   return (
     <Section>
-        <Link to="/">
+        <NextLink href="/">
             <DesignCard
                 style={{
                 background: "design/001.jpg"
                 }}
             >
             </DesignCard>
-        </Link>
-        <Link to="/">
+        </NextLink>
+        <NextLink href="/">
             <DesignCard
                 style={{
                 background: "design/002.jpg"
                 }}
             >
             </DesignCard>
-        </Link>
+        </NextLink>
     </Section>
   )
 }

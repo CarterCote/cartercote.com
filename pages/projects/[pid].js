@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import { useContext, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -349,7 +349,7 @@ const Img = ({ alt, src }) => {
   }
 
   return (
-    <Link href={src}>
+    <NextLink href={src}>
       <a target="_blank" rel="noopener noreferrer">
         <ProjectImageContainer
           className={[inView ? ProjectImageContainerAnim : ''].join(
@@ -360,7 +360,7 @@ const Img = ({ alt, src }) => {
           <img srcSet={`${src} 2x`} alt={alt} />
         </ProjectImageContainer>
       </a>
-    </Link>
+    </NextLink>
   )
 }
 

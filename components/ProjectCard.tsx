@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import Icon from './Icon'
-import styled from 'styled-components'
 import { Container } from "./Layout"
+import NextLink from "next/link"
 
 const CardsContainer = styled(Container)`
   text-align: left;
@@ -158,7 +158,7 @@ const ProjectCard = props => {
 
   return (
     <CardsContainer>
-      <Link href="/project/[wid]" as={`/project/${slug}`}>
+      <NextLink href="/project/[wid]" as={`/project/${slug}`}>
         <ProjCard style={{ background: bgColors[index % 4] }}>
           <ProjInfo>
             <ProjDate>{new Date(date).getFullYear()}</ProjDate>
@@ -180,7 +180,7 @@ const ProjectCard = props => {
             <img src={featuredImg} alt={title} />
           </ProjImage>
         </ProjCard>
-      </Link>
+      </NextLink>
     </CardsContainer>
   )
 }
