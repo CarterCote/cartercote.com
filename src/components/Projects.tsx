@@ -24,11 +24,11 @@ const ProjectListContainer: FC = ({ children }) => {
 
 const Projects = () => {
   return (
-      <ProjectContainer>
-        <ProjectTitle text="Recent works" />
-        <ProjectListContainer>
-        </ProjectListContainer>
-      </ProjectContainer>
+    <ProjectContainer>
+      <ProjectTitle text="Recent works" />
+      <ProjectListContainer>
+      </ProjectListContainer>
+    </ProjectContainer>
   );
 }
 

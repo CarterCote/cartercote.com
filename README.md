@@ -8,8 +8,8 @@ This is my personal portfolio website, built to showcase my projects, designs, a
 
 * React
 * Next.js
-* Styled-Components
+* Tailwind
+* Posthog
 * Vercel
-* Gray Matter
 
 Visit site here: +http://www.cartercote.com
