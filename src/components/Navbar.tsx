@@ -8,7 +8,7 @@ import { IoMdClose } from "react-icons/io";
 
 export const navLinks = [
   {
-    text: "WORK",
+    text: "ABOUT",
     link: "/",
   },
   // {
@@ -19,10 +19,10 @@ export const navLinks = [
     text: "PLAY",
     link: "/play",
   },
-  {
-    text: "NOW",
-    link: "/now",
-  },
+  // {
+  //   text: "NOW",
+  //   link: "/now",
+  // },
 ];
 
 const Navbar = ({ minimal }: { minimal?: boolean }) => {

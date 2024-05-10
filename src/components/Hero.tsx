@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import NextImage from "next/image";
 import Link from 'next/link';
 import { drukWide } from "../app/fonts";
+import Button from './Button';
 
 const Hero = () => {
   const blur = 5;
@@ -34,6 +35,10 @@ const Hero = () => {
                 <p>I'm a software engineer & designer at Stanford University, currently studying AI & Human-Computer Interaction. </p>
                 <p>I craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
+              <div className="flex flex-row space-x-4">
+                <Button text="PROJECTS"></Button>
+                <Button text="ABOUT ME"></Button>
+              </div>
             </div>
             <div className="w-1/2 items-center justify-center align-center">
               <NextImage
@@ -42,6 +47,7 @@ const Hero = () => {
                 height={660}
                 width={570}
                 alt="Descriptive Text"
+                className="opacity-50"
               />
             </div>
           </div>
