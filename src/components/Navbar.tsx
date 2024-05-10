@@ -8,7 +8,7 @@ import { IoMdClose } from "react-icons/io";
 
 export const navLinks = [
   {
-    text: "PROJECTS",
+    text: "WORK",
     link: "/",
   },
   // {
@@ -35,19 +35,19 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
   return (
     <>
       <div className="fixed-header-container">
-        <header className="backdrop-blur-lg z-50 w-full flex items-center justify-between h-20 px-12 text-gray-700">
+      <header className="z-50 fixed top-0 w-full flex items-center justify-between pt-7 px-12 text-gray-700">
           <NextLink href={"/"}>
             <picture>
-              <source srcSet="/head/logo.png" media="(min-width: 600px)" height="48" width="48" />
-              <NextImage src="/head/logo.png" width="36" height="36" alt="Carter Cote" />
+              <source srcSet="/head/logoWhite.png" media="(min-width: 600px)" height="48" width="48" />
+              <NextImage src="/head/logoWhite.png" width="36" height="36" alt="Carter Cote" />
             </picture>
           </NextLink>
-          <nav className="absolute right-0" ref={navRef}>
+          <nav className="absolute right-8 top-8 flex flex-col items-end" ref={navRef}>
             {minimal ? null : (
               <>
                 {navLinks.map((link) => (
                   <NextLink
-                    className="text-center no-underline text-base tracking-tighter font-sans"
+                    className="text-center no-underline text-white text-base tracking-tighter font-sans"
                     href={link.link}
                     key={`${link.link} + ${link.text}`}
                   >
@@ -55,14 +55,6 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                   </NextLink>
                 ))}
 
-                <a
-                  href="https://discord.gg/hKbvHAHvvU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center no-underline text-base tracking-tighter font-sans"
-                  >
-                  Discord
-                </a>
               </>
             )}
             <div onClick={showNavBar} className="hidden cursor-pointer">

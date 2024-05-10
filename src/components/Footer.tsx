@@ -1,4 +1,5 @@
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import Link from 'next/link';
 
 const Footer = () => (
   <>
@@ -15,39 +16,33 @@ const Footer = () => (
     <div className="mt-0">
         <p className="font-mono mb-5">
             {/* <img class="logo" src="head/favicon.png" alt="Carter Cote logo" />  */}
-            © 2021 ALL RIGHTS RESERVED. — Designed and Coded by Carter Cote
+            ©Designed and built by Carter Cote
         </p>
     </div>
-    <footer className="fixed right-0 bottom-0 pr-7">
+    <footer className="absolute right-8 bottom-8 flex flex-col items-end">
       <nav className="ml-auto mt-1.5">
-        <ul>
-          <li className="flex space-x-3.5">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="//www.linkedin.com/in/carter-cote"
-              className="text-white text-6xl pb-2.5 transition duration-200 ease-in-out hover:text-yellow-300"
-            >
-              <FaLinkedin/>
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="//www.instagram.com/carter.cote"
-              className="text-white text-6xl pb-2.5 transition duration-200 ease-in-out hover:text-yellow-300"
-            >
-              <FaInstagram/>
-            </a>
-            <a 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              href="https://github.com/CarterCote"
-              className="text-white text-6xl pb-2.5 transition duration-200 ease-in-out hover:text-yellow-300"
-            >
+        <div className="flex flex-col space-y-3.5">
+        <Link href="https://twitter.com/cartercote_" passHref>
+            <div className="text-white text-3xl pb-2.5 transition duration-200 ease-in-out hover:text-yellow-300">
+              <FaTwitter/>
+            </div>
+          </Link>
+          <Link href="https://github.com/CarterCote" passHref>
+            <div className="text-white text-3xl pb-2.5 transition duration-200 ease-in-out hover:text-yellow-300">
               <FaGithub/>
-            </a>
-          </li>
-        </ul>
+            </div>
+          </Link>
+          <Link href="//www.instagram.com/carter.cote" passHref>
+            <div className="text-white text-3xl pb-2.5 transition duration-200 ease-in-out hover:text-yellow-300">
+              <FaInstagram/>
+            </div>
+          </Link>
+          <Link href="//www.linkedin.com/in/carter-cote" passHref>
+            <div className="text-white text-3xl pb-2.5 transition duration-200 ease-in-out hover:text-yellow-300">
+              <FaLinkedin/>
+            </div>
+          </Link>
+        </div>
       </nav>
     </footer>
   </>

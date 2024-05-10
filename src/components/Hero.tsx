@@ -9,36 +9,40 @@ const Hero = () => {
   const videoSource = "home/static.mp4";
   return (
     <>
-      <main className="flex h-screen min-w-screen flex-col pt-8 items-center">
-        <div className="h-[40rem] z-[-1] w-3/4 bg-black bg-grid-large-white/[0.1] flex items-center justify-center absolute bottom-0">
-          {/* Radial gradient for the container to give a faded look */}
-          <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
+      <main className="flex h-screen min-w-screen flex-col pt-32 items-center">
+        <div className="z-[-1] w-full bg-black flex items-center justify-center absolute top-0">
+          <video
+            className='absolute top-0 left-0 w-full object-cover'
+            style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
+            autoPlay={true}
+            loop={true}
+            muted
+            id="video-id"
+          >
+            <source src={videoSource} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <div className="flex flex-col w-3/4 h-3/4 pl-24 border-dashed border-[#414141] border-b-2 border-x-2 items-start justify-center text-6xl font-bold gap-y-4 ">
-          <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col w-full h-3/4 pl-24 items-start justify-center text-6xl font-bold gap-y-4 ">
+          <div className="flex flex-row px-8 space-x-4">
             <div
-              className="font-aeonik-bold flex flex-col w-full text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start justify-start lg:gap-y-2 gap-y-0"
-            >
-              <div className="w-full">
-                <h1>A space for student builders,</h1>
+              className="flex flex-col w-1/2 align-center justify-center space-y-4 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start">
+              <div className="w-full font-aeonik-bold text-[66px]">
+                <h1>HI, I'M CARTER.</h1>
               </div>
-              <div className="w-full">
-                <h1>A space for student builders,</h1>
+              <div className="w-full font-aeonik-regular space-y-3 xs:text-md sm:text-md md:text-lg lg:text-xl xl:text-xl 2xl:text-xl">
+                <p>I'm a software engineer & designer at Stanford University, currently studying AI & Human-Computer Interaction. </p>
+                <p>I craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
             </div>
-            <div
-              className="text-[#FFFFFF] text-lg font-thin leading-snug font-aeonik-regular"
-            >
-              <div>
-                Join a community of students passionate about their own ideas.
-                Connect with us by
-              </div>
-              <div>
-                joining our Discord below, or by setting up a meetup at your
-                campus.
-              </div>
-            </div>
-            <div>
+            <div className="w-1/2 items-center justify-center align-center">
+              <NextImage
+                priority
+                src="/head/MYMIND.png"
+                height={660}
+                width={570}
+                alt="Descriptive Text"
+              />
             </div>
           </div>
         </div>
@@ -46,17 +50,7 @@ const Hero = () => {
     </>
     // <div className="relative h-full overflow-hidden">
     //   <div className='relative overflow-hidden'>
-    //     {/* <video
-    //       className='absolute top-0 left-0 min-w-full min-h-full object-cover'
-    //       style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
-    //       autoPlay={true}
-    //       loop={true}
-    //       muted
-    //       id="video-id"
-    //     >
-    //       <source src={videoSource} type="video/mp4" />
-    //       Your browser does not support the video tag.
-    //     </video> */}
+
     //     <div className="flex flex-row justify-center w-full items-center">
     //       <div className="">
     //         <h1 className="text-white text-62 underline leading-20 font-serif mb-50 pb-20 max-w-700">
