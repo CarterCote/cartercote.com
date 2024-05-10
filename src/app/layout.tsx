@@ -1,6 +1,10 @@
 import React from 'react';
-import Script from 'next/script';
-import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import "../styles/fonts.css";
+import "../styles/globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
@@ -51,9 +55,9 @@ export const metadata = {
   },
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html className={`${inter.className}`}>
       <head>
         <title>{metadata.title.default}</title>
         <meta name="description" content={metadata.description} />
@@ -71,10 +75,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.images} />
       </head>
-      <body>
-        <div>
-          {children}
-        </div>
+      <body className="bg-black text-white">
+        {children}
       </body>
     </html>
   );

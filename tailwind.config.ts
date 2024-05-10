@@ -6,14 +6,20 @@ const config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-],
+    "./src/**/*.{js,ts,jsx,tsx,mdx,css}",
+  ],
+  
   theme: {
     extend: {
       colors: {
         "blue-gradient-start": "#48BDFF",
         "blue-gradient-stop": "#2260FE",
-      }
+      },
+      fontFamily: {
+        // mono: ["var(--font-roboto-mono)"],
+        "aeonik-bold": ["Aeonik-Bold", "sans-serif"],
+        "aeonik-regular": ["Aeonik-Regular", "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

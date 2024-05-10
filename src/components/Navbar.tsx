@@ -8,35 +8,20 @@ import { IoMdClose } from "react-icons/io";
 
 export const navLinks = [
   {
-    text: "About",
-    link: "/about",
+    text: "PROJECTS",
+    link: "/",
   },
   // {
   //   text: "FAQs",
   //   link: "/faqs",
   // },
   {
-    text: "Blog",
-    link: "/blog",
+    text: "PLAY",
+    link: "/play",
   },
   {
-    text: "Pricing",
-    link: "/pricing",
-  },
-  // {
-  //   text: "Careers",
-  //   link: "/careers",
-  // },
-  {
-    text: "Dashboard",
-    link: "/login",
-  },
-];
-
-export const ctaLinks = [
-  {
-    text: "Discord",
-    link: "https://discord.gg/hKbvHAHvvU",
+    text: "NOW",
+    link: "/now",
   },
 ];
 
@@ -49,33 +34,20 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
 
   return (
     <>
-      <span className="fixed-header-spacer"></span>
       <div className="fixed-header-container">
-        <header className="[ launch-header ]">
+        <header className="backdrop-blur-lg z-50 w-full flex items-center justify-between h-20 px-12 text-gray-700">
           <NextLink href={"/"}>
             <picture>
-              <source srcSet="/sellrazeBlack.svg" media="(min-width: 600px)" height="48" width="170" />
-              <NextImage src="/sellraze_mark.svg" width="36" height="36" alt="Sellraze landing page" />
+              <source srcSet="/head/logo.png" media="(min-width: 600px)" height="48" width="48" />
+              <NextImage src="/head/logo.png" width="36" height="36" alt="Carter Cote" />
             </picture>
           </NextLink>
-          <nav className="[ launch-nav transofrm ] absolute right-0" ref={navRef}>
+          <nav className="absolute right-0" ref={navRef}>
             {minimal ? null : (
               <>
-                <NextLink href="/" rel="noopener noreferrer" className="[ landing-link login-nav ]">
-                  Home
-                </NextLink>
                 {navLinks.map((link) => (
                   <NextLink
-                    className="[ landing-link ] font-sans"
-                    href={link.link}
-                    key={`${link.link} + ${link.text}`}
-                  >
-                    {link.text}
-                  </NextLink>
-                ))}
-                {ctaLinks.map((link) => (
-                  <NextLink
-                    className="[ button ss-large roundedfull ] rounded-full px-4 py-2"
+                    className="text-center no-underline text-base tracking-tighter font-sans"
                     href={link.link}
                     key={`${link.link} + ${link.text}`}
                   >
@@ -87,18 +59,18 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                   href="https://discord.gg/hKbvHAHvvU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="[ landing-link login-nav  ] font-sans"
-                >
+                  className="text-center no-underline text-base tracking-tighter font-sans"
+                  >
                   Discord
                 </a>
               </>
             )}
-            <div onClick={showNavBar} className="[ hamburger close-navbar ] cursor-pointer">
+            <div onClick={showNavBar} className="hidden cursor-pointer">
               <IoMdClose />
             </div>
           </nav>
-          <div className="[ flow-row-large full-screen]">
-            <div onClick={showNavBar} className="[ hamburger ] cursor-pointer">
+          <div className="">
+            <div onClick={showNavBar} className="hidden cursor-pointer">
               <RxHamburgerMenu />
             </div>
           </div>

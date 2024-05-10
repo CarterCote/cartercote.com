@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Aeonik-Bold';
+    src: url('/fonts/Aeonik-Bold.otf') format('opentype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik-BoldItalic';
+    src: url('/fonts/Aeonik-BoldItalic.otf') format('opentype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik-Regular';
+    src: url('/fonts/Aeonik-Regular.otf') format('opentype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+}
