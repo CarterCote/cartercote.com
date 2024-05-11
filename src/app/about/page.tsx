@@ -7,13 +7,36 @@ import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 
+const awards = [
+    {
+        name: "Mr. Georgia Tech Semifinalist",
+        year: "2023",
+    },
+    {
+        name: "Startup Atlanta Community Builder Nominee",
+        year: "2023",
+    },
+    {
+        name: "Kleiner Perkins Design Fellow Finalist",
+        year: "2023",
+    },
+    {
+        name: "Banatao Family First-Generation Engineering Scholar",
+        year: "2020",
+    },
+    {
+        name: "National Eagle Scout Association Lifetime Member",
+        year: "2018",
+    },
+];
+
 const About = () => {
   return (
     <>
       <Navbar />
       <div className="flex w-full flex-col pt-32 items-start">
-        <div className="flex flex-col w-full px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
-          <div className="flex flex-row px-8 space-x-4">
+        <div className="flex flex-col w-full px-28 items-start justify-center text-6xl font-bold gap-y-4 ">
+          <div className="flex flex-row space-x-4">
             <div
               className="flex flex-col w-3/4 align-center justify-center space-y-4 items-start">
               <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
@@ -45,56 +68,69 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="flex flex-row w-full px-8 space-x-4">
+          <div className="flex flex-col w-full py-20">
+            <h1 className="w-full font-aeonik-bold text-[32px]">EXPERIENCE</h1>
             <div
-              className="flex flex-col w-1/2 align-center justify-center space-y-4 items-start">
-              <div className="w-full font-aeonik-bold text-[32px]">
-                <h1>EXPERIENCE</h1>
-              </div>
-              <div className="w-full font-aeonik-regular">
-                <Link href="https://overtime.tv/" className="">
-                    <div className="inline-block text-lg font-medium text-white transition duration-300 ease-in-out border-b border-white hover:text-blue-800 hover:border-blue-800 overflow-hidden group">
-                        <span className="underline-text text-sm">Overtime</span>
+              className="flex flex-row w-full justify-between space-x-10 border-b pb-10 border-gray-800">
+              <div className="w-full py-10 font-aeonik-regular">
+                <Link href="https://overtime.tv/" className="flex flex-row items-start align-start">
+                    <div className="flex flex-col w-1/6">
+                        <p className="text-sm pb-5 text-gray-500"> 01</p>
+                        <NextImage
+                        priority
+                        src="/projects/overtime.png"
+                        height={118}
+                        width={118}
+                        alt="Descriptive Text"
+                        />
+                    </div>
+                    <div className="ml-10 w-9/12 items-start">
+                        <p className="text-sm pb-5 text-gray-500"> GROWTH INTERN</p>
+                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Overtime</p>
+                        <p className="text-[18px] mt-4 leading-[150%] text-gray-400">Various design projects, 
+                        including a site to announce the anticipated release of their browser, 
+                        Arc, on Windows.</p>
+                    </div>
+                    <div className="flex flex-col w-1/12 items-end">
+                        <p className="text-sm pb-5 text-gray-500"> 2023</p>
                     </div>
                 </Link>
-                <p className="text-sm text-opacity-70 text-white">Growth</p>
-                <p className="text-xs mt-4">2023-2023</p>
               </div>
-            </div>
-            <div
-              className="flex flex-col w-1/2 align-center justify-center space-y-4 items-start">
-              <div className="w-full font-aeonik-bold text-[32px]">
-                <h1>CONTACT</h1>
-              </div>
-              <div className="w-full font-aeonik-regular space-y-3 xs:text-md sm:text-md md:text-lg lg:text-xl xl:text-xl 2xl:text-xl">
-                <p>Test </p>
+              <div className="w-full py-10 font-aeonik-regular">
+                <Link href="https://overtime.tv/" className="flex flex-row items-start align-start">
+                    <div className="flex flex-col w-1/6">
+                        <p className="text-sm pb-5 text-gray-500"> 01</p>
+                        <NextImage
+                        priority
+                        src="/projects/overtime.png"
+                        height={118}
+                        width={118}
+                        alt="Descriptive Text"
+                        />
+                    </div>
+                    <div className="ml-10 w-2/3 items-start">
+                        <p className="text-sm pb-5 text-gray-500"> GROWTH INTERN</p>
+                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Overtime</p>
+                        <p className="text-[18px] mt-4 leading-[150%] text-gray-400">Various design projects, 
+                        including a site to announce the anticipated release of their browser, 
+                        Arc, on Windows.</p>
+                    </div>
+                    <div className="flex flex-col w-1/6">
+                        <p className="text-sm pb-5 text-gray-500 ml-6"> 2023</p>
+                    </div>
+                </Link>
               </div>
             </div>
           </div>
-
-            <div className="w-full py-20">
-                <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
-                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
-                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Mr. Georgia Tech Semifinalist</p>
-                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2023</p>
+        <div className="w-full py-20">
+            <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
+            {awards.map((award) => (
+                <div className="flex flex-row justify-between items-end w-full border-b border-gray-800 pt-10">
+                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{award.name}</p>
+                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">{award.year}</p>
                 </div>
-                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
-                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Startup Atlant Community Builder Nominee</p>
-                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2023</p>
-                </div>
-                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
-                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Kleiner Perkins Design Fellow Finalist</p>
-                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2023</p>
-                </div>
-                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
-                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Banatao Family First-Generation Engineering Scholar</p>
-                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2020</p>
-                </div>
-                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
-                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">National Eagle Scout Association Lifetime Member</p>
-                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2018</p>
-                </div>
-            </div>
+            ))}
+        </div>
 
         </div>
       </div>
