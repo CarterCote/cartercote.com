@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => (
   <>
-    <div className="p-8">
+    {/* <div className="p-8">
         <p className="font-mono mb-0.5">
             LET'S BUILD TOGETHER?
         </p>
@@ -13,32 +13,16 @@ const Footer = () => (
             chcote@stanford.edu
         </p>
         </Link>
-    </div>
-    <footer className="fixed right-8 bottom-8 flex flex-col items-end">
-      <nav className="ml-auto mt-1.5">
-        <div className="flex flex-col space-y-3.5">
-        <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
-              <FaXTwitter />
-            </div>
-          </Link>
-          <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
-              <FaGithub/>
-            </div>
-          </Link>
-          <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
-              <FaInstagram/>
-            </div>
-          </Link>
-          <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl transition duration-200 ease-in-out hover:text-blue-600">
-              <FaLinkedin/>
-            </div>
-          </Link>
+    </div> */}
+    <footer className="flex flex-col px-24 pb-10 items-start">
+    <div className="flex flex-col gap-y-[0] w-full">
+        <h1 className="tracking-tight font-aeonik-bold text-[108px] leading-[110%]">LET'S BUILD.</h1>
+        <div className="flex justify-between px-10 w-full">
+          <h1 className="tracking-tight font-aeonik-bold text-[108px] leading-[70%]">SEND ME</h1>
+          <h1 className="tracking-tight font-aeonik-bold text-[108px] leading-[70%]">AN EMAIL</h1>
         </div>
-      </nav>
+        <h1 className="tracking-tight font-aeonik-bold text-[108px] text-end leading-none">CHCOTE@STANFORD.EDU</h1>
+      </div>
     </footer>
   </>
 )

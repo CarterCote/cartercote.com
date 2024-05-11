@@ -26,10 +26,13 @@ const Hero = () => {
           </video>
         </div>
         <div className="flex flex-col w-full h-3/4 items-center p-20 justify-center text-6xl font-bold gap-y-4 ">
-          <div className="flex flex-row w-full px-8 space-x-4">
+          <div className="flex flex-row w-full px-8 space-x-1">
+            <div className="mt-16">
+              <h1 className="tracking-tight font-voyager-thin text-[24px] mr-4">►</h1>
+            </div>
             <div
               className="flex flex-col w-full align-center justify-center space-y-10 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start">
-              <div className="w-full mb-3">
+              <div className="flex flex-row w-full mb-3 items-center">
                 <h1 className="tracking-tight font-voyager-thin text-[148px]">HI, I'M CARTER.</h1>
               </div>
               <div className="w-full font-aeonik-regular space-y-8 leading-[1.25] text-[32px]">
@@ -40,15 +43,15 @@ const Hero = () => {
                 <p className="font-aeonik-bold tracking-widest text-[18px]">NOW</p>
                 <Marquee gradient gradientColor="#000" gradientWidth={25} className="h-[28px] w-full" speed={85} autoFill loop={0}>
                   <Link href="https://www.sellraze.com/">
-                    <p className="font-aeonik-thin text-[24px] mr-10">Using AI to build the fastest way to sell online</p>
+                    <p className="font-aeonik-thin italic text-[24px] transition duration-200 ease-in-out hover:text-blue-600 mr-10">Using AI to build the fastest way to sell online</p>
                   </Link>
                   <Link href="https://www.startup.exchange/">
-                    <p className="font-aeonik-thin text-[24px] mr-10">Scaling builder culture at colleges across the US</p>
+                    <p className="font-aeonik-thin italic text-[24px] transition duration-200 ease-in-out hover:text-blue-600 mr-10">Scaling builder culture at colleges across the US</p>
                   </Link>
                   <Link href="https://www.jpmorgan.com/">
-                    <p className="font-aeonik-thin text-[24px] mr-10">Building high-volume ML pipelines for JPMorgan</p>
+                    <p className="font-aeonik-thin italic text-[24px] transition duration-200 ease-in-out hover:text-blue-600 mr-10">Building high-volume ML pipelines for JPMorgan</p>
                   </Link>
-                  <p className="font-aeonik-thin text-[24px] mr-10">Training for a half-marathon</p>
+                  <p className="font-aeonik-thin italic text-[24px] mr-10">Training for a half-marathon</p>
                 </Marquee>
               </div>
               <div className="flex flex-row w-full align-center items-center space-x-3">
