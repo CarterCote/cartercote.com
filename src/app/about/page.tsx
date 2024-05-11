@@ -14,6 +14,11 @@ const awards = [
         year: "2023",
     },
     {
+        name: "Buildspace Graduate",
+        desc: "Accelerator backed by a16z and Y Combinator.",
+        year: "2023",
+    },
+    {
         name: "Startup Atlanta Community Builder Nominee",
         desc: "Finalist for an award recognizing my contributions to the Atlanta entrepreneurship ecosystem.",
         year: "2023",
@@ -21,6 +26,11 @@ const awards = [
     {
         name: "Kleiner Perkins Design Fellow Finalist",
         desc: "Finalist for fellowship offering mentorship in VC and entrepreneurship.",
+        year: "2023",
+    },
+    {
+        name: "Hypepotamus Spotlight",
+        desc: "Recognized for launching Georgia Tech’s first XR Hackathon.",
         year: "2023",
     },
     {
@@ -42,48 +52,48 @@ const experiences = [
         year: "2023",
         companyName: "Overtime",
         imageName: "/projects/overtime.png",
-        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+        roleDescription: "Devised UX strategy to attract university students to Overtime events, driving digital engagement \& sales conversions to grow from <5% to 15% of overall event attendance. Launched ambassador program."
     },
     {
         number: "02",
-        position: "DESIGN INTERN",
-        year: "2023",
-        companyName: "CreatorDAO",
-        imageName: "/projects/creatorDAO.png",
-        roleDescription: "Test123 CreatorDAO Arc, on Windows."
-    },
-    {
-        number: "03",
-        position: "SOFTWARE ENGINEER INTERN",
+        position: "AI ENGINEER INTERN",
         year: "2023",
         companyName: "JPMorgan",
         imageName: "/projects/jpmorgan.png",
-        roleDescription: "Test123 JPMorgan Arc, on Windows."
+        roleDescription: "Automated compatibility testing by training and deploying multimodal classifiers, reducing manual testing by 90%. Developed a summarization tool and a high-volume ML inference API."
+    },
+    {
+        number: "03",
+        position: "PRODUCT DESIGNER",
+        year: "2023",
+        companyName: "CreatorDAO",
+        imageName: "/projects/creatorDAO.png",
+        roleDescription: "Designed web components and assets for strategic projects. Backed by a16z, Audacious Ventures, Gary Tan."
     },
     {
         number: "04",
-        position: "GROWTH INTERN",
-        year: "2023",
-        companyName: "Overtime",
-        imageName: "/projects/overtime.png",
-        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+        position: "SOFTWARE ENGINEER INTERN",
+        year: "2022",
+        companyName: "JPMorgan Chase & Co.",
+        imageName: "/projects/jpmc.png",
+        roleDescription: "Developed an end-to-end API system for scalable resiliency tasks for large transactions, and built a client-facing UI for automated task management used by 5000+ developers."
     },
-    {
-        number: "05",
-        position: "GROWTH INTERN",
-        year: "2023",
-        companyName: "Overtime",
-        imageName: "/projects/overtime.png",
-        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
-    },
-    {
-        number: "06",
-        position: "GROWTH INTERN",
-        year: "2023",
-        companyName: "Overtime",
-        imageName: "/projects/overtime.png",
-        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
-    }
+    // {
+    //     number: "05",
+    //     position: "GROWTH INTERN",
+    //     year: "2023",
+    //     companyName: "Overtime",
+    //     imageName: "/projects/overtime.png",
+    //     roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+    // },
+    // {
+    //     number: "06",
+    //     position: "GROWTH INTERN",
+    //     year: "2023",
+    //     companyName: "Overtime",
+    //     imageName: "/projects/overtime.png",
+    //     roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+    // }
 ];
 
 const About = () => {
