@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <>
       <Navbar />
-      <div className="flex h-screen min-w-screen flex-col pt-32 items-start">
+      <div className="flex w-full flex-col pt-32 items-start">
         <div className="flex flex-col w-full px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
           <div
             className="flex flex-col w-full align-center justify-center space-y-4 items-start grid gap-6 md:grid-cols-1 lg:grid-cols-1">

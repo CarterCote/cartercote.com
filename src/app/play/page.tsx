@@ -6,20 +6,29 @@ import { drukWide } from "../../app/fonts";
 import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+import Marquee from "react-fast-marquee";
 
 const Play = () => {
   return (
     <>
       <Navbar />
-      <div className="flex h-screen min-w-screen flex-col pt-32 items-start">
+      <div className="flex w-full flex-col pt-32 items-start">
         <div className="flex flex-col w-full px-20 items-start justify-center gap-y-4 ">
-          <div className="flex flex-col px-8 space-x-4">
-            <div
-              className="flex flex-col w-full align-center justify-center space-y-4 items-start">
-              <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
+          <div className="flex flex-col px-8 w-full">
+            <Link href="/" className="w-full font-aeonik-thin tracking-regular text-sm mb-4">
                 <p>← BACK TO HOME </p>
-              </Link>
-              <p>PLAY </p>
+            </Link>
+            <div
+              className="flex flex-col w-full align-center justify-center space-y-4 items-center">
+                <p className="w-2/3 font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">PLAY </p>
+                <p className="w-2/3 font-voyager-thin tracking-tight text-center leading-[100%] text-[54px] mb-3">A collection of impulsive makes, complex emotions, and creative expression. </p>
+            </div>
+            <div className="w-full flex flex-row py-20">
+                <Marquee gradient gradientColor="#000" gradientWidth={25} className="h-[54px] w-full" speed={85} autoFill loop={0}>
+                    <p className="w-full font-voyager-thin tracking-tight leading-[100%] text-[54px] mr-8">More</p>
+                    <p className="w-full font-voyager-thin tracking-tight leading-[100%] text-[54px] mr-8">Works</p>
+                    <p className="w-full font-voyager-thin tracking-tight leading-[100%] text-[54px] mr-8">&</p>
+                </Marquee>
             </div>
           </div>
         </div>
