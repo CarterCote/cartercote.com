@@ -13,18 +13,18 @@ export const navLinks = [
     text: "ABOUT",
     link: "/about",
   },
-  // {
-  //   text: "FAQs",
-  //   link: "/faqs",
-  // },
+  {
+    text: "WORK",
+    link: "/projects",
+  },
+  {
+    text: "RESUME",
+    link: "https://drive.google.com/file/d/1c638lNFs7AV_DTpqG5BoiMFrh5O7S0oI/view?usp=sharing",
+  },
   {
     text: "PLAY",
     link: "/play",
   },
-  // {
-  //   text: "NOW",
-  //   link: "/now",
-  // },
 ];
 
 const Navbar = ({ minimal }: { minimal?: boolean }) => {
@@ -46,7 +46,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
               <>
                 {navLinks.map((link) => (
                   <Link
-                    className="text-center no-underline text-white text-base font-aeonik-thin tracking-normal"
+                    className="text-center no-underline text-white text-base font-aeonik-thin transition duration-200 ease-in-out hover:text-blue-600 tracking-normal"
                     href={link.link}
                     key={`${link.link} + ${link.text}`}
                   >

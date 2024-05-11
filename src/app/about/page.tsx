@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className="flex h-screen min-w-screen flex-col pt-32 items-start">
+      <div className="flex w-full flex-col pt-32 items-start">
         <div className="flex flex-col w-full px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
           <div className="flex flex-row px-8 space-x-4">
             <div
@@ -53,7 +53,7 @@ const About = () => {
               </div>
               <div className="w-full font-aeonik-regular">
                 <Link href="https://overtime.tv/" className="">
-                    <div className="relative inline-block text-lg font-medium text-white transition duration-300 ease-in-out border-b border-white hover:text-blue-800 hover:border-blue-800 overflow-hidden group">
+                    <div className="inline-block text-lg font-medium text-white transition duration-300 ease-in-out border-b border-white hover:text-blue-800 hover:border-blue-800 overflow-hidden group">
                         <span className="underline-text text-sm">Overtime</span>
                     </div>
                 </Link>
@@ -71,6 +71,31 @@ const About = () => {
               </div>
             </div>
           </div>
+
+            <div className="w-full py-20">
+                <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
+                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
+                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Mr. Georgia Tech Semifinalist</p>
+                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2023</p>
+                </div>
+                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
+                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Startup Atlant Community Builder Nominee</p>
+                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2023</p>
+                </div>
+                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
+                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Kleiner Perkins Design Fellow Finalist</p>
+                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2023</p>
+                </div>
+                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
+                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Banatao Family First-Generation Engineering Scholar</p>
+                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2020</p>
+                </div>
+                <div className="flex flex-row justify-between items-end w-full border-b border-gray-400 pt-10">
+                    <p className="font-voyager-thin tracking-tight text-[36px] mb-3">National Eagle Scout Association Lifetime Member</p>
+                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">2018</p>
+                </div>
+            </div>
+
         </div>
       </div>
       <Footer/>
