@@ -31,7 +31,7 @@ const Hero = () => {
               <h1 className="tracking-tight font-voyager-thin text-[24px] mr-4">►</h1>
             </div>
             <div
-              className="flex flex-col w-full align-center justify-center space-y-10 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start">
+              className="flex flex-col w-full align-center justify-center space-y-10 pr-14 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start">
               <div className="flex flex-row w-full mb-3 items-center">
                 <h1 className="tracking-tight font-voyager-thin text-[148px]">HI, I'M CARTER.</h1>
               </div>
@@ -40,37 +40,64 @@ const Hero = () => {
                 <p>I craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
               <div className="flex flex-row w-full align-center items-center space-x-3">
-                <p className="font-aeonik-bold tracking-widest text-[18px]">NOW</p>
+                <p className="font-aeonik-thin tracking-widest text-[18px]">NOW</p>
                 <Marquee gradient gradientColor="#000" gradientWidth={25} className="h-[28px] w-full" speed={85} autoFill loop={0}>
-                  <Link href="https://www.sellraze.com/">
-                    <p className="font-aeonik-thin italic text-[24px] transition duration-200 ease-in-out hover:text-blue-600 mr-10">Using AI to build the fastest way to sell online</p>
-                  </Link>
-                  <Link href="https://www.startup.exchange/">
-                    <p className="font-aeonik-thin italic text-[24px] transition duration-200 ease-in-out hover:text-blue-600 mr-10">Scaling builder culture at colleges across the US</p>
-                  </Link>
-                  <Link href="https://www.jpmorgan.com/">
-                    <p className="font-aeonik-thin italic text-[24px] transition duration-200 ease-in-out hover:text-blue-600 mr-10">Building high-volume ML pipelines for JPMorgan</p>
-                  </Link>
-                  <p className="font-aeonik-thin italic text-[24px] mr-10">Training for a half-marathon</p>
+                  <div className='flex flex-row items-end'>
+                    <span className="text-[20px]">⪼</span>
+                    <Link href="https://www.sellraze.com/">
+                      <p className="font-aeonik-bold italic text-[24px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">Using AI to build the fastest way to sell online</p>
+                    </Link>
+                  </div>
+                  <div className='flex flex-row items-end'>
+                    <span className="text-[20px]">⪼</span>
+                    <Link href="https://www.startup.exchange/">
+                      <p className="font-aeonik-bold italic text-[24px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">Scaling builder culture at colleges across the US</p>
+                    </Link>
+                  </div>
+                  <div className='flex flex-row items-end'>
+                    <span className="text-[20px]">⪼</span>
+                    <Link href="https://www.jpmorgan.com/">
+                      <p className="font-aeonik-bold italic text-[24px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">Building high-volume ML pipelines for JPMorgan</p>
+                    </Link>
+                  </div>
+                  <div className='flex flex-row items-end'>
+                    <span className="text-[20px]">⪼</span>
+                    <p className="font-aeonik-bold italic text-[24px] mr-10">Training for a half-marathon</p>
+                  </div>
                 </Marquee>
               </div>
               <div className="flex flex-row w-full align-center items-center space-x-3">
-                <p className="font-aeonik-bold tracking-widest text-[18px]">PREV</p>
+                <p className="font-aeonik-thin tracking-widest text-[18px]">PREV</p>
+                <div className='flex flex-row items-start'>
+                  <span className="text-[20px]">⪼</span>
                   <Link href="https://www.jpmorgan.com/">
-                    <p className="font-aeonik-thin text-[24px] mr-5">JPMorgan</p>
+                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white" >JPMorgan</p>
                   </Link>
+                </div>
+                <div className='flex flex-row items-end'>
+                  <span className="text-[20px]">⪼</span>
                   <Link href="https://www.creatordao.com/">
-                    <p className="font-aeonik-thin text-[24px] mr-5">CreatorDAO</p>
+                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">CreatorDAO</p>
                   </Link>
+                </div>
+                <div className='flex flex-row items-end'>
+                  <span className="text-[20px]">⪼</span>
                   <Link href="https://www.overtime.tv/">
-                    <p className="font-aeonik-thin text-[24px] mr-5">Overtime</p>
+                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">Overtime</p>
                   </Link>
+                </div>
+                <div className='flex flex-row items-end'>
+                  <span className="text-[20px]">⪼</span>
                   <Link href="https://www.crayo.ai/">
-                    <p className="font-aeonik-thin text-[24px] mr-5">Crayo AI</p>
+                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">Crayo AI</p>
                   </Link>
+                </div>
+                <div className='flex flex-row items-end'>
+                  <span className="text-[20px]">⪼</span>
                   <Link href="https://www.musicfy.lol/">
-                    <p className="font-aeonik-thin text-[24px] mr-5">Musicfy</p>
+                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">Musicfy</p>
                   </Link>
+                </div>
               </div>
               <div className="flex flex-row space-x-4">
                 <Button text="VIEW PROJECTS" link="/projects"></Button>

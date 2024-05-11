@@ -8,8 +8,6 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 
 const About = () => {
-  const blur = 5;
-  const videoSource = "home/static.mp4";
   return (
     <>
       <Navbar />
