@@ -1,4 +1,5 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 
 const Footer = () => (
@@ -17,22 +18,22 @@ const Footer = () => (
       <nav className="ml-auto mt-1.5">
         <div className="flex flex-col space-y-3.5">
         <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-2xl pb-2.5 transition duration-200 ease-in-out hover:text-blue-600">
-              <FaTwitter/>
+            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+              <FaXTwitter />
             </div>
           </Link>
           <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-2xl pb-2.5 transition duration-200 ease-in-out hover:text-blue-600">
+            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
               <FaGithub/>
             </div>
           </Link>
           <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-2xl pb-2.5 transition duration-200 ease-in-out hover:text-blue-600">
+            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
               <FaInstagram/>
             </div>
           </Link>
           <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-2xl pb-2.5 transition duration-200 ease-in-out hover:text-blue-600">
+            <div className="text-white text-xl transition duration-200 ease-in-out hover:text-blue-600">
               <FaLinkedin/>
             </div>
           </Link>

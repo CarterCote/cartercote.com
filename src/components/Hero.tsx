@@ -4,13 +4,14 @@ import NextImage from "next/image";
 import Link from 'next/link';
 import { drukWide } from "../app/fonts";
 import Button from './Button';
+import Marquee from "react-fast-marquee";
 
 const Hero = () => {
   const blur = 5;
   const videoSource = "home/static.mp4";
   return (
     <>
-      <main className="flex h-screen min-w-screen flex-col pt-32 items-center">
+      <main className="flex h-screen w-full flex-col pt-48 items-center">
         <div className="z-[-1] w-full bg-black flex items-center justify-center absolute top-0">
           <video
             className='absolute top-0 left-0 w-full object-cover'
@@ -24,23 +25,56 @@ const Hero = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="flex flex-col w-full h-3/4 pl-24 items-start justify-center text-6xl font-bold gap-y-4 ">
-          <div className="flex flex-row px-8 space-x-4">
+        <div className="flex flex-col w-full h-3/4 items-center p-20 justify-center text-6xl font-bold gap-y-4 ">
+          <div className="flex flex-row w-full px-8 space-x-4">
             <div
-              className="flex flex-col w-1/2 align-center justify-center space-y-4 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start">
-              <div className="w-full font-aeonik-bold text-[66px]">
-                <h1>HI, I'M CARTER.</h1>
+              className="flex flex-col w-full align-center justify-center space-y-10 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start">
+              <div className="w-full mb-3">
+                <h1 className="tracking-tight font-voyager-thin text-[148px]">HI, I'M CARTER.</h1>
               </div>
-              <div className="w-full font-aeonik-regular space-y-3 xs:text-md sm:text-md md:text-lg lg:text-xl xl:text-xl 2xl:text-xl">
-                <p>I'm a software engineer & designer at Stanford University, currently studying AI & Human-Computer Interaction. </p>
+              <div className="w-full font-aeonik-regular space-y-8 leading-[1.25] text-[32px]">
+                <p>I'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University. </p>
                 <p>I craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
+              <div className="flex flex-row w-full align-center items-center space-x-3">
+                <p className="font-aeonik-bold tracking-widest text-[18px]">NOW</p>
+                <Marquee gradient gradientColor="#000" gradientWidth={25} className="h-[28px] w-full" speed={85} autoFill loop={0}>
+                  <Link href="https://www.sellraze.com/">
+                    <p className="font-aeonik-thin text-[24px] mr-10">Using AI to build the fastest way to sell online</p>
+                  </Link>
+                  <Link href="https://www.startup.exchange/">
+                    <p className="font-aeonik-thin text-[24px] mr-10">Scaling builder culture at colleges across the US</p>
+                  </Link>
+                  <Link href="https://www.jpmorgan.com/">
+                    <p className="font-aeonik-thin text-[24px] mr-10">Building high-volume ML pipelines for JPMorgan</p>
+                  </Link>
+                  <p className="font-aeonik-thin text-[24px] mr-10">Training for a half-marathon</p>
+                </Marquee>
+              </div>
+              <div className="flex flex-row w-full align-center items-center space-x-3">
+                <p className="font-aeonik-bold tracking-widest text-[18px]">PREV</p>
+                  <Link href="https://www.jpmorgan.com/">
+                    <p className="font-aeonik-thin text-[24px] mr-5">JPMorgan</p>
+                  </Link>
+                  <Link href="https://www.creatordao.com/">
+                    <p className="font-aeonik-thin text-[24px] mr-5">CreatorDAO</p>
+                  </Link>
+                  <Link href="https://www.overtime.tv/">
+                    <p className="font-aeonik-thin text-[24px] mr-5">Overtime</p>
+                  </Link>
+                  <Link href="https://www.crayo.ai/">
+                    <p className="font-aeonik-thin text-[24px] mr-5">Crayo AI</p>
+                  </Link>
+                  <Link href="https://www.musicfy.lol/">
+                    <p className="font-aeonik-thin text-[24px] mr-5">Musicfy</p>
+                  </Link>
+              </div>
               <div className="flex flex-row space-x-4">
-                <Button text="PROJECTS"></Button>
-                <Button text="ABOUT ME"></Button>
+                <Button text="VIEW PROJECTS" link="/projects"></Button>
+                <Button text="ABOUT ME" link="/about"></Button>
               </div>
             </div>
-            <div className="w-1/2 items-center justify-center align-center">
+            {/* <div className="w-1/2 items-center justify-center align-center">
               <NextImage
                 priority
                 src="/head/MYMIND.png"
@@ -49,63 +83,11 @@ const Hero = () => {
                 alt="Descriptive Text"
                 className="opacity-50"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
     </>
-    // <div className="relative h-full overflow-hidden">
-    //   <div className='relative overflow-hidden'>
-
-    //     <div className="flex flex-row justify-center w-full items-center">
-    //       <div className="">
-    //         <h1 className="text-white text-62 underline leading-20 font-serif mb-50 pb-20 max-w-700">
-    //           <span className="pr-15 text-25 inline-block">➤  </span>Hi, I'm Carter.
-    //         </h1>
-    //         <p className="font-sans-serif tracking-tight leading-26 text-18 m-0 text-white pb-20">
-    //           I'm 19, and I study AI, human-computer interaction, 
-    //           + industrial design at Georgia Tech. I utilize design 
-    //           thinking + computing to create disruptive systems that 
-    //           yield a more equitable future and expand opportunity.
-    //         </p>
-    //         <span className="font-sans-serif font-bold text-1.25rem tracking-normal leading-24 mb-6 text-white">NOW DEVELOPING: ⪼
-    //           <a href="https://www.aochelpinghand.org" target="_blank" rel="noopener noreferrer" className="text-white transition-200ms">
-    //             career exploration programs
-    //           </a>
-    //           ,{" "}
-    //           <a href="https://cartercote.com/designs" target="_blank" rel="noopener noreferrer" className="text-white transition-200ms">
-    //             graphics
-    //           </a>
-    //           ,{" "}
-    //           <a href="https://hexlabs.org" target="_blank" rel="noopener noreferrer" className="text-white transition-200ms">
-    //             hack-a-thons
-    //           </a>
-    //           ,{" "}
-    //           <a href="https://startup.exchange" target="_blank" rel="noopener noreferrer" className="text-white transition-200ms">
-    //             startup communities
-    //           </a>
-    //         </span>
-    //         <br />
-    //         {/* <button onClick={() => {}} className="bg-transparent text-white mt-20 mr-20 px-36 py-10 border border-white rounded-12 font-sans-serif font-bold text-1rem transition-all duration-300 cursor-pointer">
-    //           MY WORK
-    //         </button>
-    //         <button onClick={() => {}} className="bg-transparent text-white mt-20 mr-20 px-36 py-10 border border-white rounded-12 font-sans-serif font-bold text-1rem transition-all duration-300 cursor-pointer">
-    //           ABOUT ME
-    //         </button> */}
-    //       </div>
-    //       <div className="">
-    //           <NextImage
-    //         priority
-    //         src="/head/MYMIND.png"
-    //         height={500}
-    //         width={500}
-    //         alt="Descriptive Text"
-    //         className="inline-block w-[230px]"
-    //       />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 export default Hero;

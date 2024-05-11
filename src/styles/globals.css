@@ -32,9 +32,24 @@ body {
   }
 }
 
+.font-graebenbach-mono-regular {
+  font-family: 'Graebenbach-Mono-Regular', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.font-voyager-thin {
+  font-family: 'Voyager-Thin', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 .font-aeonik {
     font-family: 'Aeonik-Regular', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
       Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.font-aeonik-thin {
+  font-family: 'Aeonik-Thin', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-aeonik-bold {

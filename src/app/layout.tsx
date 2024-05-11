@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "CARTER COTE'S DIGITAL PLAYGROUND",
+    default: "CARTER COTE",
     template: "%s | cartercote.com",
   },
   description:
@@ -29,7 +29,7 @@ export const metadata = {
     creator: "@CarterCote",
     images: "https://cartercote.com/assets/carter.png",
     title: {
-      default: "CARTER COTE'S DIGITAL PLAYGROUND",
+      default: "CARTER COTE",
       template: "%s | cartercote.com",
     },
     description:
@@ -41,7 +41,7 @@ export const metadata = {
     locale: "en_US",
     siteName: "Carter Cote",
     title: {
-      default: "CARTER COTE'S DIGITAL PLAYGROUND",
+      default: "CARTER COTE",
       template: "%s | cartercote.com",
     },
     description:
@@ -49,7 +49,7 @@ export const metadata = {
     images: [
       {
         url: "https://cartercote.com/assets/carter.png",
-        alt: "CARTER COTE'S DIGITAL PLAYGROUND",
+        alt: "CARTER COTE",
       },
     ],
   },
