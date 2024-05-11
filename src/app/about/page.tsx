@@ -51,6 +51,7 @@ const experiences = [
         position: "GROWTH INTERN",
         year: "2023",
         companyName: "Overtime",
+        link: "https://overtime.tv/",
         imageName: "/projects/overtime.png",
         roleDescription: "Devised UX strategy to attract university students to Overtime events, driving digital engagement \& sales conversions to grow from <5% to 15% of overall event attendance. Launched ambassador program."
     },
@@ -59,6 +60,7 @@ const experiences = [
         position: "AI ENGINEER INTERN",
         year: "2023",
         companyName: "JPMorgan",
+        link: "https://www.jpmorgan.com/global",
         imageName: "/projects/jpmorgan.png",
         roleDescription: "Automated compatibility testing by training and deploying multimodal classifiers, reducing manual testing by 90%. Developed a summarization tool and a high-volume ML inference API."
     },
@@ -67,6 +69,7 @@ const experiences = [
         position: "PRODUCT DESIGNER",
         year: "2023",
         companyName: "CreatorDAO",
+        link: "https://www.creatordao.com/",
         imageName: "/projects/creatorDAO.png",
         roleDescription: "Designed web components and assets for strategic projects. Backed by a16z, Audacious Ventures, Gary Tan."
     },
@@ -75,6 +78,7 @@ const experiences = [
         position: "SOFTWARE ENGINEER INTERN",
         year: "2022",
         companyName: "JPMorgan Chase & Co.",
+        link: "https://www.jpmorganchase.com/",
         imageName: "/projects/jpmc.png",
         roleDescription: "Developed an end-to-end API system for scalable resiliency tasks for large transactions, and built a client-facing UI for automated task management used by 5000+ developers."
     },
@@ -144,7 +148,7 @@ const About = () => {
             <div key={index} className="flex flex-row w-full justify-between space-x-10 border-b pb-10 border-gray-800">
               {group.map((exp, idx) => (
                 <div key={idx} className="w-full py-10 font-aeonik-regular">
-                  <Link href="https://overtime.tv/" className="flex flex-row items-start align-start">
+                  <Link href={exp.link as string} className="flex flex-row items-start align-start">
                     <div className="flex flex-col w-1/6">
                       <p className="text-sm pb-5 text-gray-500">{exp.number}</p>
                       <NextImage
