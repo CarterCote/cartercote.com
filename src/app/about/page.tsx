@@ -30,7 +30,62 @@ const awards = [
     },
 ];
 
+const experiences = [
+    {
+        number: "01",
+        position: "GROWTH INTERN",
+        year: "2023",
+        companyName: "Overtime",
+        imageName: "/projects/overtime.png",
+        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+    },
+    {
+        number: "02",
+        position: "DESIGN INTERN",
+        year: "2023",
+        companyName: "CreatorDAO",
+        imageName: "/projects/creatorDAO.png",
+        roleDescription: "Test123 CreatorDAO Arc, on Windows."
+    },
+    {
+        number: "03",
+        position: "SOFTWARE ENGINEER INTERN",
+        year: "2023",
+        companyName: "JPMorgan",
+        imageName: "/projects/jpmorgan.png",
+        roleDescription: "Test123 JPMorgan Arc, on Windows."
+    },
+    {
+        number: "04",
+        position: "GROWTH INTERN",
+        year: "2023",
+        companyName: "Overtime",
+        imageName: "/projects/overtime.png",
+        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+    },
+    {
+        number: "05",
+        position: "GROWTH INTERN",
+        year: "2023",
+        companyName: "Overtime",
+        imageName: "/projects/overtime.png",
+        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+    },
+    {
+        number: "06",
+        position: "GROWTH INTERN",
+        year: "2023",
+        companyName: "Overtime",
+        imageName: "/projects/overtime.png",
+        roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
+    }
+];
+
 const About = () => {
+    const groupedExperiences = [];
+    for (let i = 0; i < experiences.length; i += 2) {
+      groupedExperiences.push(experiences.slice(i, i + 2));
+    }
   return (
     <>
       <Navbar />
@@ -70,58 +125,35 @@ const About = () => {
           </div>
           <div className="flex flex-col w-full py-20">
             <h1 className="w-full font-aeonik-bold text-[32px]">EXPERIENCE</h1>
-            <div
-              className="flex flex-row w-full justify-between space-x-10 border-b pb-10 border-gray-800">
-              <div className="w-full py-10 font-aeonik-regular">
-                <Link href="https://overtime.tv/" className="flex flex-row items-start align-start">
+            {groupedExperiences.map((group, index) => (
+            <div key={index} className="flex flex-row w-full justify-between space-x-10 border-b pb-10 border-gray-800">
+              {group.map((exp, idx) => (
+                <div key={idx} className="w-full py-10 font-aeonik-regular">
+                  <Link href="https://overtime.tv/" className="flex flex-row items-start align-start">
                     <div className="flex flex-col w-1/6">
-                        <p className="text-sm pb-5 text-gray-500"> 01</p>
-                        <NextImage
+                      <p className="text-sm pb-5 text-gray-500">{exp.number}</p>
+                      <NextImage
                         priority
-                        src="/projects/overtime.png"
+                        src={exp.imageName}
                         height={118}
                         width={118}
                         alt="Descriptive Text"
-                        />
+                      />
                     </div>
                     <div className="ml-10 w-9/12 items-start">
-                        <p className="text-sm pb-5 text-gray-500"> GROWTH INTERN</p>
-                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Overtime</p>
-                        <p className="text-[18px] mt-4 leading-[150%] text-gray-400">Various design projects, 
-                        including a site to announce the anticipated release of their browser, 
-                        Arc, on Windows.</p>
+                      <p className="text-sm pb-5 text-gray-500">{exp.position}</p>
+                      <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{exp.companyName}</p>
+                      <p className="text-[18px] mt-4 leading-[150%] text-gray-400">{exp.roleDescription}</p>
                     </div>
                     <div className="flex flex-col w-1/12 items-end">
-                        <p className="text-sm pb-5 text-gray-500"> 2023</p>
+                      <p className="text-sm pb-5 text-gray-500">{exp.year}</p>
                     </div>
-                </Link>
-              </div>
-              <div className="w-full py-10 font-aeonik-regular">
-                <Link href="https://overtime.tv/" className="flex flex-row items-start align-start">
-                    <div className="flex flex-col w-1/6">
-                        <p className="text-sm pb-5 text-gray-500"> 01</p>
-                        <NextImage
-                        priority
-                        src="/projects/overtime.png"
-                        height={118}
-                        width={118}
-                        alt="Descriptive Text"
-                        />
-                    </div>
-                    <div className="ml-10 w-2/3 items-start">
-                        <p className="text-sm pb-5 text-gray-500"> GROWTH INTERN</p>
-                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Overtime</p>
-                        <p className="text-[18px] mt-4 leading-[150%] text-gray-400">Various design projects, 
-                        including a site to announce the anticipated release of their browser, 
-                        Arc, on Windows.</p>
-                    </div>
-                    <div className="flex flex-col w-1/6">
-                        <p className="text-sm pb-5 text-gray-500 ml-6"> 2023</p>
-                    </div>
-                </Link>
-              </div>
+                  </Link>
+                </div>
+              ))}
             </div>
-          </div>
+          ))}
+            </div>
         <div className="w-full py-20">
             <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
             {awards.map((award) => (
