@@ -32,6 +32,7 @@ const Hero = () => {
             autoPlay={true}
             loop={true}
             muted
+            controls={false}
             id="video-id"
           >
             <source src={videoSource} type="video/mp4" />
