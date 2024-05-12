@@ -1,8 +1,8 @@
 import React from "react"
+import dynamic from 'next/dynamic';
 
-import Navbar from "../components/Navbar"
+const Navbar = dynamic(() => import("../components/Navbar"), { ssr: false });
 import Hero from "../components/Hero"
-import Footer from "../components/Footer"
 
 const Home = () => {
     return (
