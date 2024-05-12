@@ -36,39 +36,37 @@ export const navLinks = [
 ];
 
 const Navbar = ({ minimal }: { minimal?: boolean }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
-      if (typeof window !== "undefined") {
-        setIsMobile(window.innerWidth < 768);
-      }
+      setIsMobile(window.innerWidth < 768);
     };
-
-    if (typeof window !== "undefined") {
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }
+  
+    handleResize();
+  
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleClickOutside = (event: MouseEvent) => {
-        if (
-          navRef.current &&
-          !navRef.current.contains(event.target as Node) &&
-          hamburgerRef.current &&
-          !hamburgerRef.current.contains(event.target as Node)
-        ) {
-          setIsOpen(false);
-        }
-      };
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
   
+    if (typeof window !== 'undefined') {
       if (isOpen) {
         window.addEventListener('click', handleClickOutside);
       }
