@@ -57,24 +57,26 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        navRef.current &&
-        !navRef.current.contains(event.target as Node) &&
-        hamburgerRef.current &&
-        !hamburgerRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
+    if (typeof window !== "undefined") {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (
+          navRef.current &&
+          !navRef.current.contains(event.target as Node) &&
+          hamburgerRef.current &&
+          !hamburgerRef.current.contains(event.target as Node)
+        ) {
+          setIsOpen(false);
+        }
+      };
+  
+      if (isOpen) {
+        window.addEventListener('click', handleClickOutside);
       }
-    };
-
-    if (isOpen) {
-      window.addEventListener('click', handleClickOutside);
+  
+      return () => {
+        window.removeEventListener('click', handleClickOutside);
+      };
     }
-
-    return () => {
-      window.removeEventListener('click', handleClickOutside);
-    };
   }, [isOpen]);
   
   const toggleNavBar = () => {
