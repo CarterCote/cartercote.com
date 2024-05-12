@@ -109,7 +109,7 @@ const About = () => {
     <>
       <Navbar />
       <div className="flex w-full flex-col pt-32 items-start">
-        <div className="flex flex-col w-full px-28 items-start justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-full px-8 md:px-22 lg:px-28 items-start justify-center text-6xl font-bold gap-y-4 ">
             <div
               className="flex flex-col w-full align-center justify-center space-y-4 items-start">
               <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
@@ -117,9 +117,9 @@ const About = () => {
               </Link>
               <div
               className="flex flex-col w-full align-center justify-center space-y-4 items-center">
-                <p className="w-2/3 font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
-                <h1 className="font-voyager-thin text-[54px] leading-[125%] text-center tracking-tight">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
-              <div className="w-2/3 font-aeonik-regular pt-6 space-y-6 items-center align-center justify-center xs:text-sm sm:text-sm md:text-sm lg:text-xl xl:text-xl 2xl:text-xl">
+                <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
+                <h1 className="font-voyager-thin text-[36px] md:text-[54px] leading-[125%] text-center tracking-tight">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
+              <div className="w-full md:w-2/3 font-aeonik-regular pt-6 space-y-6 items-center align-center justify-center text-[21px] md:text-[21px]">
                 <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets + making videos about it on the internet. 
                     That led to over 4 million downloads of my work, and 1.5 million views of my YouTube videos. 
                 </p>
@@ -145,7 +145,7 @@ const About = () => {
           <div className="flex flex-col w-full py-20">
             <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">EXPERIENCE</p>
             {groupedExperiences.map((group, index) => (
-            <div key={index} className="flex flex-row w-full justify-between space-x-10 border-b pb-10 border-gray-800">
+            <div key={index} className="flex flex-col md:flex-row w-full justify-between md:space-x-10 border-b pb-10 border-gray-800">
               {group.map((exp, idx) => (
                 <div key={idx} className="w-full py-10 font-aeonik-regular">
                   <Link href={exp.link as string} className="flex flex-row items-start align-start">
@@ -176,12 +176,12 @@ const About = () => {
         <div className="w-full py-20">
             <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
             {awards.map((award) => (
-                <div className="flex flex-row justify-between items-end w-full border-b border-gray-800 pt-10">
+                <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
                     <div>
                         <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{award.name}</p>
-                        <p className="font-aeonik-thin text-gray-400 tracking-tight text-[21px] mb-3">{award.desc}</p>
+                        <p className="font-aeonik-thin text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{award.desc}</p>
                     </div>
-                    <p className="font-aeonik-thin tracking-tight text-[21px] mb-3">{award.year}</p>
+                    <p className="font-aeonik-thin tracking-tight text-[18px] md:text-[21px] mb-3">{award.year}</p>
                 </div>
             ))}
         </div>
