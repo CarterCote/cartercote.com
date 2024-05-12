@@ -118,7 +118,7 @@ const About = () => {
               <div
               className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
-                <h1 className="font-voyager-thin text-[36px] md:text-[54px] leading-[125%] text-center tracking-tight">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
+                <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
               <div className="w-full md:w-2/3 font-aeonik-regular pt-6 space-y-6 items-center align-center justify-center text-[21px] md:text-[21px]">
                 <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets + making videos about it on the internet. 
                     That led to over 4 million downloads of my work, and 1.5 million views of my YouTube videos. 
