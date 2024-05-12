@@ -155,28 +155,30 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
               </nav>
             )}
           </header>
-        <div className="flex flex-col space-y-3.5 fixed right-8 bottom-8 items-end">
-          <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
-              <FaXTwitter />
-            </div>
-          </Link>
-          <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
-              <FaGithub/>
-            </div>
-          </Link>
-          <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
-              <FaInstagram/>
-            </div>
-          </Link>
-          <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer">
-            <div className="text-white text-xl transition duration-200 ease-in-out hover:text-blue-600">
-              <FaLinkedin/>
-            </div>
-          </Link>
-        </div>
+        {isMobile ? null : (
+          <div className="flex flex-col space-y-3.5 fixed right-8 bottom-8 items-end">
+            <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer">
+              <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+                <FaXTwitter />
+              </div>
+            </Link>
+            <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer">
+              <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+                <FaGithub/>
+              </div>
+            </Link>
+            <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer">
+              <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+                <FaInstagram/>
+              </div>
+            </Link>
+            <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer">
+              <div className="text-white text-xl transition duration-200 ease-in-out hover:text-blue-600">
+                <FaLinkedin/>
+              </div>
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );
