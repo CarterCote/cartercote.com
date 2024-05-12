@@ -98,21 +98,21 @@ const Projects = () => {
     <>
       <Navbar />
       <div className="flex w-full flex-col pt-32 items-start">
-        <div className="flex flex-col w-full px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-full px-8 sm:px-8 md:px-16 lg:px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
           <div
-            className="flex flex-col w-full align-center justify-center space-y-4 items-start grid gap-6 md:grid-cols-1 lg:grid-cols-1">
+            className="flex flex-col w-full md:justify-center space-y-4 items-start grid gap-6 md:grid-cols-1 lg:grid-cols-1">
             <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
               <p>← BACK TO HOME </p>
             </Link>
           </div>
           <div
             className="flex flex-col w-full align-center justify-center space-y-4 items-start">
-              <div className="w-full border-b border-gray-400 mb-5">
+              <div className="w-full border-b border-gray-400 mb-2 md:mb-5">
                 <p className="font-aeonik-thin tracking-widest text-[18px] mb-3">PROJECTS</p>
               </div>
               {projects.map((project) => (
-              <div key={project.name} className="w-full flex flex-row space-x-5 py-10 items-start font-aeonik-thin tracking-regular space-y-3 text-sm">
-                <div className="flex flex-row" style={{ width: '50%', height: 'auto' }}>
+              <div key={project.name} className="w-full flex flex-col md:flex-row md:space-x-5 py-6 md:py-10 items-start font-aeonik-thin tracking-regular space-y-3 text-sm">
+                <div className="flex flex-col md:flex-row w-full md:w-1/2 lg:w-1/2">
                   <NextImage
                     priority
                     src={project.image}
@@ -121,8 +121,8 @@ const Projects = () => {
                     alt={project.name}
                   />
                 </div>
-                <div className="w-1/2">
-                  <div className="flex flex-row space-x-3 text-[32px]">
+                <div className="w-full md:w-1/2">
+                  <div className="flex flex-row space-x-3 text-[23px] md:text-[32px]">
                     <h1 className="font-voyager-thin italic">{project.name}</h1>
                     <h1 className="font-voyager-thin italic"> || </h1>
                     <h1 className="font-voyager-thin">{project.role}</h1>
@@ -131,7 +131,7 @@ const Projects = () => {
                   <div className="flex flex-row my-10 tracking-normal font-aeonik-regular text-[18px] leading-[125%]">
                     <p>{project.description}</p>
                   </div>
-                  <div className="flex flex-row space-x-3">
+                  <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 text-center md:text-start">
                     <Button text={project.linkText} link={project.link} newTab={true}></Button>
                     {project.secondLink && <Button text={project.linkText2 || ''} link={project.link2 || '#'} newTab={true}></Button>}
                   </div>
