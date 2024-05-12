@@ -11,7 +11,7 @@ const projects =[
     role: "Founding Engineer",
     year: "2024",
     description: "Using AI to build the fastest way to sell online. Designed and built React Native mobile app alongside 2 friends. Led growth strategy, leading to over 10,000 impressions and 1,500 users in a month.",
-    image: "/projects/gpa.jpg",
+    image: "/projects/sellraze.png",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
     secondLink: true,
@@ -23,7 +23,7 @@ const projects =[
     role: "Founding Designer",
     year: "2024",
     description: "Enabling content creators with AI tools to go viral at 10x the speed, with stylized, captioned, and animated short-form content. 50,000+ users.",
-    image: "/projects/gpa.jpg",
+    image: "/projects/crayo.png",
     link: "/projects",
     linkText: "VIEW PROJECT",
     secondLink: false,
@@ -32,8 +32,8 @@ const projects =[
     name: "Musicfy",
     role: "Founding Designer",
     year: "2023",
-    description: "Emerging AI tools for 1M+ users to rapidly create new music, saving precious time for true creativity. Designed v2.",
-    image: "/projects/gpa.jpg",
+    description: "Emerging AI tools for 1M+ users to rapidly create new music, saving precious time for true creativity. Designed the UI and branding for v2 of the platform.",
+    image: "/projects/musicfy.png",
     link: "https://musicfy.lol/",
     linkText: "VIEW PROJECT",
     secondLink: false,
@@ -62,12 +62,14 @@ const projects =[
 
 const freelance = [
   {
-    name: "Freelance1",
-    image: "/projects/gpa.jpg"
+    name: "Wise Smith for District Attorney",
+    link: "",
+    image: "/projects/cazares.png"
   },
   {
     name: "Freelance2",
-    image: "/projects/overtime.png"
+    link: "",
+    image: "/projects/cazares.png"
   }
 ];
 
@@ -134,7 +136,7 @@ const Projects = () => {
                 </div>
                 <div className='w-full'>
                   {freelance.map((item, index) => (
-                    <Link href='/' key={index}>
+                    <Link href={item.link as string} key={index}>
                       <div className="w-full border-b border-gray-400 pt-10 group">
                         <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{item.name}</p>
                       </div>
