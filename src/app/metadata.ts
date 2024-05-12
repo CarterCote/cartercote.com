@@ -4,7 +4,7 @@ export const metadata = {
       template: "%s | cartercote.com",
     },
     description:
-    "Hi, I'm Carter. I'm 19, and I study AI, human-computer interaction, + industrial design at Georgia Tech.",
+    "Hi, I'm Carter. I'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University.",
     keywords: [],
     robots: {
       index: true,
@@ -19,13 +19,13 @@ export const metadata = {
       card: "summary_large_image",
       site: "@CarterCote",
       creator: "@CarterCote",
-      images: "https://cartercote.com/assets/carter.png",
+      images: "https://cartercote.com/head/embed.png",
       title: {
         default: "CARTER COTE",
         template: "%s | cartercote.com",
       },
       description:
-      "Hi, I'm Carter. I'm 19, and I study AI, human-computer interaction, + industrial design at Georgia Tech.",
+      "Hi, I'm Carter. I'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University.",
     },
     openGraph: {
       url: "https://cartercote.com/",
@@ -37,10 +37,10 @@ export const metadata = {
         template: "%s | cartercote.com",
       },
       description:
-      "Hi, I'm Carter. I'm 19, and I study AI, human-computer interaction, + industrial design at Georgia Tech.",
+      "Hi, I'm Carter.I'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University.",
       images: [
         {
-          url: "https://cartercote.com/assets/carter.png",
+          url: "https://cartercote.com/head/embed.png",
           alt: "CARTER COTE",
         },
       ],
