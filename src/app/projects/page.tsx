@@ -24,7 +24,7 @@ const projects =[
     year: "2024",
     description: "Enabling content creators with AI tools to go viral at 10x the speed, with stylized, captioned, and animated short-form content. 50,000+ users.",
     image: "/projects/crayo.png",
-    link: "/projects",
+    link: "http://crayo.ai",
     linkText: "VIEW PROJECT",
     secondLink: false,
   },
@@ -132,8 +132,8 @@ const Projects = () => {
                     <p>{project.description}</p>
                   </div>
                   <div className="flex flex-row space-x-3">
-                    <Button text={project.linkText} link={project.link}></Button>
-                    {project.secondLink && <Button text={project.linkText2 || ''} link={project.link2 || '#'}></Button>}                  </div>
+                    <Button text={project.linkText} link={project.link} newTab={true}></Button>
+                    {project.secondLink && <Button text={project.linkText2 || ''} link={project.link2 || '#'} newTab={true}></Button>}                  </div>
                 </div>
               </div>
             ))}
@@ -155,7 +155,7 @@ const Projects = () => {
                 </div>
                 <div className='w-full'>
                   {freelance.map((item, index) => (
-                    <Link href={item.link as string} key={index}>
+                    <Link href={item.link as string} key={index} target="_blank" rel="noopener noreferrer">
                       <div className="w-full border-b border-gray-400 pt-10 group">
                         <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{item.name}</p>
                       </div>
