@@ -1,10 +1,23 @@
-import Typewriter from 'typewriter-effect'
 import React, { FC } from 'react';
 import NextImage from "next/image";
 import Link from 'next/link';
-import { drukWide } from "../app/fonts";
 import Button from './Button';
 import Marquee from "react-fast-marquee";
+
+const nowProjects = [
+  { name: "Using AI to build the fastest way to sell online", link: "https://www.sellraze.com/" },
+  { name: "Scaling builder culture at colleges across the US", link: "https://www.startup.exchange/" },
+  { name: "Building high-volume ML pipelines for JPMorgan", link: "https://www.jpmorgan.com/" },
+  { name: "Training for a half-marathon", link: "#" }
+];
+
+const prevProjects = [
+  { name: "Founding Engineer, SellRaze", link: "https://www.jpmorgan.com/" },
+  { name: "AI/ML, JPMorgan", link: "https://www.jpmorgan.com/" },
+  { name: "Design, CreatorDAO", link: "https://www.creatordao.com/" },
+  { name: "Growth, Overtime", link: "https://www.overtime.tv/" },
+  { name: "Founding Designer, Crayo AI", link: "https://www.crayo.ai/" }
+];
 
 const Hero = () => {
   const blur = 5;
@@ -25,83 +38,47 @@ const Hero = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="flex flex-col w-full items-center px-28 justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-full items-center px-8 sm:px-8 md:px-16 lg:px-28 justify-center text-6xl font-bold gap-y-4 ">
           <div className="flex flex-row w-full space-x-1">
-            <div className="mt-16">
-              <h1 className="tracking-tight font-voyager-thin text-[24px] mr-4">►</h1>
+            <div className="mt-6 md:mt-14 lg:mt-16">
+              <h1 className="tracking-tight font-voyager-thin text-[16px] sm:text-[12px] md:text-[18px] lg:text-[24px] mr-4">►</h1>
             </div>
             <div
-              className="flex flex-col w-full align-center justify-center space-y-10 pr-14 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl items-start">
+              className="flex flex-col w-full align-center justify-center space-y-10 pr-14 items-start">
               <div className="flex flex-row w-full mb-3 items-center">
-                <h1 className="tracking-tight font-voyager-thin text-[148px]">HI, I'M CARTER.</h1>
+                <h1 className="tracking-tight font-voyager-thin text-[62px] sm:text-[62px] md:text-[124px] lg:text-[148px]">HI, I'M CARTER.</h1>
               </div>
-              <div className="w-full font-aeonik-regular space-y-8 leading-[1.25] text-[32px]">
+              <div className="w-full font-aeonik-regular space-y-8 leading-[1.25] text-[28px] sm:text-[28px] md:text-[28px] lg:text-[32px]">
                 <p>I'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University. </p>
                 <p>I craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
-              <div className="flex flex-row w-full align-center items-center space-x-3">
+              <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
                 <p className="font-aeonik-thin tracking-widest text-[18px]">NOW</p>
                 <Marquee gradient gradientColor="#000" gradientWidth={25} className="h-[28px] w-full" speed={85} autoFill loop={0}>
-                  <div className='flex flex-row items-end'>
-                    <span className="text-[20px]">⪼</span>
-                    <Link href="https://www.sellraze.com/">
-                      <p className="font-aeonik-bold italic text-[24px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">Using AI to build the fastest way to sell online</p>
-                    </Link>
-                  </div>
-                  <div className='flex flex-row items-end'>
-                    <span className="text-[20px]">⪼</span>
-                    <Link href="https://www.startup.exchange/">
-                      <p className="font-aeonik-bold italic text-[24px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">Scaling builder culture at colleges across the US</p>
-                    </Link>
-                  </div>
-                  <div className='flex flex-row items-end'>
-                    <span className="text-[20px]">⪼</span>
-                    <Link href="https://www.jpmorgan.com/">
-                      <p className="font-aeonik-bold italic text-[24px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">Building high-volume ML pipelines for JPMorgan</p>
-                    </Link>
-                  </div>
-                  <div className='flex flex-row items-end'>
-                    <span className="text-[20px]">⪼</span>
-                    <p className="font-aeonik-bold italic text-[24px] mr-10">Training for a half-marathon</p>
-                  </div>
+                  {nowProjects.map((project, index) => (
+                    <div key={index} className='flex flex-row items-end'>
+                      <span className="text-[16px]">⪼</span>
+                      <Link href={project.link}>
+                        <p className="font-aeonik-bold italic text-[18px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">{project.name}</p>
+                      </Link>
+                    </div>
+                  ))}
                 </Marquee>
               </div>
-              <div className="flex flex-row w-full align-center items-center space-x-3">
+              <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
                 <p className="font-aeonik-thin tracking-widest text-[18px]">PREV</p>
-                <div className='flex flex-row items-start'>
-                  <span className="text-[20px]">⪼</span>
-                  <Link href="https://www.jpmorgan.com/">
-                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white" >Founding Engineer, SellRaze</p>
-                  </Link>
-                </div>
-                <div className='flex flex-row items-start'>
-                  <span className="text-[20px]">⪼</span>
-                  <Link href="https://www.jpmorgan.com/">
-                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white" >AI/ML, JPMorgan</p>
-                  </Link>
-                </div>
-                <div className='flex flex-row items-end'>
-                  <span className="text-[20px]">⪼</span>
-                  <Link href="https://www.creatordao.com/">
-                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">Design, CreatorDAO</p>
-                  </Link>
-                </div>
-                <div className='flex flex-row items-end'>
-                  <span className="text-[20px]">⪼</span>
-                  <Link href="https://www.overtime.tv/">
-                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">Growth, Overtime</p>
-                  </Link>
-                </div>
-                <div className='flex flex-row items-end'>
-                  <span className="text-[20px]">⪼</span>
-                  <Link href="https://www.crayo.ai/">
-                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">Founding Designer, Crayo AI</p>
-                  </Link>
-                </div>
+                {prevProjects.map((project, index) => (
+                  <div key={index} className='flex flex-row items-end'>
+                    <span className="text-[16px]">⪼</span>
+                    <Link href={project.link}>
+                      <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">{project.name}</p>
+                    </Link>
+                  </div>
+                ))}
               </div>
-              <div className="flex flex-row space-x-4">
-                <Button text="VIEW PROJECTS" link="/projects"></Button>
-                <Button text="ABOUT ME" link="/about"></Button>
+              <div className="flex flex-col sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
+                <Button text="VIEW PROJECTS" link="/projects" className="w-full text-center md:text-left sm:w-auto"></Button>
+                <Button text="ABOUT ME" link="/about" className="w-full text-center md:text-left sm:w-auto"></Button>
               </div>
             </div>
           </div>
