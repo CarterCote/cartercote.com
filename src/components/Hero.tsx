@@ -9,7 +9,7 @@ const nowProjects = [
   { name: "Using AI to build the fastest way to sell online", link: "https://www.sellraze.com/" },
   { name: "Scaling builder culture at colleges across the US", link: "https://www.startup.exchange/" },
   { name: "Building high-volume ML pipelines for JPMorgan", link: "https://www.jpmorgan.com/" },
-  { name: "Training for a half-marathon", link: "#" }
+  { name: "Training for a half-marathon", link: "" }
 ];
 
 const prevProjects = [
