@@ -10,7 +10,7 @@ const projects =[
     name: "SellRaze",
     role: "Founding Engineer",
     year: "2024",
-    description: "Using AI to build the fastest way to sell online. Designed and built React Native mobile app alongside 2 friends. Led growth strategy, leading to over 10,000 impressions and 1,500 users in a month.",
+    description: "Using AI to build the fastest way to sell online. Led all design. Built React Native mobile app alongside 2 friends. Led growth strategy, leading to over 10,000 impressions and 1,500 users in two months.",
     image: "/projects/sellraze.png",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
@@ -39,6 +39,16 @@ const projects =[
     secondLink: false,
   },
   {
+    name: "Bedrock Systems",
+    role: "Winning Design Concept",
+    year: "2023",
+    description: "Refreshing the brand identity + redesigning the UX/UI and information architecture for Bedrock Systems, a Kleiner Perkins portfolio company focused on securing critical infrastructure. Awarded Kleiner Perkins Design Fellow Finalist.",
+    image: "/projects/bedrock.png",
+    link: "https://www.loom.com/share/aae2b4ebbf9547c8b46bc2f7dcc4c785",
+    linkText: "VIEW CASE STUDY",
+    secondLink: false,
+  },
+  {
     name: "Pathways.me",
     role: "Founder",
     year: "2022",
@@ -63,14 +73,24 @@ const projects =[
 const freelance = [
   {
     name: "Wise Smith for District Attorney",
+    link: "https://wisesmithforda.com/",
+    image: "/projects/cazares.png"
+  },
+  {
+    name: "Startup Exchange",
+    link: "https://startup.exchange/",
+    image: "/projects/cazares.png"
+  },
+  {
+    name: "Cazares for COC",
     link: "",
     image: "/projects/cazares.png"
   },
   {
-    name: "Freelance2",
+    name: "Global Prep Academy",
     link: "",
-    image: "/projects/cazares.png"
-  }
+    image: "/projects/gpa.jpg"
+  },
 ];
 
 const Projects = () => {
