@@ -1,8 +1,8 @@
 # WELCOME TO MY DIGITAL PLAYGROUND. TRY NOT TO GET LOST
-This is my personal portfolio website, built to showcase my projects, designs, and work experiences!
+This is my personal portfolio website, built to showcase my projects, designs, passions, and work experiences!
 
 
-![Site](https://imgur.com/ImpQvxt.png)
+![Site](https://imgur.com/a/NugynbA)
 
 ### Tech Stack
 
