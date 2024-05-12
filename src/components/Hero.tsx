@@ -11,7 +11,7 @@ const Hero = () => {
   const videoSource = "home/static.mp4";
   return (
     <>
-      <main className="flex h-screen w-full flex-col pt-48 items-center">
+      <main className="flex h-screen w-full flex-col pt-32 items-center">
         <div className="z-[-1] w-full bg-black flex items-center justify-center absolute top-0">
           <video
             className='absolute top-0 left-0 w-full object-cover'
@@ -25,8 +25,8 @@ const Hero = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="flex flex-col w-full h-3/4 items-center p-20 justify-center text-6xl font-bold gap-y-4 ">
-          <div className="flex flex-row w-full px-8 space-x-1">
+        <div className="flex flex-col w-full items-center px-28 justify-center text-6xl font-bold gap-y-4 ">
+          <div className="flex flex-row w-full space-x-1">
             <div className="mt-16">
               <h1 className="tracking-tight font-voyager-thin text-[24px] mr-4">►</h1>
             </div>
@@ -104,16 +104,6 @@ const Hero = () => {
                 <Button text="ABOUT ME" link="/about"></Button>
               </div>
             </div>
-            {/* <div className="w-1/2 items-center justify-center align-center">
-              <NextImage
-                priority
-                src="/head/MYMIND.png"
-                height={660}
-                width={570}
-                alt="Descriptive Text"
-                className="opacity-50"
-              />
-            </div> */}
           </div>
         </div>
       </main>
