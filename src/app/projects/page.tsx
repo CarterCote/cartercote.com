@@ -1,11 +1,75 @@
-import Typewriter from 'typewriter-effect'
 import React, { FC } from 'react';
 import NextImage from "next/image";
 import Link from 'next/link';
-import { drukWide } from "../fonts";
 import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+
+const projects =[
+  {
+    name: "SellRaze",
+    role: "Founding Engineer",
+    year: "2024",
+    description: "Using AI to build the fastest way to sell online. Designed and built React Native mobile app alongside 2 friends. Led growth strategy, leading to over 10,000 impressions and 1,500 users in a month.",
+    image: "/projects/gpa.jpg",
+    link: "http://sellraze.com",
+    linkText: "VIEW LANDING PAGE",
+    secondLink: true,
+    link2: "https://apps.apple.com/us/app/sellraze-list-sell-earn/id6455042085",
+    linkText2: "VIEW MOBILE APP"
+  },
+  {
+    name: "Crayo AI",
+    role: "Founding Designer",
+    year: "2024",
+    description: "Enabling content creators with AI tools to go viral at 10x the speed, with stylized, captioned, and animated short-form content. 50,000+ users.",
+    image: "/projects/gpa.jpg",
+    link: "/projects",
+    linkText: "VIEW PROJECT",
+    secondLink: false,
+  },
+  {
+    name: "Musicfy",
+    role: "Founding Designer",
+    year: "2023",
+    description: "Emerging AI tools for 1M+ users to rapidly create new music, saving precious time for true creativity. Designed v2.",
+    image: "/projects/gpa.jpg",
+    link: "https://musicfy.lol/",
+    linkText: "VIEW PROJECT",
+    secondLink: false,
+  },
+  {
+    name: "Pathways.me",
+    role: "Founder",
+    year: "2022",
+    description: "Using story-driven design to encourage career exploration. Solo founder. 10,000 users. Recognized at ACTE CareerTech National Conference.",
+    image: "/projects/pathway.png",
+    link: "https://www.pathways.me/",
+    linkText: "VIEW PROJECT",
+    secondLink: false,
+  },
+  {
+    name: "Six Feet Supplies",
+    role: "Founding Designer",
+    year: "2020",
+    description: "Zero-cost emergency supply delivery web app during peak of COVID-19. 20,000 users, 14 cities. Solo designer + dev. Featured on CNN, LA Times.",
+    image: "/projects/sixfeet.png",
+    link: "",
+    linkText: "VIEW PROJECT",
+    secondLink: false,
+  },
+];
+
+const freelance = [
+  {
+    name: "Freelance1",
+    image: "/projects/gpa.jpg"
+  },
+  {
+    name: "Freelance2",
+    image: "/projects/overtime.png"
+  }
+];
 
 const Projects = () => {
   return (
@@ -21,30 +85,63 @@ const Projects = () => {
           </div>
           <div
             className="flex flex-col w-full align-center justify-center space-y-4 items-start">
-              <div className="w-full border-b border-gray-400 mb-10">
+              <div className="w-full border-b border-gray-400 mb-5">
                 <p className="font-aeonik-thin tracking-widest text-[18px] mb-3">PROJECTS</p>
               </div>
-            <Link href="/" className="w-full flex flex-row space-x-5 font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
-              <div className="flex flex-row" style={{ width: '50%', height: 'auto' }}>
-                <NextImage
-                  priority
-                  src="/projects/gpa.jpg"
-                  height={660}
-                  width={570}
-                  alt="Descriptive Text"
-                />
-              </div>
-              <div className="w-1/2">
-                  <h1 className="font-aeonik-bold italic">SellRaze</h1><span className="font-aeonik-thin"> | </span>
-                  <h1>Founding Designer</h1>
-                  <p>Using AI to detect the value of your inventory, and sell it at record speeds.</p>
+              {projects.map((project) => (
+              <div key={project.name} className="w-full flex flex-row space-x-5 py-10 items-start font-aeonik-thin tracking-regular space-y-3 text-sm">
+                <div className="flex flex-row" style={{ width: '50%', height: 'auto' }}>
+                  <NextImage
+                    priority
+                    src={project.image}
+                    height={700}
+                    width={600}
+                    alt={project.name}
+                  />
                 </div>
-            </Link>
-            <div className="w-full border-b border-gray-400 pt-10">
-              <p className="font-aeonik-thin tracking-widest text-[18px] mb-3">ARCHIVES</p>
-            </div>
-            <div className="w-full border-b border-gray-400 pt-10">
-              <p className="font-voyager-thin tracking-tight text-[36px] mb-3">Mr. Georgia Tech Semifinalist</p>
+                <div className="w-1/2">
+                  <div className="flex flex-row space-x-3 text-[32px]">
+                    <h1 className="font-voyager-thin italic">{project.name}</h1>
+                    <h1 className="font-voyager-thin italic"> || </h1>
+                    <h1 className="font-voyager-thin">{project.role}</h1>
+                  </div>
+                  <p className="pt-3">{project.year}</p>
+                  <div className="flex flex-row my-10 tracking-normal font-aeonik-regular text-[18px] leading-[125%]">
+                    <p>{project.description}</p>
+                  </div>
+                  <div className="flex flex-row space-x-3">
+                    <Button text={project.linkText} link={project.link}></Button>
+                    {project.secondLink && <Button text={project.linkText2} link={project.link2}></Button>}
+                  </div>
+                </div>
+              </div>
+            ))}
+            <div className='flex flex-col justify-end w-full pt-5 pb-20'>
+              <p className="font-aeonik-thin border-b border-gray-400 pb-3 tracking-widest text-[18px]">FREELANCE WORK</p>
+              <div className="flex flex-row items-start w-full">
+                <div className="w-2/3 pt-10 pr-20 items-start">
+                  {freelance.map((item, index) => (
+                    <div key={index} className="hidden group-hover:block">
+                      <NextImage
+                        priority
+                        src={item.image}
+                        height={700}
+                        width={600}
+                        alt="hi"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className='w-full'>
+                  {freelance.map((item, index) => (
+                    <Link href='/' key={index}>
+                      <div className="w-full border-b border-gray-400 pt-10 group">
+                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{item.name}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -58,6 +155,7 @@ export default Projects;
 // Sellraze
 // Crayo
 // Musicfy
+// Bedrock
 // Pathways
 // Six Feet Supplies
 // Startup Exchange

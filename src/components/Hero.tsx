@@ -71,31 +71,31 @@ const Hero = () => {
                 <div className='flex flex-row items-start'>
                   <span className="text-[20px]">⪼</span>
                   <Link href="https://www.jpmorgan.com/">
-                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white" >JPMorgan</p>
+                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white" >Founding Engineer, SellRaze</p>
+                  </Link>
+                </div>
+                <div className='flex flex-row items-start'>
+                  <span className="text-[20px]">⪼</span>
+                  <Link href="https://www.jpmorgan.com/">
+                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white" >AI/ML, JPMorgan</p>
                   </Link>
                 </div>
                 <div className='flex flex-row items-end'>
                   <span className="text-[20px]">⪼</span>
                   <Link href="https://www.creatordao.com/">
-                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">CreatorDAO</p>
+                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">Design, CreatorDAO</p>
                   </Link>
                 </div>
                 <div className='flex flex-row items-end'>
                   <span className="text-[20px]">⪼</span>
                   <Link href="https://www.overtime.tv/">
-                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">Overtime</p>
+                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">Growth, Overtime</p>
                   </Link>
                 </div>
                 <div className='flex flex-row items-end'>
                   <span className="text-[20px]">⪼</span>
                   <Link href="https://www.crayo.ai/">
-                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">Crayo AI</p>
-                  </Link>
-                </div>
-                <div className='flex flex-row items-end'>
-                  <span className="text-[20px]">⪼</span>
-                  <Link href="https://www.musicfy.lol/">
-                    <p className="font-aeonik-bold text-[24px] mr-2 border-b border-white">Musicfy</p>
+                    <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">Founding Designer, Crayo AI</p>
                   </Link>
                 </div>
               </div>

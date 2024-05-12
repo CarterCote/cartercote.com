@@ -67,7 +67,7 @@ const experiences = [
     {
         number: "03",
         position: "PRODUCT DESIGNER",
-        year: "2023",
+        year: "2022",
         companyName: "CreatorDAO",
         link: "https://www.creatordao.com/",
         imageName: "/projects/creatorDAO.png",
