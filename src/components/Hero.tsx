@@ -3,6 +3,7 @@ import NextImage from "next/image";
 import Link from 'next/link';
 import Button from './Button';
 import Marquee from "react-fast-marquee";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 const nowProjects = [
   { name: "Using AI to build the fastest way to sell online", link: "https://www.sellraze.com/" },
@@ -78,7 +79,15 @@ const Hero = () => {
                 ))}
               </div>
               <div className="flex flex-col sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
-                <Button text="VIEW PROJECTS" link="/projects" className="w-full text-center md:text-left sm:w-auto"></Button>
+                <HoverBorderGradient
+                  containerClassName="rounded-xl w-full text-center md:text-left sm:w-auto"
+                  link="/projects"
+                  as="button"
+                  className="dark:bg-white bg-black text-white dark:text-black flex items-center space-x-2"
+                >
+                  <p className="font-graebenbach-mono-regular">VIEW PROJECTS</p>
+                </HoverBorderGradient>
+                {/* <Button text="VIEW PROJECTS" link="/projects" className="w-full text-center md:text-left sm:w-auto"></Button> */}
                 <Button text="ABOUT ME" link="/about" className="w-full text-center md:text-left sm:w-auto"></Button>
               </div>
             </div>

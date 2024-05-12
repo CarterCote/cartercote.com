@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = ({text, link, newTab = false, className}) => {
         <Link href={link} passHref legacyBehavior>
             <a target={newTab ? "_blank" : "_self"} 
                rel={newTab ? "noopener noreferrer" : undefined} 
-               className={`border border-white transition duration-200 cursor-pointer ease-in-out hover:bg-blue-600 hover:border-blue-600 rounded-xl h-10 px-8 py-2 ${className}`}>
+               className={`border border-white transition duration-200 cursor-pointer ease-in-out transition duration-500 hover:bg-blue-600 hover:border-blue-600 rounded-xl h-10 px-8 py-2 ${className}`}>
                 <p className="text-sm font-graebenbach-mono-regular">{text}</p>
             </a>
         </Link>

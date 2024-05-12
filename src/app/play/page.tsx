@@ -1,4 +1,3 @@
-import Typewriter from 'typewriter-effect'
 import React, { FC } from 'react';
 import NextImage from "next/image";
 import Link from 'next/link';
