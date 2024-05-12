@@ -1,11 +1,10 @@
-import Typewriter from 'typewriter-effect'
 import React, { FC } from 'react';
 import NextImage from "next/image";
 import Link from 'next/link';
-import { drukWide } from "../../app/fonts";
 import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+import { TracingBeam } from "../../components/ui/tracing-beam";
 
 const awards = [
     {
@@ -109,7 +108,8 @@ const About = () => {
     <>
       <Navbar />
       <div className="flex w-full flex-col pt-32 items-start">
-        <div className="flex flex-col w-full px-8 md:px-22 lg:px-28 items-start justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-full px-8 md:px-22 lg:px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
+          <TracingBeam className="px-0 md:px-2">
             <div
               className="flex flex-col w-full align-center justify-center space-y-4 items-start">
               <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
@@ -185,7 +185,7 @@ const About = () => {
                 </div>
             ))}
         </div>
-
+        </TracingBeam>
         </div>
       </div>
       <Footer/>

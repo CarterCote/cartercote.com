@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+import { TracingBeam } from "../../components/ui/tracing-beam";
 
 const projects =[
   {
@@ -98,7 +99,8 @@ const Projects = () => {
     <>
       <Navbar />
       <div className="flex w-full flex-col pt-32 items-start">
-        <div className="flex flex-col w-full px-8 sm:px-8 md:px-16 lg:px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-full px-8 sm:px-8 md:px-16 lg:px-20 items-start justify-start text-6xl font-bold gap-y-4 ">
+        <TracingBeam className="px-0 md:px-2">
           <div
             className="flex flex-col w-full md:justify-center space-y-4 items-start grid gap-6 md:grid-cols-1 lg:grid-cols-1">
             <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
@@ -166,6 +168,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          </TracingBeam>
         </div>
       </div>
       <Footer/>
