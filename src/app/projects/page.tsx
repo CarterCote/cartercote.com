@@ -133,8 +133,7 @@ const Projects = () => {
                   </div>
                   <div className="flex flex-row space-x-3">
                     <Button text={project.linkText} link={project.link}></Button>
-                    {project.secondLink && <Button text={project.linkText2} link={project.link2}></Button>}
-                  </div>
+                    {project.secondLink && <Button text={project.linkText2 || ''} link={project.link2 || '#'}></Button>}                  </div>
                 </div>
               </div>
             ))}
