@@ -2,7 +2,7 @@
 This is my personal portfolio website, built to showcase my projects, designs, passions, and work experiences!
 
 
-![Site](https://imgur.com/a/NugynbA)
+![Site](https://i.imgur.com/jHlRtw5.png)
 
 ### Tech Stack
 
