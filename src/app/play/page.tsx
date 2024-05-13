@@ -24,12 +24,27 @@ const Play = () => {
                   <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">PLAY </p>
                   <p className="w-full md:w-2/3 font-voyager-thin tracking-tight text-center leading-[100%] text-[44px] md:text-[54px] mb-3">A collection of impulsive makes, complex emotions, and creative expression. </p>
               </div>
-              <div className="flex flex-col md:flex-row">
-                <div className="flex flex-row pb-40">
-                  <NextImage priority src="/design/001.jpg" height={450} width={360} alt="Descriptive Text" />
+              <div className="flex flex-col pt-10 justify-between md:space-x-10 md:flex-row">
+                <div className="flex flex-col pb-20 md:pb-40">
+                  <NextImage priority src="/design/001.jpg" height={400} width={320} alt="everything i'm not" className="w-full sm:w-auto sm:h-auto"/>
+                  <div className="flex flex-row justify-between mt-3 w-full">
+                    <p className="text-start font-aeonik-bold text-sm tracking-tight">EVERYTHING I'M NOT</p>
+                    <p className="text-start font-aeonik-thin text-sm tracking-tight ml-2">2020</p>
+                  </div>
                 </div>
-                <div className="flex flex-col md:flex-row mt-28 md:mt-30 md:ml-10">
-                  <NextImage priority src="/design/001.jpg" height={450} width={360} alt="Descriptive Text" />
+                <div className="flex flex-col pb-20 md:pb-0 mt-2 md:mt-40 md:pl-20">
+                  <NextImage priority src="/design/002.jpg" height={438} width={350} alt="mixed signals" className="w-full sm:w-auto sm:h-auto"/>
+                  <div className="flex flex-row justify-between mt-3 w-full">
+                    <p className="text-start font-aeonik-bold text-sm tracking-tight">MIXED SIGNALS</p>
+                    <p className="text-start font-aeonik-thin text-sm tracking-tight ml-2">2020</p>
+                  </div>
+                </div>
+                <div className="flex flex-col pb-20 md:pb-0 md:mt-20 md:mb-[420px]">
+                  <NextImage priority src="/design/graduation.jpg" height={160} width={160} alt="graduation" className="w-full sm:w-auto sm:h-auto"/>
+                  <div className="flex flex-row justify-between mt-3 w-full">
+                    <p className="text-start font-aeonik-bold text-sm tracking-tight">GRADUATION</p>
+                    <p className="text-start font-aeonik-thin text-sm tracking-tight ml-2">2021</p>
+                  </div>
                 </div>
               </div>
               <div className="w-full flex flex-row py-20">
