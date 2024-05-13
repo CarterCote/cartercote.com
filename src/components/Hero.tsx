@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+"use client";
+
+import React, { useEffect, FC, useRef } from 'react';
 import NextImage from "next/image";
 import Link from 'next/link';
 import Button from './Button';
@@ -21,22 +23,47 @@ const prevProjects = [
 ];
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    const handleCanPlay = () => {
+      if (videoElement) {
+        videoElement.play().catch((error) => {
+          console.warn('Video autoplay was prevented:', error);
+        });
+      }
+    };
+
+    if (videoElement) {
+      videoElement.addEventListener('canplay', handleCanPlay);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('canplay', handleCanPlay);
+      }
+    };
+  }, []);
+
   const blur = 5;
   const videoSource = "home/static.mp4";
+  
   return (
     <>
       <main className="flex h-screen w-full flex-col pt-32 items-center">
         <div className="z-[-1] w-full bg-black flex items-center justify-center absolute top-0">
-          <video
-            className='absolute top-0 left-0 w-full object-cover'
-            style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
-            autoPlay={true}
-            loop={true}
-            muted
-            controls={false}
-            playsInline
-            id="video-id"
-          >
+            <video
+              className="absolute top-0 left-0 w-full object-cover"
+              style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
+              autoPlay
+              loop
+              muted
+              playsInline
+              id="video-id"
+              ref={videoRef}
+            >
             <source src={videoSource} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
