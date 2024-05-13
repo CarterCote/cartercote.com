@@ -156,7 +156,10 @@ const About = () => {
                   </p>
                   <p className="leading-[150%]">At 19, I built a <a href="http://pathways.me" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>career pathway exploration platform</a> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
                   </p>
-                  <p className="leading-[150%]">At 21, I worked on <a href="http://musicfy.lol" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Musicfy</a>, an AI-voice generation platform with over 1M users; Crayo, an AI short-form content generation platform that amassed over 50,000 users in a month; and SellRaze, a mobile app that uses AI to autofill listings for online selling.
+                  <p className="leading-[150%]">At 21, I worked on <a href="http://musicfy.lol" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Musicfy</a>,
+                  an AI-voice generation platform with over 1M users; 
+                  {' '}<a href="http://crayo.ai" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Crayo</a>, an AI short-form content generation platform that amassed over 50,000 users in a month;
+                  and <a href="http://sellraze.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>SellRaze</a>, a mobile app that uses AI to autofill listings for online selling.
                   </p>
                   <p className="leading-[150%]">I also started a nonprofit called <a href="http://startup.exchange" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Startup Exchange</a>, which enables college students to learn how to build side projects and grow them into startups. Over 7,000 students at over 40 universities have attended a Startup Exchange event since Fall 2022.
                   </p>
