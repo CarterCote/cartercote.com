@@ -25,13 +25,12 @@ const Play = () => {
                   <p className="w-full md:w-2/3 font-voyager-thin tracking-tight text-center leading-[100%] text-[44px] md:text-[54px] mb-3">A collection of impulsive makes, complex emotions, and creative expression. </p>
               </div>
               <div className="flex flex-col md:flex-row">
-                <NextImage
-                      priority
-                      src="/projects/gpa.jpg"
-                      height={700}
-                      width={600}
-                      alt="Descriptive Text"
-                />
+                <div className="flex flex-row pb-40">
+                  <NextImage priority src="/design/001.jpg" height={450} width={360} alt="Descriptive Text" />
+                </div>
+                <div className="flex flex-col md:flex-row mt-28 md:mt-30 md:ml-10">
+                  <NextImage priority src="/design/001.jpg" height={450} width={360} alt="Descriptive Text" />
+                </div>
               </div>
               <div className="w-full flex flex-row py-20">
                   <Marquee gradient gradientColor="#000" gradientWidth={25} className="h-[54px] w-full" speed={85} autoFill loop={0}>

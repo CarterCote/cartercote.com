@@ -34,21 +34,22 @@ const Hero = () => {
             loop={true}
             muted
             controls={false}
+            playsInline
             id="video-id"
           >
             <source src={videoSource} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="flex flex-col w-full items-center px-8 sm:px-8 md:px-16 lg:px-28 justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-full items-center px-8 md:px-16 lg:px-28 justify-center text-6xl font-bold gap-y-4 ">
           <div className="flex flex-row w-full space-x-1">
-            <div className="mt-6 md:mt-14 lg:mt-16">
-              <h1 className="tracking-tight font-voyager-thin text-[16px] sm:text-[12px] md:text-[18px] lg:text-[24px] mr-4">►</h1>
+            <div className="mt-4 md:mt-14 lg:mt-16">
+              <h1 className="tracking-tight font-voyager-thin text-[14px] md:text-[18px] lg:text-[24px] mr-4">►</h1>
             </div>
             <div
               className="flex flex-col w-full align-center justify-center space-y-10 pr-14 items-start">
               <div className="flex flex-row w-full mb-3 items-center">
-                <h1 className="tracking-tight font-voyager-thin text-[62px] sm:text-[62px] md:text-[124px] lg:text-[148px]">HI, I'M CARTER.</h1>
+                <h1 className="tracking-tight font-voyager-thin text-[44px] md:text-[124px] lg:text-[148px]">HI, I'M CARTER.</h1>
               </div>
               <div className="w-full font-aeonik-regular space-y-8 leading-[1.25] text-[28px] sm:text-[28px] md:text-[28px] lg:text-[32px]">
                 <p>I'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University. </p>
@@ -78,7 +79,7 @@ const Hero = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
+              <div className="flex flex-col pb-20 md:pb-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
                 <HoverBorderGradient
                   containerClassName="rounded-xl w-full text-center md:text-left sm:w-auto"
                   link="/projects"

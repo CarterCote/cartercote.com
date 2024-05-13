@@ -3,7 +3,7 @@
 import NextImage from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from 'react';
-import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from "react-icons/fa6";
@@ -86,15 +86,15 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
       <div className="fixed-header-container">
         <header className="z-50 fixed top-0 w-full flex items-center justify-between text-gray-700">
             <Link href={"/"}>
-              <p className="font-aeonik-bold tracking-tighter text-white absolute left-8 top-8 transition duration-200 ease-in-out hover:text-blue-600">CARTER COTE</p>
+              <p className="font-aeonik-bold text-[21px] md:text-[18px] tracking-tighter text-white absolute left-8 top-8 transition duration-200 ease-in-out hover:text-blue-600">CARTER COTE</p>
             </Link>
             {isMobile ? (
               <>
                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                   <SheetTrigger asChild>
                     <div ref={hamburgerRef}>
-                      <GiHamburgerMenu
-                        className="absolute right-8 top-8 text-white text-xl cursor-pointer"
+                      <RxHamburgerMenu
+                        className="absolute right-9 top-9 text-white text-[21px] cursor-pointer"
                         onClick={toggleNavBar}
                       />
                     </div>
