@@ -146,8 +146,8 @@ const About = () => {
                   className="py-10"
                 />
                 <div className="w-full md:w-2/3 font-aeonik-thin tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
-                  <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets and making videos about it on the internet.
-                  That led to over 4 million downloads of my work and <a href="https://youtube.com/cartercote" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>1.3 million views of my YouTube videos</a>.
+                  <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets and making videos about it on YouTube.
+                  That led to over 4 million downloads of my work and <a href="https://youtube.com/cartercote" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>1.3 million views of my videos</a>.
                   </p>
                   <p className="leading-[150%]">This hobby kindled a deeper passion for using design to impact others through web apps. 
                       Naturally, I gained curiosity in how to build the software behind websites, not just design it.
