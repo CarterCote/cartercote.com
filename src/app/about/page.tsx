@@ -9,7 +9,7 @@ import { TracingBeam } from "../../components/ui/tracing-beam";
 const awards = [
     {
         name: "Mr. Georgia Tech Semifinalist",
-        desc: "Finalist for GT’s prestigious award recognizing campus leadership & service.",
+        desc: "Finalist for GT’s prestigious award recognizing campus leadership and service.",
         year: "2023",
     },
     {
@@ -119,18 +119,26 @@ const About = () => {
               className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
                 <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
-              <div className="w-full md:w-2/3 font-aeonik-regular pt-6 space-y-6 items-center align-center justify-center text-[21px] md:text-[21px]">
-                <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets + making videos about it on the internet. 
-                    That led to over 4 million downloads of my work, and 1.5 million views of my YouTube videos. 
-                </p>
-                <p className="leading-[150%]">This hobby kindled a deeper passion for using design to impact others through web apps. 
-                    Naturally, I gained curiousity in how to build the software behind websites, not just design it.
-                </p>
-                <p className="leading-[150%]">Today, I am a swiss-army knife that can understand end-users, and design, build, and scale end-solutions.
-                    I can code-switch as the designer, the software engineer, or growth hacker.
-                </p>
+                <div className="w-full md:w-2/3 font-aeonik-thin tracking-[0.015em] pt-6 space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
+                  <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets and making videos about it on the internet.
+                  That led to over 4 million downloads of my work and <a href="https://youtube.com/cartercote" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>1.3 million views of my YouTube videos</a>.
+                  </p>
+                  <p className="leading-[150%]">This hobby kindled a deeper passion for using design to impact others through web apps. 
+                      Naturally, I gained curiosity in how to build the software behind websites, not just design it.
+                  </p>
+                  <p className="leading-[150%]">At 18, I designed and built <a href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>an emergency supply delivery app</a> during the peak of COVID-19, which delivered over $50,000 worth of urgent supplies to over 20,000 people.
+                  </p>
+                  <p className="leading-[150%]">At 19, I built a <a href="http://pathways.me" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>career pathway exploration platform</a> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
+                  </p>
+                  <p className="leading-[150%]">At 21, I worked on <a href="http://musicfy.lol" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Musicfy</a>, an AI-voice generation platform with over 1M users; Crayo, an AI short-form content generation platform that amassed over 50,000 users in a month; and SellRaze, a mobile app that uses AI to autofill listings for online selling.
+                  </p>
+                  <p className="leading-[150%]">I also started a nonprofit called <a href="http://startup.exchange" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Startup Exchange</a>, which enables college students to learn how to build side projects and grow them into startups. Over 7,000 students at over 40 universities have attended a Startup Exchange event since Fall 2022.
+                  </p>
+                  <p className="leading-[150%]">Today, I am a swiss-army knife that can understand end-users, and design, build, and scale end-solutions.
+                      I can code-switch as the designer, the software engineer, or growth hacker.
+                  </p>
+                </div>
               </div>
-            </div>
             {/* <div className="w-1/4 items-center justify-center align-center">
               <NextImage
                 priority
@@ -141,7 +149,7 @@ const About = () => {
                 className="opacity-50"
               />
             </div> */}
-          </div>
+            </div>
           <div className="flex flex-col w-full py-20">
             <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">EXPERIENCE</p>
             {groupedExperiences.map((group, index) => (
