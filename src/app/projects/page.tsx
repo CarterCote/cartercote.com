@@ -110,7 +110,7 @@ const Projects = () => {
           <div
             className="flex flex-col w-full align-center justify-center space-y-4 items-start">
               <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">PROJECTS </p>
-              <h1 className="w-full font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">Here's a list of the projects that I've built and/or designed.</h1>
+              <h1 className="w-full font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">Here are some of the projects that I've built and/or designed.</h1>
               {projects.map((project) => (
               <div key={project.name} className="w-full flex flex-col md:flex-row md:space-x-5 py-6 md:py-10 items-start font-aeonik-thin tracking-regular space-y-3 text-sm">
                 <div className="flex flex-col md:flex-row w-full md:w-1/2 lg:w-1/2">
