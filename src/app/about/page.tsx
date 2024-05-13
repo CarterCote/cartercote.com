@@ -134,7 +134,7 @@ const About = () => {
                 <p>← BACK TO HOME </p>
               </Link>
               <div
-              className="flex flex-col w-full align-center justify-center space-y-4 items-center">
+                className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
                 <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
                 <NextImage
