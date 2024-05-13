@@ -15,7 +15,7 @@ const nowProjects = [
 ];
 
 const prevProjects = [
-  { name: "Founding Engineer, SellRaze", link: "https://www.jpmorgan.com/" },
+  { name: "Founding Engineer, SellRaze", link: "https://www.sellraze.com/" },
   { name: "AI/ML, JPMorgan", link: "https://www.jpmorgan.com/" },
   { name: "Design, CreatorDAO", link: "https://www.creatordao.com/" },
   { name: "Growth, Overtime", link: "https://www.overtime.tv/" },
