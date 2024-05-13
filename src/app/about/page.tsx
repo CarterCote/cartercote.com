@@ -34,7 +34,7 @@ const awards = [
     },
     {
         name: "Banatao Family First-Generation Engineering Scholar",
-        desc: "1 of 6 scholars for $20,000 scholarship for first-gen engineering students.",
+        desc: "1 of 6 scholars for $20,000 scholarship for first-gen Filipino-American engineering students.",
         year: "2020",
     },
     {
