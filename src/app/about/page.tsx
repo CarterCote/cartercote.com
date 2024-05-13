@@ -44,6 +44,24 @@ const awards = [
     },
 ];
 
+const education = [
+  {
+    name: "MS in Human-Computer Interaction at Stanford University",
+    desc: "Attending on a full-ride scholarship.",
+    year: "2024-2025",
+  },
+  {
+    name: "MS in Computer Science at Georgia Tech",
+    desc: "Dropped out to attend Stanford.",
+    year: "2024",
+  },
+  {
+    name: "BS in Computer Science at Georgia Tech",
+    desc: "Highest honors, minor in Industrial Design.",
+    year: "2020-2023",
+  },
+]
+
 const experiences = [
     {
         number: "01",
@@ -118,8 +136,16 @@ const About = () => {
               <div
               className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
-                <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
-                <div className="w-full md:w-2/3 font-aeonik-thin tracking-[0.015em] pt-6 space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
+                <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
+                <NextImage
+                  priority
+                  src="/about/aboutMe.jpg"
+                  height={600}
+                  width={481}
+                  alt="Descriptive Text"
+                  className="py-10"
+                />
+                <div className="w-full md:w-2/3 font-aeonik-thin tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
                   <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets and making videos about it on the internet.
                   That led to over 4 million downloads of my work and <a href="https://youtube.com/cartercote" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>1.3 million views of my YouTube videos</a>.
                   </p>
@@ -179,20 +205,32 @@ const About = () => {
                 </div>
               ))}
             </div>
-          ))}
-            </div>
-        <div className="w-full py-20">
-            <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
-            {awards.map((award) => (
-                <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
-                    <div>
-                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{award.name}</p>
-                        <p className="font-aeonik-thin text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{award.desc}</p>
-                    </div>
-                    <p className="font-aeonik-thin tracking-tight text-[18px] md:text-[21px] mb-3">{award.year}</p>
-                </div>
             ))}
-        </div>
+          </div>
+          <div className="w-full py-20">
+              <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">EDUCATION</p>
+              {education.map((education) => (
+                  <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
+                      <div>
+                          <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{education.name}</p>
+                          <p className="font-aeonik-thin text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{education.desc}</p>
+                      </div>
+                      <p className="font-aeonik-thin tracking-tight text-[18px] md:text-[21px] mb-3">{education.year}</p>
+                  </div>
+              ))}
+          </div>
+          <div className="w-full py-20">
+              <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
+              {awards.map((award) => (
+                  <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
+                      <div>
+                          <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{award.name}</p>
+                          <p className="font-aeonik-thin text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{award.desc}</p>
+                      </div>
+                      <p className="font-aeonik-thin tracking-tight text-[18px] md:text-[21px] mb-3">{award.year}</p>
+                  </div>
+              ))}
+          </div>
         </TracingBeam>
         </div>
       </div>
