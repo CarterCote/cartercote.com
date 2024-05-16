@@ -11,7 +11,7 @@ const projects =[
     name: "SellRaze",
     role: "Founding Engineer",
     year: "2024",
-    description: "Using AI to build the fastest way to sell online. Led all design. Built React Native mobile app alongside 2 friends. Led growth strategy, leading to over 10,000 impressions and 1,500 users in two months.",
+    description: "Using AI to build the fastest way to sell online. Led all design. Built React Native mobile app alongside founding team. Led SEO, growth, and GTM strategy, leading to over 10,000 impressions and 1,500 users in two months.",
     image: "/projects/sellraze.png",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
