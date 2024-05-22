@@ -73,6 +73,16 @@ const projects =[
 
 const freelance = [
   {
+    name: "Startup Exchange",
+    link: "https://startup.exchange/",
+    image: "/projects/cazares.png"
+  },
+  {
+    name: "Ship-It",
+    link: "https://shipit.lol/",
+    image: "/projects/cazares.png"
+  },
+  {
     name: "Wise Smith for District Attorney",
     link: "https://wisesmithforda.com/",
     image: "/projects/cazares.png"
