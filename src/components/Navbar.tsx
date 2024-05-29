@@ -1,8 +1,10 @@
 "use client";
 
+import React, { useState, useEffect, useRef } from 'react';
 import NextImage from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from 'react';
+import posthog from 'posthog-js';
+
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
@@ -12,6 +14,8 @@ import {
   SheetContent,
   SheetTrigger,
 } from "./ui/sheet"
+
+posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' });
 
 export const navLinks = [
   {
@@ -107,28 +111,33 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                           className="text-start no-underline text-white text-[32px] font-voyager-thin transition duration-200 ease-in-out hover:text-blue-600 tracking-normal"
                           href={link.link}
                           key={`${link.link} + ${link.text}`}
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => {
+                            setIsOpen(false);
+                            posthog.capture('mobileNavClicked', {
+                              page: link.text,
+                            });
+                          }}
                         >
                           {link.text}
                         </Link>
                       ))}
                       <div className="flex flex-row space-x-4 pt-4 items-start">
-                        <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer">
+                        <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileTwitterClicked')}>
                           <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                             <FaXTwitter />
                           </div>
                         </Link>
-                        <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer">
+                        <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileGithubClicked')}>
                           <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                             <FaGithub/>
                           </div>
                         </Link>
-                        <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer">
+                        <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileInstagramClicked')}>
                           <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                             <FaInstagram/>
                           </div>
                         </Link>
-                        <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer">
+                        <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileLinkedinClicked')}>
                           <div className="text-white text-2xl transition duration-200 ease-in-out hover:text-blue-600">
                             <FaLinkedin/>
                           </div>
@@ -145,6 +154,11 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                     className="text-center no-underline text-white text-base font-aeonik-thin transition duration-200 ease-in-out hover:text-blue-600 tracking-normal"
                     href={link.link}
                     key={`${link.link} + ${link.text}`}
+                    onClick={() => {
+                      posthog.capture('navClicked', {
+                        page: link.text,
+                      });
+                    }}
                   >
                     {link.text}
                   </Link>
@@ -154,22 +168,22 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
           </header>
         {isMobile ? null : (
           <div className="flex flex-col space-y-3.5 fixed right-8 bottom-8 items-end">
-            <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer">
+            <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('twitterClicked')}>
               <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                 <FaXTwitter />
               </div>
             </Link>
-            <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('githubClicked')}>
               <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                 <FaGithub/>
               </div>
             </Link>
-            <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer">
+            <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('instagramClicked')}>
               <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                 <FaInstagram/>
               </div>
             </Link>
-            <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer">
+            <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('linkedinClicked')}>
               <div className="text-white text-xl transition duration-200 ease-in-out hover:text-blue-600">
                 <FaLinkedin/>
               </div>

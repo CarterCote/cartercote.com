@@ -143,7 +143,12 @@ const Projects = () => {
                     <p>{project.description}</p>
                   </div>
                   <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 text-center md:text-start">
-                    <Button text={project.linkText} link={project.link} newTab={true}></Button>
+                    <Button
+                    text={project.linkText}
+                    link={project.link}
+                    newTab={true}
+                    event={`'projectsProjectClicked', { project: project.name }`}
+                    ></Button>
                     {project.secondLink && <Button text={project.linkText2 || ''} link={project.link2 || '#'} newTab={true}></Button>}
                   </div>
                 </div>

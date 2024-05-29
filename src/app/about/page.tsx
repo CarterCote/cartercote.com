@@ -5,6 +5,7 @@ import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import { TracingBeam } from "../../components/ui/tracing-beam";
+import InteractiveLink from './InteractiveLink';
 
 const awards = [
     {
@@ -128,13 +129,11 @@ const About = () => {
       <div className="flex w-full flex-col pt-32 items-start">
         <div className="flex flex-col w-full px-8 md:px-22 lg:px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
           <TracingBeam className="px-0 md:px-2">
-            <div
-              className="flex flex-col w-full align-center justify-center space-y-4 items-start">
+            <div className="flex flex-col w-full align-center justify-center space-y-4 items-start">
               <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
                 <p>← BACK TO HOME </p>
               </Link>
-              <div
-                className="flex flex-col w-full align-center justify-center space-y-4 items-center">
+              <div className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
                 <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
                 <NextImage
@@ -147,21 +146,21 @@ const About = () => {
                 />
                 <div className="w-full md:w-2/3 font-aeonik-thin tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
                   <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets and making videos about it on YouTube.
-                  That led to over 4 million downloads of my work and <a href="https://youtube.com/cartercote" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>1.3 million views of my videos</a>.
+                  That led to over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views of my videos</InteractiveLink>.
                   </p>
                   <p className="leading-[150%]">This hobby kindled a deeper passion for using design to impact others through web apps. 
                       Naturally, I gained curiosity in how to build the software behind websites, not just design it.
                   </p>
-                  <p className="leading-[150%]">At 18, I designed and built <a href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>an emergency supply delivery app</a> during the peak of COVID-19, which delivered over $50,000 worth of urgent supplies to over 20,000 people.
+                  <p className="leading-[150%]">At 18, I designed and built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>an emergency supply delivery app</InteractiveLink> during the peak of COVID-19, which delivered over $50,000 worth of urgent supplies to over 20,000 people.
                   </p>
-                  <p className="leading-[150%]">At 19, I built a <a href="http://pathways.me" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>career pathway exploration platform</a> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
+                  <p className="leading-[150%]">At 19, I built a <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>career pathway exploration platform</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
                   </p>
-                  <p className="leading-[150%]">At 21, I worked on <a href="http://musicfy.lol" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Musicfy</a>,
+                  <p className="leading-[150%]">At 21, I worked on <InteractiveLink href="http://musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>Musicfy</InteractiveLink>,
                   an AI-voice generation platform with over 1M users; 
-                  {' '}<a href="http://crayo.ai" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Crayo</a>, an AI short-form content generation platform that amassed over 50,000 users in a month;
-                  and <a href="http://sellraze.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>SellRaze</a>, a mobile app that uses AI to autofill listings for online selling.
+                  {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>Crayo</InteractiveLink>, an AI short-form content generation platform that amassed over 50,000 users in a month;
+                  and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>SellRaze</InteractiveLink>, a mobile app that uses AI to autofill listings for online selling.
                   </p>
-                  <p className="leading-[150%]">I also started a nonprofit called <a href="http://startup.exchange" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Startup Exchange</a>, which enables college students to learn how to build side projects and grow them into startups. Over 7,000 students at over 40 universities have attended a Startup Exchange event since Fall 2022.
+                  <p className="leading-[150%]">I also started a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>Startup Exchange</InteractiveLink>, which enables college students to learn how to build side projects and grow them into startups. Over 7,000 students at over 40 universities have attended a Startup Exchange event since Fall 2022.
                   </p>
                   <p className="leading-[150%]">Today, I am a swiss-army knife that can understand end-users, and design, build, and scale end-solutions.
                       I can code-switch as the designer, the software engineer, or growth hacker.
@@ -185,26 +184,31 @@ const About = () => {
             <div key={index} className="flex flex-col md:flex-row w-full justify-between md:space-x-10 border-b pb-10 border-gray-800">
               {group.map((exp, idx) => (
                 <div key={idx} className="w-full py-10 font-aeonik-regular">
-                  <Link href={exp.link as string} className="flex flex-row items-start align-start">
-                    <div className="flex flex-col w-1/6">
-                      <p className="text-sm pb-5 text-gray-500">{exp.number}</p>
-                      <NextImage
-                        priority
-                        src={exp.imageName}
-                        height={118}
-                        width={118}
-                        alt="Descriptive Text"
-                      />
+                  <InteractiveLink 
+                    href={exp.link as string}
+                    event={'aboutExperienceClicked'}
+                  >
+                    <div className="flex flex-row items-start align-start ">
+                      <div className="flex flex-col w-1/6">
+                        <p className="text-sm pb-5 text-gray-500">{exp.number}</p>
+                        <NextImage
+                          priority
+                          src={exp.imageName}
+                          height={118}
+                          width={118}
+                          alt="Descriptive Text"
+                        />
+                      </div>
+                      <div className="ml-10 w-9/12 items-start">
+                        <p className="text-sm pb-5 text-gray-500">{exp.position}</p>
+                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{exp.companyName}</p>
+                        <p className="text-[18px] mt-4 leading-[150%] text-gray-400">{exp.roleDescription}</p>
+                      </div>
+                      <div className="flex flex-col w-1/12 items-end">
+                        <p className="text-sm pb-5 text-gray-500">{exp.year}</p>
+                      </div>
                     </div>
-                    <div className="ml-10 w-9/12 items-start">
-                      <p className="text-sm pb-5 text-gray-500">{exp.position}</p>
-                      <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{exp.companyName}</p>
-                      <p className="text-[18px] mt-4 leading-[150%] text-gray-400">{exp.roleDescription}</p>
-                    </div>
-                    <div className="flex flex-col w-1/12 items-end">
-                      <p className="text-sm pb-5 text-gray-500">{exp.year}</p>
-                    </div>
-                  </Link>
+                  </InteractiveLink>
                 </div>
               ))}
             </div>

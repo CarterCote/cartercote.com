@@ -6,6 +6,9 @@ import Link from 'next/link';
 import Button from './Button';
 import Marquee from "react-fast-marquee";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import posthog from 'posthog-js';
+
+posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' });
 
 const nowProjects = [
   { name: "Using AI to build the fastest way to sell online", link: "https://www.sellraze.com/" },
@@ -88,7 +91,12 @@ const Hero = () => {
                   {nowProjects.map((project, index) => (
                     <div key={index} className='flex flex-row items-end'>
                       <span className="text-[16px]">⪼</span>
-                      <Link href={project.link}>
+                      <Link href={project.link} onClick={() => {
+                        posthog.capture('nowClicked', {
+                          name: project.name,
+                          url: project.link
+                        });
+                      }}>
                         <p className="font-aeonik-bold italic text-[18px] underline transition duration-200 ease-in-out hover:text-blue-600 mr-10">{project.name}</p>
                       </Link>
                     </div>
@@ -100,7 +108,12 @@ const Hero = () => {
                 {prevProjects.map((project, index) => (
                   <div key={index} className='flex flex-row items-end'>
                     <span className="text-[16px]">⪼</span>
-                    <Link href={project.link}>
+                    <Link href={project.link} onClick={() => {
+                        posthog.capture('prevProjectsClicked', {
+                          name: project.name,
+                          url: project.link
+                        });
+                      }}>
                       <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">{project.name}</p>
                     </Link>
                   </div>
@@ -112,11 +125,21 @@ const Hero = () => {
                   link="/projects"
                   as="button"
                   className="dark:bg-white bg-black text-white dark:text-black flex items-center space-x-2"
+                  onClick={() => {
+                    posthog.capture('viewProjectsClicked', {property: 'value'});
+                  }}
                 >
                   <p className="font-graebenbach-mono-regular">VIEW PROJECTS</p>
                 </HoverBorderGradient>
                 {/* <Button text="VIEW PROJECTS" link="/projects" className="w-full text-center md:text-left sm:w-auto"></Button> */}
-                <Button text="ABOUT ME" link="/about" className="w-full text-center md:text-left sm:w-auto"></Button>
+                <Button 
+                  text="ABOUT ME"
+                  link="/about"
+                  className="w-full text-center md:text-left sm:w-auto"
+                  onClick={() => {
+                    posthog.capture('aboutClicked', {property: 'value'});
+                  }}
+                ></Button>
               </div>
             </div>
           </div>
