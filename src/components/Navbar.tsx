@@ -15,7 +15,26 @@ import {
   SheetTrigger,
 } from "./ui/sheet"
 
-posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' });
+if (typeof window !== "undefined") {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' });
+}
+
+const handleNavClick = (linkText: string) => {
+  if (typeof window !== "undefined") {
+    posthog.capture('navClicked', {
+      page: linkText,
+    });
+  }
+};
+
+const handleSocialClick = (socialName: string, mobile: boolean = false) => {
+  if (typeof window !== "undefined") {
+    posthog.capture(mobile ? 'mobileSocialClicked' : 'socialClicked', {
+      social: socialName,
+    });
+  }
+};
+
 
 export const navLinks = [
   {
@@ -122,22 +141,22 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                         </Link>
                       ))}
                       <div className="flex flex-row space-x-4 pt-4 items-start">
-                        <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileTwitterClicked')}>
+                        <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Twitter', true)}>
                           <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                             <FaXTwitter />
                           </div>
                         </Link>
-                        <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileGithubClicked')}>
+                        <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('GitHub', true)}>
                           <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                             <FaGithub/>
                           </div>
                         </Link>
-                        <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileInstagramClicked')}>
+                        <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Instagram', true)}>
                           <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                             <FaInstagram/>
                           </div>
                         </Link>
-                        <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('mobileLinkedinClicked')}>
+                        <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('LinkedIn', true)}>
                           <div className="text-white text-2xl transition duration-200 ease-in-out hover:text-blue-600">
                             <FaLinkedin/>
                           </div>
@@ -154,11 +173,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                     className="text-center no-underline text-white text-base font-aeonik-thin transition duration-200 ease-in-out hover:text-blue-600 tracking-normal"
                     href={link.link}
                     key={`${link.link} + ${link.text}`}
-                    onClick={() => {
-                      posthog.capture('navClicked', {
-                        page: link.text,
-                      });
-                    }}
+                    onClick={() => handleNavClick(link.text)}
                   >
                     {link.text}
                   </Link>
@@ -168,22 +183,22 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
           </header>
         {isMobile ? null : (
           <div className="flex flex-col space-y-3.5 fixed right-8 bottom-8 items-end">
-            <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('twitterClicked')}>
+            <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Twitter', false)}>
               <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                 <FaXTwitter />
               </div>
             </Link>
-            <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('githubClicked')}>
+            <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('GitHub', false)}>
               <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                 <FaGithub/>
               </div>
             </Link>
-            <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('instagramClicked')}>
+            <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Instagram', false)}>
               <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
                 <FaInstagram/>
               </div>
             </Link>
-            <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => posthog.capture('linkedinClicked')}>
+            <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('LinkedIn', false)}>
               <div className="text-white text-xl transition duration-200 ease-in-out hover:text-blue-600">
                 <FaLinkedin/>
               </div>
