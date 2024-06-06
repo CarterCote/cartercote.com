@@ -23,7 +23,7 @@ const projects =[
     name: "Crayo AI",
     role: "Founding Designer",
     year: "2024",
-    description: "Enabling content creators with AI tools to go viral at 10x the speed, with stylized, captioned, and animated short-form content. 50,000+ users in a month.",
+    description: "Enabling content creators with AI tools to go viral at 10x the speed, with stylized, captioned, and animated short-form content. 280,000+ users.",
     image: "/projects/crayo.png",
     link: "http://crayo.ai",
     linkText: "VIEW PROJECT",

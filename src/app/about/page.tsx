@@ -157,7 +157,7 @@ const About = () => {
                   </p>
                   <p className="leading-[150%]">At 21, I worked on <InteractiveLink href="http://musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>Musicfy</InteractiveLink>,
                   an AI-voice generation platform with over 1M users; 
-                  {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>Crayo</InteractiveLink>, an AI short-form content generation platform that amassed over 50,000 users in a month;
+                  {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>Crayo</InteractiveLink>, an AI short-form content generation platform with over 280,000 users, with over 50,000 users in the first month;
                   and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>SellRaze</InteractiveLink>, a mobile app that uses AI to autofill listings for online selling.
                   </p>
                   <p className="leading-[150%]">I also started a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>Startup Exchange</InteractiveLink>, which enables college students to learn how to build side projects and grow them into startups. Over 7,000 students at over 40 universities have attended a Startup Exchange event since Fall 2022.
