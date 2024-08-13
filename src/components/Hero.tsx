@@ -131,7 +131,7 @@ const Hero = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col pb-20 md:pb-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
+              <div className="flex flex-col pb-20 md:pb-0 pt-6 md:pt-0 lg:pt-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
                 <HoverBorderGradient
                   containerClassName="rounded-xl w-full text-center md:text-left sm:w-auto"
                   link="/projects"
