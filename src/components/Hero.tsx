@@ -125,7 +125,7 @@ const Hero = () => {
                 {prevProjects.map((project, index) => (
                   <div key={index} className='flex flex-row items-end space-x-1 md:space-x-2 lg:space-x-2'>
                     <Link key={index} href={project.link || '#'} onClick={() => project.link && handleProjClick(project.name, project.link, 'prevProjectsClicked')}>
-                      <p className="font-aeonik-bold text-[16px] md:text-[18px] lg:text-[18px]">{project.name}</p>
+                      <p className="font-aeonik-bold text-[16px] md:text-[18px] lg:text-[18px] hover:text-blue-600 transition duration-200 ease-in-out">{project.name}</p>
                     </Link>
                     <span className="text-[16px]">⪼</span>
                     <p className="font-aeonik-thin text-[14px] md:text-[18px] lg:text-[18px]">{project.desc}</p>
