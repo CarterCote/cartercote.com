@@ -37,7 +37,7 @@ const nowProjects = [
 const prevProjects = [
   { name: "sellraze", desc: "sell items online in seconds", link: "https://www.sellraze.com/" },
   { name: "jpmorgan", desc: "high-volume ml pipelines", link: "https://www.jpmorgan.com/" },
-  { name: "creatorDAO", desc: "empower creators to become founders", ink: "https://www.creatordao.com/" },
+  { name: "creatordao", desc: "enable creators to be founders", ink: "https://www.creatordao.com/" },
   // { name: "Growth, Overtime", link: "https://www.overtime.tv/" },
   { name: "crayo", desc: "generate short-form content in seconds", link: "https://www.crayo.ai/" },
   { name: "musicfy", desc: "generate music samples in seconds", link: "https://www.musicfy.lol/" }
@@ -94,16 +94,16 @@ const Hero = () => {
             </video>
             )}
         </div>
-        <div className="flex flex-col w-full max-w-[600px] mx-auto mt-14 md:mt-0 lg:pt-0 p-16 md:p-0 lg:p-0 justify-center text-6xl font-bold gap-y-4">
+        <div className="flex flex-col w-full max-w-[600px] mx-auto mt-14 md:mt-0 lg:pt-0 p-8 md:p-0 lg:p-0 justify-center text-6xl font-bold gap-y-4">
           <div className="flex flex-row w-full space-x-1">
-            <div className="self-start mt-1 md:mt-2 lg:mt-3">
-              <h1 className="tracking-tight font-voyager-thin text-[14px] mr-1">►</h1>
+            <div className="self-start mt-3">
+              <h1 className="tracking-tight font-voyager-thin text-[16px] md:text-[14px] lg:text-[14px] mr-1">►</h1>
             </div>
             <div className="flex flex-col w-full align-center justify-center space-y-6 md:space-y-6 items-start">
               <div className="flex flex-row w-full mb-3 items-center">
-                <h1 className="tracking-tight font-voyager-thin text-[32px]">hi, i'm carter.</h1>
+                <h1 className="tracking-tight font-voyager-thin text-[38px] md:text-[32px] lg:text-[32px]">hi, i'm carter.</h1>
               </div>
-              <div className="w-full font-aeonik-regular space-y-6 leading-[1.25] text-[18px]">
+              <div className="w-full font-aeonik-regular space-y-6 leading-[1.25] text-[21px] md:text-[18px] lg:text-[18px]">
                 <p>i'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University. </p>
                 <p>i craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
@@ -121,14 +121,14 @@ const Hero = () => {
                 </Marquee>
               </div> */}
               <div className="flex flex-col w-full space-y-3">
-                <p className="font-aeonik-regular text-[18px]">i like to design and build products:</p>
+                <p className="font-aeonik-regular text-[21px] md:text-[18px] lg:text-[18px]">i like to design and build products:</p>
                 {prevProjects.map((project, index) => (
-                  <div key={index} className='flex flex-row items-end space-x-2'>
+                  <div key={index} className='flex flex-row items-end space-x-1 md:space-x-2 lg:space-x-2'>
                     <Link key={index} href={project.link || '#'} onClick={() => project.link && handleProjClick(project.name, project.link, 'prevProjectsClicked')}>
-                      <p className="font-aeonik-bold text-[18px]">{project.name}</p>
+                      <p className="font-aeonik-bold text-[16px] md:text-[18px] lg:text-[18px]">{project.name}</p>
                     </Link>
                     <span className="text-[16px]">⪼</span>
-                    <p className="font-aeonik-thin tracking-wide text-[18px]">{project.desc}</p>
+                    <p className="font-aeonik-thin text-[14px] md:text-[18px] lg:text-[18px]">{project.desc}</p>
                   </div>
                 ))}
               </div>
