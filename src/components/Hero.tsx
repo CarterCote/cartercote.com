@@ -35,12 +35,12 @@ const nowProjects = [
 ];
 
 const prevProjects = [
-  { name: "SellRaze", link: "https://www.sellraze.com/" },
-  { name: "JPMorgan", link: "https://www.jpmorgan.com/" },
-  { name: "CreatorDAO", link: "https://www.creatordao.com/" },
+  { name: "sellraze", desc: "sell items online in seconds", link: "https://www.sellraze.com/" },
+  { name: "jpmorgan", desc: "high-volume ml pipelines", link: "https://www.jpmorgan.com/" },
+  { name: "creatorDAO", desc: "empower creators to become founders", ink: "https://www.creatordao.com/" },
   // { name: "Growth, Overtime", link: "https://www.overtime.tv/" },
-  { name: "Crayo AI", link: "https://www.crayo.ai/" },
-  { name: "Musicfy", link: "https://www.musicfy.lol/" }
+  { name: "crayo", desc: "generate short-form content in seconds", link: "https://www.crayo.ai/" },
+  { name: "musicfy", desc: "generate music samples in seconds", link: "https://www.musicfy.lol/" }
 
 ];
 
@@ -123,11 +123,12 @@ const Hero = () => {
               <div className="flex flex-col w-full space-y-3">
                 <p className="font-aeonik-regular text-[18px]">i like to design and build products:</p>
                 {prevProjects.map((project, index) => (
-                  <div key={index} className='flex flex-row items-end'>
-                    <span className="text-[16px]">⪼</span>
-                    <Link key={index} href={project.link} onClick={() => handleProjClick(project.name, project.link, 'prevProjectsClicked')}>
+                  <div key={index} className='flex flex-row items-end space-x-2'>
+                    <Link key={index} href={project.link || '#'} onClick={() => project.link && handleProjClick(project.name, project.link, 'prevProjectsClicked')}>
                       <p className="font-aeonik-bold text-[18px]">{project.name}</p>
                     </Link>
+                    <span className="text-[16px]">⪼</span>
+                    <p className="font-aeonik-thin tracking-wide text-[18px]">{project.desc}</p>
                   </div>
                 ))}
               </div>
