@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, FC, useRef } from 'react';
+import React, { useEffect, FC, useRef, useState } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import Button from './Button';
@@ -35,17 +35,21 @@ const nowProjects = [
 ];
 
 const prevProjects = [
-  { name: "Founding Engineer, SellRaze", link: "https://www.sellraze.com/" },
-  { name: "AI/ML, JPMorgan", link: "https://www.jpmorgan.com/" },
-  { name: "Design, CreatorDAO", link: "https://www.creatordao.com/" },
-  { name: "Growth, Overtime", link: "https://www.overtime.tv/" },
-  { name: "Founding Designer, Crayo AI", link: "https://www.crayo.ai/" }
+  { name: "SellRaze", link: "https://www.sellraze.com/" },
+  { name: "JPMorgan", link: "https://www.jpmorgan.com/" },
+  { name: "CreatorDAO", link: "https://www.creatordao.com/" },
+  // { name: "Growth, Overtime", link: "https://www.overtime.tv/" },
+  { name: "Crayo AI", link: "https://www.crayo.ai/" },
+  { name: "Musicfy", link: "https://www.musicfy.lol/" }
+
 ];
 
 const Hero = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    setIsMounted(true);
     const videoElement = videoRef.current;
 
     const handleCanPlay = () => {
@@ -72,37 +76,38 @@ const Hero = () => {
   
   return (
     <>
-      <main className="flex h-screen w-full flex-col pt-32 items-center">
-        <div className="z-[-1] w-full bg-black flex items-center justify-center absolute top-0">
-            <video
-              className="absolute top-0 left-0 w-full object-cover"
-              style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
-              autoPlay
-              loop
-              muted
-              playsInline
-              id="video-id"
-              ref={videoRef}
-            >
-            <source src={videoSource} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+      <main className="flex min-h-screen w-full flex-col items-center justify-center py-8 md:py-12 lg:py-16">
+        <div className="z-[-1] w-full h-full bg-black flex items-center justify-center absolute top-0">
+            {isMounted && (
+              <video
+                className="absolute top-0 left-0 w-full object-cover"
+                style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
+                autoPlay
+                loop
+                muted
+                playsInline
+                id="video-id"
+                ref={videoRef}
+              >
+              <source src={videoSource} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            )}
         </div>
-        <div className="flex flex-col w-full items-center px-8 md:px-16 lg:px-28 justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-full max-w-[600px] mx-auto mt-14 md:mt-0 lg:pt-0 p-16 md:p-0 lg:p-0 justify-center text-6xl font-bold gap-y-4">
           <div className="flex flex-row w-full space-x-1">
-            <div className="mt-4 md:mt-14 lg:mt-16">
-              <h1 className="tracking-tight font-voyager-thin text-[14px] md:text-[18px] lg:text-[24px] mr-4">►</h1>
+            <div className="self-start mt-1 md:mt-2 lg:mt-3">
+              <h1 className="tracking-tight font-voyager-thin text-[14px] mr-1">►</h1>
             </div>
-            <div
-              className="flex flex-col w-full align-center justify-center space-y-10 pr-14 items-start">
+            <div className="flex flex-col w-full align-center justify-center space-y-6 md:space-y-6 items-start">
               <div className="flex flex-row w-full mb-3 items-center">
-                <h1 className="tracking-tight font-voyager-thin text-[44px] md:text-[124px] lg:text-[148px]">HI, I'M CARTER.</h1>
+                <h1 className="tracking-tight font-voyager-thin text-[32px]">hi, i'm carter.</h1>
               </div>
-              <div className="w-full font-aeonik-regular space-y-8 leading-[1.25] text-[28px] sm:text-[28px] md:text-[28px] lg:text-[32px]">
-                <p>I'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University. </p>
-                <p>I craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
+              <div className="w-full font-aeonik-regular space-y-6 leading-[1.25] text-[18px]">
+                <p>i'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University. </p>
+                <p>i craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
-              <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
+              {/* <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
                 <p className="font-aeonik-thin tracking-widest text-[18px]">NOW</p>
                 <Marquee gradient gradientColor="#000" gradientWidth={25} className="h-[28px] w-full" speed={85} autoFill loop={0}>
                   {nowProjects.map((project, index) => (
@@ -114,14 +119,14 @@ const Hero = () => {
                     </div>
                   ))}
                 </Marquee>
-              </div>
-              <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
-                <p className="font-aeonik-thin tracking-widest text-[18px]">PREV</p>
+              </div> */}
+              <div className="flex flex-col w-full space-y-3">
+                <p className="font-aeonik-regular text-[18px]">i like to design and build products:</p>
                 {prevProjects.map((project, index) => (
                   <div key={index} className='flex flex-row items-end'>
                     <span className="text-[16px]">⪼</span>
                     <Link key={index} href={project.link} onClick={() => handleProjClick(project.name, project.link, 'prevProjectsClicked')}>
-                      <p className="font-aeonik-bold text-[18px] mr-2 border-b border-white">{project.name}</p>
+                      <p className="font-aeonik-bold text-[18px]">{project.name}</p>
                     </Link>
                   </div>
                 ))}

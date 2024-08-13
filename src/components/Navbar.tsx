@@ -106,7 +106,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
       <div className="fixed-header-container">
         <header className="z-50 fixed top-0 w-full flex items-center justify-between">
             <Link href={"/"}>
-              <p className="font-aeonik-bold text-[21px] md:text-[18px] tracking-tighter text-white absolute left-8 top-8 transition duration-200 ease-in-out hover:text-blue-600">CARTER COTE</p>
+              <p className="font-aeonik-bold text-[21px] md:text-[18px] tracking-tighter text-white absolute left-8 top-8 transition duration-200 ease-in-out hover:text-white">CARTER COTE</p>
             </Link>
             {isMobile ? (
               <>
@@ -127,7 +127,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                     <div className="grid gap-4 p-6">
                       {navLinks.map((link) => (
                         <Link
-                          className="text-start no-underline text-white text-[32px] font-voyager-thin transition duration-200 ease-in-out hover:text-blue-600 tracking-normal"
+                          className="text-start no-underline text-white text-[32px] font-graebenbach-mono-regular transition duration-200 ease-in-out hover:text-white tracking-normal"
                           href={link.link}
                           key={`${link.link} + ${link.text}`}
                           onClick={() => {
@@ -142,22 +142,22 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
                       ))}
                       <div className="flex flex-row space-x-4 pt-4 items-start">
                         <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Twitter', true)}>
-                          <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+                          <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-white">
                             <FaXTwitter />
                           </div>
                         </Link>
                         <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('GitHub', true)}>
-                          <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+                          <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-white">
                             <FaGithub/>
                           </div>
                         </Link>
                         <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Instagram', true)}>
-                          <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+                          <div className="text-white text-2xl pb-2 transition duration-200 ease-in-out hover:text-white">
                             <FaInstagram/>
                           </div>
                         </Link>
                         <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('LinkedIn', true)}>
-                          <div className="text-white text-2xl transition duration-200 ease-in-out hover:text-blue-600">
+                          <div className="text-white text-2xl transition duration-200 ease-in-out hover:text-white">
                             <FaLinkedin/>
                           </div>
                         </Link>
@@ -170,7 +170,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
               <nav className="absolute right-8 top-8 flex flex-col items-end" ref={navRef}>
                 {navLinks.map((link) => (
                   <Link
-                    className="text-center no-underline text-white text-base font-aeonik-thin transition duration-200 ease-in-out hover:text-blue-600 tracking-normal"
+                    className="text-center no-underline text-[#ffffff80] text-base font-graebenbach-mono-regular transition duration-200 ease-in-out hover:text-white tracking-normal"
                     href={link.link}
                     key={`${link.link} + ${link.text}`}
                     onClick={() => handleNavClick(link.text)}
@@ -184,22 +184,22 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
         {isMobile ? null : (
           <div className="flex flex-col space-y-3.5 fixed right-8 bottom-8 items-end">
             <Link href="https://twitter.com/cartercote_" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Twitter', false)}>
-              <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+              <div className="text-[#ffffff80] text-xl pb-2 transition duration-200 ease-in-out hover:text-white">
                 <FaXTwitter />
               </div>
             </Link>
             <Link href="https://github.com/CarterCote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('GitHub', false)}>
-              <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+              <div className="text-[#ffffff80] text-xl pb-2 transition duration-200 ease-in-out hover:text-white">
                 <FaGithub/>
               </div>
             </Link>
             <Link href="//www.instagram.com/carter.cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('Instagram', false)}>
-              <div className="text-white text-xl pb-2 transition duration-200 ease-in-out hover:text-blue-600">
+              <div className="text-[#ffffff80] text-xl pb-2 transition duration-200 ease-in-out hover:text-white">
                 <FaInstagram/>
               </div>
             </Link>
             <Link href="//www.linkedin.com/in/carter-cote" passHref target="_blank" rel="noopener noreferrer" onClick={() => handleSocialClick('LinkedIn', false)}>
-              <div className="text-white text-xl transition duration-200 ease-in-out hover:text-blue-600">
+              <div className="text-[#ffffff80] text-xl transition duration-200 ease-in-out hover:text-white">
                 <FaLinkedin/>
               </div>
             </Link>
