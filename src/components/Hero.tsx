@@ -123,7 +123,13 @@ const Hero = () => {
                 <p className="font-aeonik-regular text-[21px] md:text-[18px] lg:text-[18px]">i like to design + build products:</p>
                 {prevProjects.map((project, index) => (
                   <div key={index} className='flex flex-row items-end space-x-1 md:space-x-2 lg:space-x-2'>
-                    <Link key={index} href={project.link || '#'} onClick={() => project.link && handleProjClick(project.name, project.link, 'prevProjectsClicked')}>
+                    <Link 
+                      key={index} 
+                      href={project.link || '#'} 
+                      onClick={() => project.link && handleProjClick(project.name, project.link, 'prevProjectsClicked')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <p className="font-aeonik-bold text-[16px] md:text-[18px] lg:text-[18px] hover:text-blue-600 transition duration-200 ease-in-out">{project.name}</p>
                     </Link>
                     <span className="text-[16px]">⪼</span>
