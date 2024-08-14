@@ -155,7 +155,7 @@ const About = () => {
                   </p>
                   <p className="leading-[150%]">At 19, I built a <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>career pathway exploration platform</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
                   </p>
-                  <p className="leading-[150%]">At 21, I worked on <InteractiveLink href="http://musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>Musicfy</InteractiveLink>,
+                  <p className="leading-[150%]">At 21, I worked on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>Musicfy</InteractiveLink>,
                   an AI-voice generation platform with over 1M users; 
                   {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>Crayo</InteractiveLink>, an AI short-form content generation platform with over 280,000 users, with over 50,000 users in the first month;
                   and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>SellRaze</InteractiveLink>, a mobile app that uses AI to autofill listings for online selling.

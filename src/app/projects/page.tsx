@@ -35,7 +35,7 @@ const projects =[
     year: "2023",
     description: "Emerging AI tools for 1M+ users to rapidly create new music, saving precious time for true creativity. Designed the UI and branding for v2 of the platform.",
     image: "/projects/musicfy.png",
-    link: "https://musicfy.lol/",
+    link: "https://create.musicfy.lol/",
     linkText: "VIEW PROJECT",
     secondLink: false,
   },

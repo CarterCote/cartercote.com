@@ -38,7 +38,7 @@ const prevProjects = [
   { name: "sellraze", desc: "sell items online in seconds", link: "https://www.sellraze.com/" },
   { name: "crayo", desc: "generate short-form content in seconds", link: "https://www.crayo.ai/" },
   { name: "jpmorgan", desc: "high-volume ml pipelines", link: "https://www.jpmorgan.com/" },
-  { name: "musicfy", desc: "generate music samples in seconds", link: "https://www.musicfy.lol/" },
+  { name: "musicfy", desc: "generate music samples in seconds", link: "https://create.musicfy.lol/" },
   { name: "creatordao", desc: "enable creators to be founders", ink: "https://www.creatordao.com/" }
 
 ];
