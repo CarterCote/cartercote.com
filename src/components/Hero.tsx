@@ -102,7 +102,7 @@ const Hero = () => {
               <div className="flex flex-row w-full mb-3 items-center">
                 <h1 className="tracking-tight font-voyager-thin text-[38px] md:text-[32px] lg:text-[32px]">hi, i'm carter.</h1>
               </div>
-              <div className="w-full font-aeonik-regular space-y-6 leading-[1.25] text-[21px] md:text-[18px] lg:text-[18px]">
+              <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[21px] md:text-[18px] lg:text-[18px]">
                 <p>i'm a 22 y/o software engineer + designer based in Palo Alto, currently studying AI + HCI at Stanford University. </p>
                 <p>i craft elegant, interactive interfaces from 0 → 1. My goal is to reduce information gaps and barriers in education and career development.</p>
               </div>
