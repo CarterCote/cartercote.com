@@ -120,7 +120,7 @@ const Hero = () => {
                 </Marquee>
               </div> */}
               <div className="flex flex-col w-full space-y-3">
-                <p className="font-aeonik-regular text-[21px] md:text-[18px] lg:text-[18px]">i like to design and build products:</p>
+                <p className="font-aeonik-regular text-[21px] md:text-[18px] lg:text-[18px]">i like to design + build products:</p>
                 {prevProjects.map((project, index) => (
                   <div key={index} className='flex flex-row items-end space-x-1 md:space-x-2 lg:space-x-2'>
                     <Link key={index} href={project.link || '#'} onClick={() => project.link && handleProjClick(project.name, project.link, 'prevProjectsClicked')}>
