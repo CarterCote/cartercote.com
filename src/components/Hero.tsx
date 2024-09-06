@@ -35,7 +35,7 @@ const nowProjects = [
 ];
 
 const prevProjects = [
-  { name: "sellraze", desc: "sell items online in seconds. $500k mv", link: "https://www.sellraze.com/" },
+  { name: "sellraze", desc: "sell online in seconds. $500k mv", link: "https://www.sellraze.com/" },
   { name: "crayo", desc: "short-form content in seconds. 1.1m users.", link: "https://www.crayo.ai/" },
   { name: "jpmorgan", desc: "high-volume ml pipelines", link: "https://www.jpmorgan.com/" },
   { name: "musicfy", desc: "music samples in seconds. 3m users.", link: "https://create.musicfy.lol/" },
