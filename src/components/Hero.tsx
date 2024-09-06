@@ -36,10 +36,10 @@ const nowProjects = [
 
 const prevProjects = [
   { name: "sellraze", desc: "sell items online in seconds. $500k mv", link: "https://www.sellraze.com/" },
-  { name: "crayo", desc: "generate short-form content in seconds. 1.1m users.", link: "https://www.crayo.ai/" },
+  { name: "crayo", desc: "short-form content in seconds. 1.1m users.", link: "https://www.crayo.ai/" },
   { name: "jpmorgan", desc: "high-volume ml pipelines", link: "https://www.jpmorgan.com/" },
-  { name: "musicfy", desc: "generate music samples in seconds. 3m users.", link: "https://create.musicfy.lol/" },
-  { name: "creatordao", desc: "enable creators to be founders. raised $20m from a16z.", ink: "https://www.creatordao.com/" }
+  { name: "musicfy", desc: "music samples in seconds. 3m users.", link: "https://create.musicfy.lol/" },
+  { name: "creatordao", desc: "turn creators into founders.", ink: "https://www.creatordao.com/" }
 
 ];
 
@@ -93,7 +93,7 @@ const Hero = () => {
             </video>
             )}
         </div>
-        <div className="flex flex-col w-full max-w-[600px] mx-auto mt-14 md:mt-0 lg:pt-0 p-8 md:p-0 lg:p-0 justify-center text-6xl font-bold gap-y-4">
+        <div className="flex flex-col w-full max-w-[600px] mx-auto mt-14 md:mt-0 lg:pt-0 p-4 md:p-0 lg:p-0 justify-center text-6xl font-bold gap-y-4">
           <div className="flex flex-row w-full space-x-1">
             <div className="self-start mt-3">
               <h1 className="tracking-tight font-voyager-thin text-[16px] md:text-[14px] lg:text-[14px] mr-1">►</h1>
