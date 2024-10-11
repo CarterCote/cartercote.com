@@ -55,7 +55,7 @@ const prevProjects = [
   { name: "startup exchange", 
     role: "founder",
     desc: "largest community of college builders. 7k event attendees in 1.5 yrs.", 
-    link: "https://www.jpmorgan.com/"
+    link: "https://www.startup.exchange/"
   },
   { name: "musicfy", 
     role: "ux and brand design",
