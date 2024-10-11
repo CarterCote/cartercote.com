@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import NextImage from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import posthog from 'posthog-js';
 

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import NextImage from "next/image";
+import Image from "next/image";
 import Link from 'next/link';
 import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
@@ -136,7 +136,7 @@ const About = () => {
               <div className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
                 <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
-                <NextImage
+                <Image
                   priority
                   src="/about/aboutMe.jpg"
                   height={600}
@@ -168,7 +168,7 @@ const About = () => {
                 </div>
               </div>
             {/* <div className="w-1/4 items-center justify-center align-center">
-              <NextImage
+              <Image
                 priority
                 src="/head/MYMIND.png"
                 height={660}
@@ -191,7 +191,7 @@ const About = () => {
                     <div className="flex flex-row items-start align-start ">
                       <div className="flex flex-col w-1/6">
                         <p className="text-sm pb-5 text-gray-500">{exp.number}</p>
-                        <NextImage
+                        <Image
                           priority
                           src={exp.imageName}
                           height={118}

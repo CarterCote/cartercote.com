@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import NextImage from "next/image";
+import Image from "next/image";
 import Link from 'next/link';
 import Button from '../../components/Button';
 import Navbar from "../../components/Navbar"
@@ -124,7 +124,7 @@ const Projects = () => {
               {projects.map((project) => (
               <div key={project.name} className="w-full flex flex-col md:flex-row md:space-x-5 py-6 md:py-10 items-start font-aeonik-thin tracking-regular space-y-3 text-sm">
                 <div className="flex flex-col md:flex-row w-full md:w-1/2 lg:w-1/2">
-                  <NextImage
+                  <Image
                     priority
                     src={project.image}
                     height={700}
@@ -160,7 +160,7 @@ const Projects = () => {
                 <div className="w-2/3 pt-10 pr-20 items-start">
                   {freelance.map((item, index) => (
                     <div key={index} className="hidden group-hover:block">
-                      <NextImage
+                      <Image
                         priority
                         src={item.image}
                         height={700}
