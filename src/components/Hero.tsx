@@ -63,6 +63,12 @@ const prevProjects = [
     link: "https://create.musicfy.lol/" 
   },
   { 
+    name: "overtime", 
+    role: "growth",
+    desc: "building the future of sport entertainment. backed by morgan stanley, blackstone, and jeff bezos.", 
+    link: "https://www.overtime.tv/" 
+  },
+  { 
     name: "creatordao", 
     role: "graphic design",
     desc: "enabling creators to become founders. raised $20m from a16z.", 
@@ -195,7 +201,7 @@ const Hero = () => {
                     </Link>
                     <p className="opacity-70 font-aeonik-thin text-[18px]">{project.role}</p>
                   </div>
-                  <p className="opacity-90 font-aeonik-regular text-[18px]">{project.desc}</p>
+                  <p className="opacity-90 font-aeonik-regular text-[18px] leading-[140%]">{project.desc}</p>
                 </div>
                 // <div key={index} className='flex flex-row items-end space-x-1 md:space-x-2 lg:space-x-2'>
                 //   <Link 
@@ -211,6 +217,61 @@ const Hero = () => {
                 //   <p className="font-aeonik-thin text-[14px] md:text-[18px] lg:text-[18px]">{project.desc}</p>
                 // </div>
               ))}
+            </div>
+          </div>
+          <div className="flex flex-col space-y-4 px-5">
+            <h1 className="tracking-tight font-voyager-thin text-[21px]">projects</h1>
+            <div className="flex flex-col pb-20 md:pb-0 pt-6 md:pt-0 lg:pt-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
+              <div className="flex flex-col md:flex-row lg:flex-row space-x-0 space-y-4 md:space-y-0 lg:space-y-0 md:space-x-4 lg:space-x-4 w-full">
+                <Link 
+                  href="https://www.pathways.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl w-full border border-[#ffffff33] p-4 space-y-2">
+                  <div className="flex flex-row w-full justify-between items-center">
+                    <p className="font-aeonik-medium text-[18px]">pathways.me</p>
+                    <Image
+                      priority
+                      src="/home/iconArrowUprightWhite.png"
+                      height={100}
+                      width={100}
+                      alt="White arrow icon"
+                      className="w-2.5 h-2.5"
+                      />
+                  </div>
+
+                  <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
+                    an attempt to democratize access to career exploration. 0 to 10,000 users in 6 months.
+                    <br/>
+                    <br/>
+                    invited to speak at ACTE CareerTech National Conference.
+                  </p>
+                </Link>
+                <Link 
+                  href="https://www.latimes.com/california/story/2020-05-09/teen-volunteers-develop-ways-to-help-most-vulnerable-unable-to-help-themselves-during-virus-outbreak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl w-full border border-[#ffffff33] p-4 space-y-2">
+                  <div className="flex flex-row w-full justify-between items-center">
+                    <p className="font-aeonik-medium text-[18px]">six feet supplies</p>
+                    <Image
+                      priority
+                      src="/home/iconArrowUprightWhite.png"
+                      height={100}
+                      width={100}
+                      alt="White arrow icon"
+                      className="w-2.5 h-2.5"
+                      />
+                  </div>
+
+                  <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
+                    0 to 20,000+ vulnerable individuals that received $50,000+ in urgent supplies delivered in 13 cities across California during COVID-19.
+                    <br/>
+                    <br/>
+                    Featured on CNN, LA Times.
+                  </p>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="flex flex-col space-y-4 px-5">
