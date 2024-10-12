@@ -7,6 +7,7 @@ import Button from './Button';
 import Marquee from "react-fast-marquee";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import posthog from 'posthog-js';
+import { CardSpotlight } from "@/src/components/ui/card-spotlight";
 
 if (typeof window !== "undefined") {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' });
@@ -54,7 +55,7 @@ const prevProjects = [
   },
   { name: "startup exchange", 
     role: "founder",
-    desc: "largest community of college builders. 7k event attendees in 1.5 yrs.", 
+    desc: "redefining community for college builders. 7k event attendees in 1.5 yrs.", 
     link: "https://www.startup.exchange/"
   },
   { name: "musicfy", 
@@ -140,7 +141,7 @@ const Hero = () => {
               <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[21px] md:text-[18px] lg:text-[18px]">
                 <p>i'm a 22 y/o software engineer + designer studying AI + HCI at Stanford University. i'm currently learning how human feedback enables AI + end-users to learn from one another.</p>
                 <p>i craft elegant, interactive interfaces from 0 → 1. my goal is to reduce information gaps and barriers in education and career development.</p>
-                <p>you can reach me via <Link className="italic border-b" href="https://twitter.com/cartercote_">twitter</Link> or email at <Link href="mailto:chcote@stanford.edu" className="border-b italic">chcote@stanford.edu</Link>.</p>
+                <p>you can reach me via <Link className="italic border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://twitter.com/cartercote_">twitter</Link> or email at <Link href="mailto:chcote@stanford.edu" className="border-b italic hover:text-blue-500 transition-all duration-400 hover:border-blue-500">chcote@stanford.edu</Link>.</p>
               </div>
               {/* <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
                 <p className="font-aeonik-thin tracking-widest text-[18px]">NOW</p>
@@ -222,12 +223,10 @@ const Hero = () => {
           <div className="flex flex-col space-y-4 px-5">
             <h1 className="tracking-tight font-voyager-thin text-[21px]">projects</h1>
             <div className="flex flex-col pb-20 md:pb-0 pt-6 md:pt-0 lg:pt-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
-              <div className="flex flex-col md:flex-row lg:flex-row space-x-0 space-y-4 md:space-y-0 lg:space-y-0 md:space-x-4 lg:space-x-4 w-full">
-                <Link 
+              <div className="flex flex-row space-x-4 w-full">
+                <CardSpotlight 
                   href="https://www.pathways.me/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl w-full border border-[#ffffff33] p-4 space-y-2">
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#ffffff33] p-4 space-y-2 bg-black">
                   <div className="flex flex-row w-full justify-between items-center">
                     <p className="font-aeonik-medium text-[18px]">pathways.me</p>
                     <Image
@@ -236,22 +235,20 @@ const Hero = () => {
                       height={100}
                       width={100}
                       alt="White arrow icon"
-                      className="w-2.5 h-2.5"
-                      />
+                      className={`w-3 h-3 transition-opacity duration-200
+                        opacity-100
+                      }`}
+                    />
                   </div>
-
                   <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
                     an attempt to democratize access to career exploration. 0 to 10,000 users in 6 months.
-                    <br/>
-                    <br/>
+                    <br/><br/>
                     invited to speak at ACTE CareerTech National Conference.
                   </p>
-                </Link>
-                <Link 
+                </CardSpotlight>
+                <CardSpotlight 
                   href="https://www.latimes.com/california/story/2020-05-09/teen-volunteers-develop-ways-to-help-most-vulnerable-unable-to-help-themselves-during-virus-outbreak"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl w-full border border-[#ffffff33] p-4 space-y-2">
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#ffffff33] p-4 space-y-2 bg-black">
                   <div className="flex flex-row w-full justify-between items-center">
                     <p className="font-aeonik-medium text-[18px]">six feet supplies</p>
                     <Image
@@ -260,17 +257,17 @@ const Hero = () => {
                       height={100}
                       width={100}
                       alt="White arrow icon"
-                      className="w-2.5 h-2.5"
-                      />
+                      className={`w-3 h-3 transition-opacity duration-200
+                        opacity-100
+                      }`}
+                    />
                   </div>
-
                   <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
                     0 to 20,000+ vulnerable individuals that received $50,000+ in urgent supplies delivered in 13 cities across California during COVID-19.
-                    <br/>
-                    <br/>
-                    Featured on CNN, LA Times.
+                    <br/><br/>
+                    featured on CNN, LA Times.
                   </p>
-                </Link>
+                </CardSpotlight>
               </div>
             </div>
           </div>

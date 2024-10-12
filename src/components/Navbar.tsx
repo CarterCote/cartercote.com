@@ -106,7 +106,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
       <div className="fixed-header-container">
         <header className="z-50 fixed top-0 w-full flex items-center justify-between">
             <Link href={"/"}>
-              <p className="font-aeonik-bold text-[21px] md:text-[18px] tracking-tighter text-white absolute left-8 top-8 transition duration-200 ease-in-out hover:text-white">CARTER COTE</p>
+              <p className="font-aeonik-bold text-[21px] md:text-[18px] tracking-tighter text-white absolute left-8 top-8 transition duration-200 ease-in-out hover:text-blue-500">CARTER COTE</p>
             </Link>
             {isMobile ? (
               <>
