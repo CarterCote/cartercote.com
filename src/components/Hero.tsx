@@ -71,7 +71,7 @@ const prevProjects = [
   },
   { 
     name: "creatordao", 
-    role: "graphic design",
+    role: "product design",
     desc: "enabling creators to become founders. raised $20m from a16z.", 
     link: "https://www.creatordao.com/" 
   }
