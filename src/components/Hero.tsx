@@ -45,7 +45,7 @@ const prevProjects = [
   { 
     name: "crayo", 
     role: "founding engineer",
-    desc: "generate short-form content in seconds. 0 -> 1.68 million users, $6 million arr.", 
+    desc: "generate short-form content in seconds. 0 -> 1.68 million users.", 
     link: "https://www.crayo.ai/" 
   },
   { name: "jpmorgan", 
@@ -60,7 +60,7 @@ const prevProjects = [
   },
   { name: "musicfy", 
     role: "ux and brand design",
-    desc: "generate music samples in seconds. 3m users, $1.5m arr.",
+    desc: "generate music samples in seconds. 3m users, $200k mrr.",
     link: "https://create.musicfy.lol/" 
   },
   { 
