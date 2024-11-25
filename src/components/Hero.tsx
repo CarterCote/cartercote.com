@@ -39,7 +39,7 @@ const prevProjects = [
   { 
     name: "sellraze", 
     role: "founding engineer",
-    desc: "sell online in seconds. $560k pre-seed, $5 million gmv, 5k users.", 
+    desc: "sell online in seconds. $560k pre-seed, $5 million gmv.", 
     link: "https://www.sellraze.com/",
   },
   { 
