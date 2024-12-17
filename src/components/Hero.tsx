@@ -55,7 +55,7 @@ const prevProjects = [
   },
   { name: "startup exchange", 
     role: "founder",
-    desc: "redefining community for college builders. 7k event attendees in 1.5 yrs.", 
+    desc: "redefining community for college builders. 10k event attendees in 1.5 yrs.", 
     link: "https://www.startup.exchange/"
   },
   { name: "musicfy", 
