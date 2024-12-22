@@ -200,7 +200,7 @@ const Hero = () => {
                         />
                       </div>
                     </Link>
-                    <p className="opacity-70 font-aeonik-thin text-[18px]">{project.role}</p>
+                    {/* <p className="opacity-70 font-aeonik-thin text-[18px]">{project.role}</p> */}
                   </div>
                   <p className="opacity-90 font-aeonik-regular text-[18px] leading-[140%]">{project.desc}</p>
                 </div>
