@@ -39,7 +39,7 @@ const prevProjects = [
   { 
     name: "sellraze", 
     role: "founding engineer",
-    desc: "sell online in seconds. $10k mrr", 
+    desc: "sell online in seconds. $50k arr", 
     link: "https://www.sellraze.com/",
   },
   { 
