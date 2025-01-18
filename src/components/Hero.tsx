@@ -39,13 +39,13 @@ const prevProjects = [
   { 
     name: "sellraze", 
     role: "founding engineer",
-    desc: "sell online in seconds. $560k pre-seed, $5 million gmv.", 
+    desc: "sell online in seconds. $10k mrr", 
     link: "https://www.sellraze.com/",
   },
   { 
     name: "crayo", 
     role: "founding engineer",
-    desc: "generate short-form content in seconds. 0 -> 1.73 million users.", 
+    desc: "generate short-form content in seconds. 0 -> 2 million users.", 
     link: "https://www.crayo.ai/" 
   },
   { name: "jpmorgan", 
