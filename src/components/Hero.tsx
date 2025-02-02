@@ -60,7 +60,7 @@ const prevProjects = [
   },
   { name: "musicfy", 
     role: "ux and brand design",
-    desc: "generate music samples in seconds. 3 million users, $200k mrr.",
+    desc: "generate music samples in seconds. 3 million users, $1.5m arr.",
     link: "https://create.musicfy.lol/" 
   },
   { 
