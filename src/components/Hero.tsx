@@ -139,8 +139,8 @@ const Hero = () => {
                 <h1 className="tracking-tight font-voyager-thin text-[38px] md:text-[32px] lg:text-[32px]">hi, i'm carter.</h1>
               </div>
               <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[21px] md:text-[18px] lg:text-[18px]">
-                <p>i'm a 22 y/o software engineer + designer studying AI + HCI at Stanford University. i'm studying how human feedback + preferences can drive personalized learning experiences, enabling both AI systems + end-users to learn together.</p>
-                <p>i craft elegant, interactive interfaces from 0 → 1. my goal is to reduce information gaps and barriers in education and career development.</p>
+                <p>i'm a 22 y/o software engineer + designer studying AI + HCI at Stanford University. i'm studying how human feedback + preferences can drive the future of human-ai interaction.</p>
+                <p>i craft elegant, interactive software from 0 → 1. these days, i spend my time thinking about how agents and language models reduce barriers for self-exploration and consumer habits.</p>
                 <p>you can reach me via <Link className="italic border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://twitter.com/cartercote_">twitter</Link> or email at <Link href="mailto:chcote@stanford.edu" className="border-b italic hover:text-blue-500 transition-all duration-400 hover:border-blue-500">chcote@stanford.edu</Link>.</p>
               </div>
               {/* <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
