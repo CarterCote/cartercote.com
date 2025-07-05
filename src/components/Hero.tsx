@@ -39,7 +39,7 @@ const prevProjects = [
   { 
     name: "sellraze",
     role: "founding engineer",
-    desc: "sell online in seconds. 0 -> 50,000 users", 
+    desc: "sell online in seconds. 0 -> 200,000 users", 
     link: "https://www.sellraze.com/",
   },
   { 
@@ -48,11 +48,7 @@ const prevProjects = [
     desc: "generate short-form content in seconds. 0 -> 2 million users.", 
     link: "https://www.crayo.ai/" 
   },
-  { name: "jpmorgan", 
-    role: "applied ai and swe",
-    desc: "high-volume ml pipelines, anomaly detection for 40m daily alerts", 
-    link: "https://www.jpmorgan.com/"
-  },
+
   { name: "startup exchange", 
     role: "founder",
     desc: "redefining community for college builders. 10k event attendees in 1.5 yrs.", 
@@ -60,20 +56,18 @@ const prevProjects = [
   },
   { name: "musicfy", 
     role: "ux and brand design",
-    desc: "generate music samples in seconds. 3 million users, $1.5m arr.",
+    desc: "generate music samples in seconds. 5 million users, $1.5m arr.",
     link: "https://create.musicfy.lol/" 
   },
-  { 
-    name: "overtime", 
-    role: "growth",
-    desc: "building the future of sport entertainment. backed by morgan stanley, blackstone, and jeff bezos.", 
-    link: "https://www.overtime.tv/" 
+  { name: "pathways.me", 
+    role: "founder",
+    desc: "an attempt to democratize access to career exploration. invited to speak at ACTE CareerTech National Conference.",
+    link: "https://www.pathways.me/"
   },
-  { 
-    name: "creatordao", 
-    role: "product design",
-    desc: "enabling creators to become founders. raised $20m from a16z.", 
-    link: "https://www.creatordao.com/" 
+  { name: "six feet supplies", 
+    role: "founder",
+    desc: "0 -> 20k vulnerable individuals that received delivery of $50k+ in urgent supplies across CA during COVID. featured on CNN, LA Times.",
+    link: "https://www.latimes.com/california/story/2020-05-09/teen-volunteers-develop-ways-to-help-most-vulnerable-unable-to-help-themselves-during-virus-outbreak"
   }
 
 ];
@@ -138,10 +132,12 @@ const Hero = () => {
               <div className="flex flex-row w-full mb-3 items-center">
                 <h1 className="tracking-tight font-voyager-thin text-[38px] md:text-[32px] lg:text-[32px]">hi, i'm carter.</h1>
               </div>
-              <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[21px] md:text-[18px] lg:text-[18px]">
-                <p>i'm a 22 y/o software engineer + designer studying AI + HCI at Stanford University. i'm studying how human feedback + preferences can drive the future of human-ai interaction.</p>
-                <p>i craft elegant, interactive software from 0 → 1. these days, i spend my time thinking about how agents and language models reduce barriers for self-exploration and consumer habits.</p>
-                <p>currently to-and-from palo alto and nyc.</p>
+              <div className="w-full font-aeonik-regular space-y-8 leading-[1.5] text-[21px] md:text-[18px] lg:text-[18px]">
+                <p>i'm a 23 y/o software engineer + designer, and cpo at <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://join.phia.com/">phia</Link>.</p>
+                <p>i craft elegant, interactive software from 0 → 1. these days, i spend my time thinking about how agents + language models reduce barriers for self-exploration + consumer habits.</p>
+                <p>at stanford + georgia tech, I studied AI + HCI. from 0, I built <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.sellraze.com/">sellraze</Link> (200k users), <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.crayo.ai/">crayo</Link> (2m users in 10 months), and several other projects.</p>
+                <p>i also run <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.startup.exchange/">startup exchange</Link>, a nonprofit that I started to help student builders to discover themselves and pursue the nontraditional path.</p>
+                <p>currently based in nyc.</p>
                 <p>reach me via <Link className="italic border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://twitter.com/cartercote_">twitter</Link> or email at <Link href="mailto:chcote@stanford.edu" className="border-b italic hover:text-blue-500 transition-all duration-400 hover:border-blue-500">chcote@stanford.edu</Link>.</p>
               </div>
               {/* <div className="flex flex-col md:flex-row lg:flex-row items-left md:items-center lg:items-center w-full space-y-3 md:space-y-0 md:space-x-3">
@@ -160,8 +156,8 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex flex-col w-full space-y-3 px-5">
-            {/* <p className="font-aeonik-regular text-[21px] md:text-[18px] lg:text-[18px]">previously, I've design + build products:</p> */}
-            <div className="flex flex-col space-y-20">
+          <h1 className="tracking-tight font-voyager-thin text-[21px] pb-8">projects i've built</h1>
+          <div className="flex flex-col space-y-20">
               {prevProjects.map((project, index) => (
                 <div key={index} className='flex flex-col space-y-6'>
                   <div key={index} className='flex flex-col space-y-2'>
@@ -222,14 +218,14 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-4 px-5">
-            <h1 className="tracking-tight font-voyager-thin text-[21px]">projects</h1>
+            <h1 className="tracking-tight font-voyager-thin text-[21px]">teams i've been on</h1>
             <div className="flex flex-col pb-20 md:pb-0 pt-6 md:pt-0 lg:pt-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
               <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 w-full">
                 <CardSpotlight 
-                  href="https://www.pathways.me/"
-                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#ffffff33] p-4 space-y-2 bg-black">
+                  href="https://www.jpmorgan.com/"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#ffffff33] p-4 space-y-2 bg-black h-26 md:h-40">
                   <div className="flex flex-row w-full justify-between items-center">
-                    <p className="font-aeonik-medium text-[18px]">pathways.me</p>
+                    <p className="font-aeonik-medium text-[18px]">jpmorgan</p>
                     <Image
                       priority
                       src="/home/iconArrowUprightWhite.png"
@@ -242,16 +238,14 @@ const Hero = () => {
                     />
                   </div>
                   <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
-                    an attempt to democratize access to career exploration. 0 to 10,000 users in 6 months.
-                    <br/><br/>
-                    invited to speak at ACTE CareerTech National Conference.
+                    high-volume ml pipelines, anomaly detection for 40m daily alerts
                   </p>
                 </CardSpotlight>
                 <CardSpotlight 
-                  href="https://www.latimes.com/california/story/2020-05-09/teen-volunteers-develop-ways-to-help-most-vulnerable-unable-to-help-themselves-during-virus-outbreak"
-                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#ffffff33] p-4 space-y-2 bg-black">
+                  href="https://www.overtime.tv/"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#ffffff33] p-4 space-y-2 bg-black h-26 md:h-40">
                   <div className="flex flex-row w-full justify-between items-center">
-                    <p className="font-aeonik-medium text-[18px]">six feet supplies</p>
+                    <p className="font-aeonik-medium text-[18px]">overtime</p>
                     <Image
                       priority
                       src="/home/iconArrowUprightWhite.png"
@@ -264,9 +258,27 @@ const Hero = () => {
                     />
                   </div>
                   <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
-                    0 to 20,000+ vulnerable individuals that received $50,000+ in urgent supplies delivered in 13 cities across California during COVID-19.
-                    <br/><br/>
-                    featured on CNN, LA Times.
+                    building the future of sport entertainment. backed by morgan stanley, blackstone, and jeff bezos.
+                  </p>
+                </CardSpotlight>
+                <CardSpotlight 
+                  href="https://www.creatordao.com/"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#ffffff33] p-4 space-y-2 bg-black h-26 md:h-40">
+                  <div className="flex flex-row w-full justify-between items-center">
+                    <p className="font-aeonik-medium text-[18px]">creatordao</p>
+                    <Image
+                      priority
+                      src="/home/iconArrowUprightWhite.png"
+                      height={100}
+                      width={100}
+                      alt="White arrow icon"
+                      className={`w-3 h-3 transition-opacity duration-200
+                        opacity-100
+                      }`}
+                    />
+                  </div>
+                  <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
+                    enabling creators to become founders. raised $20m from a16z.
                   </p>
                 </CardSpotlight>
               </div>
