@@ -37,6 +37,12 @@ const nowProjects = [
 
 const prevProjects = [
   { 
+    name: "phia",
+    role: "chief product officer",
+    desc: "building the future of shopping your closet. 0 -> 200,000 users in a month", 
+    link: "https://join.phia.com/",
+  },
+  { 
     name: "sellraze",
     role: "founding engineer",
     desc: "sell online in seconds. 0 -> 200,000 users", 
