@@ -39,7 +39,7 @@ const prevProjects = [
   { 
     name: "phia",
     role: "chief product officer",
-    desc: "building the future of shopping your closet. 0 -> 200,000 users in a month", 
+    desc: "currently building the future of shopping your closet. 0 -> 300,000 users in <2 months", 
     link: "https://join.phia.com/",
   },
   { 
