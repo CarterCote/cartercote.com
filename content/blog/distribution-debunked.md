@@ -4,8 +4,6 @@ description: "\"distribution is the only moat\" is truly one of the biggest fall
 date: "2025-12-21"
 ---
 
-"distribution is the only moat" is truly one of the biggest fallacies of this generation of founders.
-
 if distribution was the only moat, it would contradict the origin story of some of the most successful products of our generation.
 
 dropbox didn't grow because they bought ads. they did something super simple: invite a friend, get more storage. zoom grew because every meeting link was an invitation to try the product, no marketing required. loom turns every video into a demo. figma's collaborative links meant designers pulled in their entire team just by sharing work.
