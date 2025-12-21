@@ -1,6 +1,6 @@
 ---
-title: "finding your why"
-description: "the vast majority of people can't explain their goal in life after 25 seconds of questioning. here's why that matters."
+title: "discovering your why"
+description: "the vast majority of people can't explain their goal in life after 25 seconds of questioning."
 date: "2025-01-18"
 ---
 

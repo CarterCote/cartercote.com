@@ -1,6 +1,6 @@
 ---
 title: "distribution debunked"
-description: "\"distribution is the only moat\" is one of the biggest fallacies of this generation of founders."
+description: "\"distribution is the only moat\" is truly one of the biggest fallacies of this generation of founders."
 date: "2025-12-21"
 ---
 
