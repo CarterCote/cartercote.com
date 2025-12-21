@@ -226,7 +226,7 @@ const Work = () => {
       <Navbar />
       <div className="flex w-full min-h-screen flex-col pt-24 pb-20 items-center justify-center gap-[4px]">
         {/* Projects Grid */}
-        <div className="w-[95%] grid grid-cols-2 md:grid-cols-3 gap-[4px]">
+        <div className="w-[95%] grid grid-cols-1 md:grid-cols-3 gap-[4px]">
           {projects.map((project) => (
             <div
               key={project.name}
@@ -253,7 +253,7 @@ const Work = () => {
           <p className="font-aeonik-bold tracking-tight text-left leading-[100%] text-[16px] mb-2">PLAY</p>
           <p className="font-voyager-thin tracking-tight text-left leading-[110%] text-[28px] md:text-[38px] mb-6">A collection of impulsive makes, complex emotions, and creative expression.</p>
         </div>
-        <div className="w-[95%] grid grid-cols-2 md:grid-cols-5 gap-[4px]">
+        <div className="w-[95%] grid grid-cols-1 md:grid-cols-5 gap-[4px]">
           {playItems.map((item) => (
             <div
               key={item.name}
