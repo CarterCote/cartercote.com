@@ -11,7 +11,7 @@ const Blog = () => {
       <Navbar />
       <div className="flex w-full min-h-screen flex-col pt-32 pb-20 px-8 md:px-20">
         <div className="max-w-[800px] mx-auto w-full">
-          <h1 className="font-voyager-thin text-[44px] md:text-[54px] mb-12">blog</h1>
+          <h1 className="font-voyager-thin text-[44px] md:text-[54px] mb-12">thoughts</h1>
 
           {posts.length === 0 ? (
             <p className="font-aeonik-regular text-[18px] text-white/60">
