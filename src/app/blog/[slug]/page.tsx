@@ -86,7 +86,7 @@ const BlogPost = ({ params }: PageProps) => {
                 a: ({ href, children }) => (
                   <a
                     href={href}
-                    className="text-blue-500 hover:text-blue-400 border-b border-blue-500 hover:border-blue-400 transition-colors"
+                    className="text-white underline hover:text-white/70 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

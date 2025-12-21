@@ -28,9 +28,9 @@ distribution is like having a set of nukes in your pocket. you should strike onc
 
 ## the national enquirer problem
 
-when i think of acquiring attention, i think about when I was growing up, checking out at the grocery store, and always noticing the latest headlines on the magazine called national enquirer.
+when i think of acquiring attention, i think about when I was growing up, checking out at the grocery store, and always noticing the latest headlines on the magazine called [national enquirer](https://www.gettyimages.com/photos/national-enquirer).
 
-i always vividly remember notiicing the headline for each new issue of the magazine.
+i always vividly remember noticing the headline for each new issue of the magazine.
 
 every time i check out, the national enquirer got my attention. but to be clear, i have never read the national enquirer.
 
