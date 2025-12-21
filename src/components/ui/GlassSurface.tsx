@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef, useId } from 'react';
 import './GlassSurface.css';
 
@@ -174,6 +176,8 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   }, [width, height]);
 
   const supportsSVGFilters = () => {
+    if (typeof window === 'undefined') return false;
+
     const isWebkit = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
     const isFirefox = /Firefox/.test(navigator.userAgent);
 

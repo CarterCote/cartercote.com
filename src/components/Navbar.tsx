@@ -42,6 +42,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
   const pathname = usePathname();
 
   const getActiveIndex = () => {
+    if (!pathname) return -1;
     const index = navLinks.findIndex((link) => {
       if (link.link.startsWith('http')) return false;
       if (link.link === '/') return pathname === '/';
