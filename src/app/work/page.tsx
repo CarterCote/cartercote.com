@@ -44,6 +44,24 @@ const projects = [
     link: "https://create.musicfy.lol/",
     linkText: "VIEW PROJECT",
   },
+  {
+    name: "FitSnap",
+    role: "Founder",
+    year: "2025",
+    description: "An app concept I almost launched based on viral trends around color analysis and body shape.",
+    image: "/work/fitsnap.png",
+    link: "",
+    linkText: "",
+  },
+  {
+    name: "Startup Exchange",
+    role: "Founder",
+    year: "2022",
+    description: "A nonprofit enabling college students to build the self-awareness, goals, and mindset needed to pursue the nontraditional path. Over 30K students at 40+ universities.",
+    image: "/work/startupexchange.jpg",
+    link: "https://www.startup.exchange/",
+    linkText: "VIEW PROJECT",
+  },
   // {
   //   name: "Bedrock Systems",
   //   role: "Winning Design Concept",
@@ -161,12 +179,15 @@ const ProjectModal = ({
             {project.description}
           </p>
 
-          {project.link && (
-            <Button
-              text={project.linkText}
-              link={project.link}
-              newTab={true}
-            />
+          {project.link && project.linkText && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-white rounded-lg px-6 py-3 text-sm font-graebenbach-mono-regular hover:bg-blue-600 hover:border-blue-600 transition duration-300"
+            >
+              {project.linkText}
+            </a>
           )}
         </div>
       </div>
