@@ -13,7 +13,7 @@ const projects = [
     role: "Founding Engineer",
     year: "2024",
     description: "Using AI to build the fastest way to sell online. Led all design. Built React Native mobile app alongside founding team. Led SEO, growth, and GTM strategy, leading to over 10,000 impressions and 1,500 users in two months.",
-    image: "/work/sellraze.jpeg",
+    image: "/work/sellraze.png",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
   },
@@ -53,15 +53,15 @@ const projects = [
     link: "https://www.pathways.me/",
     linkText: "VIEW PROJECT",
   },
-  {
-    name: "Six Feet Supplies",
-    role: "Founding Designer",
-    year: "2020",
-    description: "Zero-cost emergency supply delivery web app to assist the immunocompromised during peak of COVID-19. 20,000 users, 14 cities. Solo designer + dev. Featured on CNN, LA Times.",
-    image: "/work/sixfeet.png",
-    link: "https://www.latimes.com/california/story/2020-05-09/teen-volunteers-develop-ways-to-help-most-vulnerable-unable-to-help-themselves-during-virus-outbreak",
-    linkText: "VIEW PROJECT",
-  },
+  // {
+  //   name: "Six Feet Supplies",
+  //   role: "Founding Designer",
+  //   year: "2020",
+  //   description: "Zero-cost emergency supply delivery web app to assist the immunocompromised during peak of COVID-19. 20,000 users, 14 cities. Solo designer + dev. Featured on CNN, LA Times.",
+  //   image: "/work/sixfeet.png",
+  //   link: "https://www.latimes.com/california/story/2020-05-09/teen-volunteers-develop-ways-to-help-most-vulnerable-unable-to-help-themselves-during-virus-outbreak",
+  //   linkText: "VIEW PROJECT",
+  // },
 ];
 
 const playItems = [
@@ -143,10 +143,10 @@ const ProjectModal = ({
         <div className="p-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             <h2 className="font-voyager-thin text-[32px] md:text-[40px]">{project.name}</h2>
-            <p className="font-aeonik-thin text-white/60 text-[16px]">{project.year}</p>
+            <p className="font-aeonik-regular text-white/60 text-[16px]">{project.year}</p>
           </div>
 
-          <p className="font-aeonik-thin text-white/70 text-[14px] mb-4">{project.role}</p>
+          <p className="font-aeonik-regular text-white/70 text-[14px] mb-4">{project.role}</p>
 
           <p className="font-aeonik-regular text-[16px] leading-[150%] mb-8">
             {project.description}
@@ -200,7 +200,7 @@ const PlayModal = ({
         <div className="p-8">
           <div className="flex flex-row items-center justify-between">
             <h2 className="font-voyager-thin text-[28px] md:text-[32px]">{item.name}</h2>
-            <p className="font-aeonik-thin text-white/60 text-[16px]">{item.year}</p>
+            <p className="font-aeonik-regular text-white/60 text-[16px]">{item.year}</p>
           </div>
         </div>
       </div>
@@ -217,11 +217,11 @@ const Work = () => {
       <Navbar />
       <div className="flex w-full min-h-screen flex-col pt-24 pb-20 items-center justify-center gap-[4px]">
         {/* Projects Grid */}
-        <div className="w-[95%] grid grid-cols-2 md:grid-cols-4 gap-[4px]">
+        <div className="w-[95%] grid grid-cols-2 md:grid-cols-3 gap-[4px]">
           {projects.map((project) => (
             <div
               key={project.name}
-              className="relative aspect-[4/4.5] cursor-pointer group overflow-hidden rounded-[4px]"
+              className="relative aspect-[4/2.88] cursor-pointer group overflow-hidden rounded-[4px]"
               onClick={() => setSelectedProject(project)}
             >
               <Image

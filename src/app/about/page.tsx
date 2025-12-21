@@ -141,16 +141,18 @@ const About = () => {
                   className="py-10"
                 />
                 <h1 className="font-voyager-thin text-left text-[44px] md:text-[54px] leading-[125%] tracking-tight mb-3 max-w-[800px]">i'm just a dude that loves making stuff for others.</h1>
-                <div className="w-full font-aeonik-thin tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px] max-w-[800px]">
+                <div className="w-full font-aeonik-regular space-y-10 items-center align-center justify-center text-[21px] md:text-[18px] max-w-[800px]">
                   <p className="leading-[150%]">my first side hustle was designing Minecraft game assets + posting them on youtube, when i was 12.
-                  that led to over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views of my videos</InteractiveLink>.
+                  i ended up accumulating over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views on my videos</InteractiveLink>.
                   </p>
-                  <p className="leading-[150%]">this hobby kindled a deeper passion for using design to impact others through web apps.
-                      naturally, i gained curiosity in how to build the software behind websites, not just design it.
+                  <p className="leading-[150%]">selling minecraft texture packs to youtubers turned into a hobby of designing typographic posters, until a friend of mine told me to explore web.
                   </p>
-                  <p className="leading-[150%]">at 18, i designed and built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>an emergency supply delivery app</InteractiveLink> during the peak of covid-19, which delivered over $50,000 worth of urgent supplies to over 20,000 people.
+                  <p className="leading-[150%]">after a couple of freelance gigs, I got frustrated with not having full creative control on how websites worked and looked. this led me to go on to study CS at Georgia Tech.
                   </p>
-                  <p className="leading-[150%]">at 19, i built a <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>career pathway exploration platform</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
+                  <p className="leading-[150%]">during the peak of covid-19, a group of friends of mine wanted to take action to help our community. we built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>six feet supplies</InteractiveLink>, which delivered over $50k worth of urgent supplies to over 20k people.
+                    this taught me the effects of scale, and the ability to impact people through software.
+                  </p>
+                  <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
                   </p>
                   <p className="leading-[150%]">at 21, i worked on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>musicfy</InteractiveLink>,
                   an ai-voice generation platform with over 5m users;
@@ -176,7 +178,7 @@ const About = () => {
             </div> */}
             </div>
           <div className="flex flex-col w-full py-20">
-            <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">EXPERIENCE</p>
+            <p className="font-aeonik-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EXPERIENCE</p>
             {groupedExperiences.map((group, index) => (
             <div key={index} className="flex flex-col md:flex-row w-full justify-between md:space-x-10 border-b pb-10 border-gray-800">
               {group.map((exp, idx) => (
@@ -187,7 +189,7 @@ const About = () => {
                   >
                     <div className="flex flex-row items-start align-start ">
                       <div className="flex flex-col w-1/6">
-                        <p className="text-sm pb-5 text-gray-500">{exp.number}</p>
+                        <p className="font-mono-regular text-sm pb-5 text-gray-500">{exp.number}</p>
                         <Image
                           priority
                           src={exp.imageName}
@@ -197,7 +199,7 @@ const About = () => {
                         />
                       </div>
                       <div className="ml-10 w-9/12 items-start">
-                        <p className="text-sm pb-5 text-gray-500">{exp.position}</p>
+                        <p className="font-mono-regular text-sm pb-5 text-gray-500">{exp.position}</p>
                         <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{exp.companyName}</p>
                         <p className="text-[18px] mt-4 leading-[150%] text-gray-400">{exp.roleDescription}</p>
                       </div>
@@ -212,26 +214,26 @@ const About = () => {
             ))}
           </div>
           <div className="w-full py-20">
-              <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">EDUCATION</p>
+              <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EDUCATION</p>
               {education.map((education) => (
                   <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
                       <div>
                           <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{education.name}</p>
-                          <p className="font-aeonik-thin text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{education.desc}</p>
+                          <p className="font-aeonik-regular text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{education.desc}</p>
                       </div>
-                      <p className="font-aeonik-thin tracking-tight text-[18px] md:text-[21px] mb-3">{education.year}</p>
+                      <p className="font-aeonik-regular tracking-tight text-[18px] md:text-[21px] mb-3">{education.year}</p>
                   </div>
               ))}
           </div>
           <div className="w-full py-20">
-              <p className="font-aeonik-thin tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
+              <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
               {awards.map((award) => (
                   <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
                       <div>
                           <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{award.name}</p>
-                          <p className="font-aeonik-thin text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{award.desc}</p>
+                          <p className="font-aeonik-regular text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{award.desc}</p>
                       </div>
-                      <p className="font-aeonik-thin tracking-tight text-[18px] md:text-[21px] mb-3">{award.year}</p>
+                      <p className="font-aeonik-regular tracking-tight text-[18px] md:text-[21px] mb-3">{award.year}</p>
                   </div>
               ))}
           </div>
