@@ -132,35 +132,35 @@ const About = () => {
             <div className="flex flex-col w-full align-center justify-center space-y-4 items-start">
               <div className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
-                <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
                 <Image
                   priority
                   src="/about/aboutMe.jpg"
-                  height={600}
-                  width={481}
+                  height={350}
+                  width={231}
                   alt="Descriptive Text"
                   className="py-10"
                 />
-                <div className="w-full md:w-2/3 font-aeonik-thin tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
-                  <p className="leading-[150%]">My journey in software started at age 12 with designing video game assets and making videos about it on YouTube.
-                  That led to over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views of my videos</InteractiveLink>.
+                <h1 className="font-voyager-thin text-left text-[44px] md:text-[54px] leading-[125%] tracking-tight mb-3 max-w-[800px]">i'm just a dude that loves making stuff for others.</h1>
+                <div className="w-full font-aeonik-thin tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px] max-w-[800px]">
+                  <p className="leading-[150%]">my first side hustle was designing Minecraft game assets + posting them on youtube, when i was 12.
+                  that led to over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views of my videos</InteractiveLink>.
                   </p>
-                  <p className="leading-[150%]">This hobby kindled a deeper passion for using design to impact others through web apps. 
-                      Naturally, I gained curiosity in how to build the software behind websites, not just design it.
+                  <p className="leading-[150%]">this hobby kindled a deeper passion for using design to impact others through web apps.
+                      naturally, i gained curiosity in how to build the software behind websites, not just design it.
                   </p>
-                  <p className="leading-[150%]">At 18, I designed and built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>an emergency supply delivery app</InteractiveLink> during the peak of COVID-19, which delivered over $50,000 worth of urgent supplies to over 20,000 people.
+                  <p className="leading-[150%]">at 18, i designed and built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>an emergency supply delivery app</InteractiveLink> during the peak of covid-19, which delivered over $50,000 worth of urgent supplies to over 20,000 people.
                   </p>
-                  <p className="leading-[150%]">At 19, I built a <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>career pathway exploration platform</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
+                  <p className="leading-[150%]">at 19, i built a <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>career pathway exploration platform</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
                   </p>
-                  <p className="leading-[150%]">At 21, I worked on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>Musicfy</InteractiveLink>,
-                  an AI-voice generation platform with over 1M users; 
-                  {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>Crayo</InteractiveLink>, an AI short-form content generation platform with over 280,000 users, with over 50,000 users in the first month;
-                  and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>SellRaze</InteractiveLink>, a mobile app that uses AI to autofill listings for online selling.
+                  <p className="leading-[150%]">at 21, i worked on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>musicfy</InteractiveLink>,
+                  an ai-voice generation platform with over 5m users;
+                  {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>crayo</InteractiveLink>, an ai short-form content generation platform with over 2m users, with over 50k users in the first month;
+                  and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>sellraze</InteractiveLink>, a mobile app that uses ai to autofill listings for online selling.
                   </p>
-                  <p className="leading-[150%]">I also started a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>Startup Exchange</InteractiveLink>, which enables college students to learn how to build side projects and grow them into startups. Over 7,000 students at over 40 universities have attended a Startup Exchange event since Fall 2022.
+                  <p className="leading-[150%]">i also started a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>startup exchange</InteractiveLink>, which enables college students to learn how to build side projects and grow them into startups. over 30k students at over 40 universities have attended a startup exchange event since fall 2022.
                   </p>
-                  <p className="leading-[150%]">Today, I am a swiss-army knife that can understand end-users, and design, build, and scale end-solutions.
-                      I can code-switch as the designer, the software engineer, or growth hacker.
+                  <p className="leading-[150%]">today, i am a swiss-army knife that can understand end-users, and design, build, and scale end-solutions.
+                      i can code-switch as the designer, the software engineer, or growth hacker.
                   </p>
                 </div>
               </div>
