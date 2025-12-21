@@ -70,7 +70,7 @@ const experiences = [
         year: "2023",
         companyName: "Overtime",
         link: "https://overtime.tv/",
-        imageName: "/projects/overtime.png",
+        imageName: "/work/overtime.png",
         roleDescription: "Devised UX strategy to attract university students to Overtime events, driving digital engagement \& sales conversions to grow from <5% to 15% of overall event attendance. Launched ambassador program."
     },
     {
@@ -79,7 +79,7 @@ const experiences = [
         year: "2023",
         companyName: "JPMorgan",
         link: "https://www.jpmorgan.com/global",
-        imageName: "/projects/jpmorgan.png",
+        imageName: "/work/jpmorgan.png",
         roleDescription: "Automated compatibility testing by training and deploying multimodal classifiers, reducing manual testing by 90%. Developed a summarization tool and a high-volume ML inference API."
     },
     {
@@ -88,7 +88,7 @@ const experiences = [
         year: "2022",
         companyName: "CreatorDAO",
         link: "https://www.creatordao.com/",
-        imageName: "/projects/creatorDAO.png",
+        imageName: "/work/creatorDAO.png",
         roleDescription: "Designed web components and assets for strategic projects. Backed by a16z, Audacious Ventures, Gary Tan."
     },
     {
@@ -97,7 +97,7 @@ const experiences = [
         year: "2022",
         companyName: "JPMorgan Chase & Co.",
         link: "https://www.jpmorganchase.com/",
-        imageName: "/projects/jpmc.png",
+        imageName: "/work/jpmc.png",
         roleDescription: "Developed an end-to-end API system for scalable resiliency tasks for large transactions, and built a client-facing UI for automated task management used by 5000+ developers."
     },
     // {
@@ -105,7 +105,7 @@ const experiences = [
     //     position: "GROWTH INTERN",
     //     year: "2023",
     //     companyName: "Overtime",
-    //     imageName: "/projects/overtime.png",
+    //     imageName: "/work/overtime.png",
     //     roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
     // },
     // {
@@ -113,7 +113,7 @@ const experiences = [
     //     position: "GROWTH INTERN",
     //     year: "2023",
     //     companyName: "Overtime",
-    //     imageName: "/projects/overtime.png",
+    //     imageName: "/work/overtime.png",
     //     roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
     // }
 ];
@@ -130,9 +130,6 @@ const About = () => {
         <div className="flex flex-col w-full px-8 md:px-22 lg:px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
           <TracingBeam className="px-0 md:px-2">
             <div className="flex flex-col w-full align-center justify-center space-y-4 items-start">
-              <Link href="/" className="w-full font-aeonik-thin tracking-regular space-y-3 text-sm mb-4">
-                <p>← BACK TO HOME </p>
-              </Link>
               <div className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                 <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
                 <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">👋🏼 I'm Carter Cote, a Fil-American software engineer + designer. Currently studying HCI @ Stanford.</h1>
