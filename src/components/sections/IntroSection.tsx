@@ -15,7 +15,7 @@ const IntroSection = () => {
           <p>i'm a 23 y/o software engineer + designer, and stanford + georgia tech alum.</p>
           <p>i'm also the cpo of <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://join.phia.com/">phia</Link>, where I lead design + product. in 8 months, we went from 0 → 900K users + raised $30m.</p>
           <p>previously, I built <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.crayo.ai/">crayo</Link> (2m users in 10 months), and <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.sellraze.com/">sellraze</Link> (300k users).</p>
-          <p>i also run <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.startup.exchange/">startup exchange</Link>, a nonprofit helping college students to build the self-awareness, goals, + mindset needed to pursue the nontraditional path.</p>
+          <p>i also run <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.startup.exchange/">startup exchange</Link>, a nonprofit enabling college students to build the self-awareness, goals, + mindset needed to pursue the nontraditional path.</p>
         </div>
       </div>
     </div>
