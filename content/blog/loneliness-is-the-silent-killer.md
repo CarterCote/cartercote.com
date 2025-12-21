@@ -1,6 +1,6 @@
 ---
 title: "loneliness is the silent killer"
-description: "on disconnection, the difference between being alone and being lonely, and finding your way back home."
+description: "there's a difference between being alone and being lonely."
 date: "2025-01-08"
 ---
 
