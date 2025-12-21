@@ -23,7 +23,7 @@ const projects = [
   {
     name: "Crayo AI",
     description: "Founding designer. 0 -> 2m users.",
-    image: "/work/crayo.png",
+    image: "/work/crayo1.png",
     link: "http://crayo.ai",
   },
 ];
