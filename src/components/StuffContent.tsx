@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const categories = ["MY THOUGHTS", "GOOD READS", "SONGS", "QUOTES"] as const;
+const categories = ["THOUGHTS", "READS", "SONGS", "QUOTES"] as const;
 type Category = (typeof categories)[number];
 
 interface Post {
