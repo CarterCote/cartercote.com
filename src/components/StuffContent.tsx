@@ -22,7 +22,7 @@ const StuffContent = ({ posts }: StuffContentProps) => {
 
   return (
     <>
-      <div className="flex items-center gap-2 font-mono-regular text-[14px] mb-12">
+      <div className="flex items-center font-mono-regular text-[14px] mb-12">
         {categories.map((category, index) => (
           <span key={category} className="flex items-center">
             <button
@@ -36,7 +36,7 @@ const StuffContent = ({ posts }: StuffContentProps) => {
               {category}
             </button>
             {index < categories.length - 1 && (
-              <span className="text-white/50 mx-2">•</span>
+              <span className="text-white/50 px-4">•</span>
             )}
           </span>
         ))}
