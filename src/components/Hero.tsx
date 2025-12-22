@@ -113,7 +113,7 @@ const BeliefsSection = () => {
   return (
     <div className="mt-32">
       <p className="font-aeonik-regular text-[21px] md:text-[18px] leading-[1.5]">
-        if you want to learn more about me, read my thoughts <Link href="/blog" className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500">here</Link>.
+        if you want to learn more about me, read my thoughts <Link href="/stuff" className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500">here</Link>.
       </p>
     </div>
   );

@@ -33,8 +33,8 @@ export const navLinks = [
     link: "/work",
   },
   {
-    text: "BLOG",
-    link: "/blog",
+    text: "STUFF",
+    link: "/stuff",
   },
 ];
 
