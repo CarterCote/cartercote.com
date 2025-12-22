@@ -72,7 +72,7 @@ const StuffContent = ({ posts }: StuffContentProps) => {
         </>
       )}
 
-      {activeCategory === "GOOD READS" && (
+      {activeCategory === "READS" && (
         <p className="font-aeonik-regular text-[18px] text-white/60">
           coming soon.
         </p>
