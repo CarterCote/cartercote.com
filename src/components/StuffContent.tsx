@@ -18,7 +18,7 @@ interface StuffContentProps {
 }
 
 const StuffContent = ({ posts }: StuffContentProps) => {
-  const [activeCategory, setActiveCategory] = useState<Category>("MY THOUGHTS");
+  const [activeCategory, setActiveCategory] = useState<Category>("THOUGHTS");
 
   return (
     <>
@@ -42,7 +42,7 @@ const StuffContent = ({ posts }: StuffContentProps) => {
         ))}
       </div>
 
-      {activeCategory === "MY THOUGHTS" && (
+      {activeCategory === "THOUGHTS" && (
         <>
           {posts.length === 0 ? (
             <p className="font-aeonik-regular text-[18px] text-white/60">
