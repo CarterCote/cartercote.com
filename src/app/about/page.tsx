@@ -21,7 +21,7 @@ const photos = [
   "/about/about7.jpg",
   "/about/about8.jpg",
   "/about/about9.jpg",
-  "/about/about10.jpg",
+  "/about/about10.jpeg",
 ];
 
 const awards = [
@@ -197,7 +197,7 @@ const About = () => {
                   </svg>
                 </button>
 
-                <div className="relative w-full h-full rounded-[12px] overflow-hidden">
+                <div className="relative w-full h-full rounded-[8px] overflow-hidden">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentPhoto}
