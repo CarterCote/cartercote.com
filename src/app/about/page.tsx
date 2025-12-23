@@ -17,9 +17,11 @@ const photos = [
   "/about/about3.JPG",
   "/about/about4.jpg",
   "/about/about5.jpg",
-  "/about/about8.jpg",
-  "/about/about7.jpg",
   "/about/about6.JPG",
+  "/about/about7.jpg",
+  "/about/about8.jpg",
+  "/about/about9.jpg",
+  "/about/about10.jpg",
 ];
 
 const awards = [
@@ -161,9 +163,9 @@ const About = () => {
     if (!isPlaying) return;
     const interval = setInterval(() => {
       setCurrentPhoto((prev) => (prev + 1) % photos.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }, [isPlaying, currentPhoto]);
 
   const nextPhoto = () => {
     setCurrentPhoto((prev) => (prev + 1) % photos.length);
@@ -249,7 +251,7 @@ const About = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentPhoto(index)}
-                    className={`relative w-12 h-16 overflow-hidden rounded-[4px] transition-opacity ${
+                    className={`relative w-12 h-16 overflow-hidden rounded-[4px] transition-opacity duration-300 ease-in-out ${
                       index === currentPhoto ? 'opacity-100' : 'opacity-40 hover:opacity-60'
                     }`}
                   >
@@ -436,7 +438,7 @@ const About = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentPhoto(index)}
-                  className={`relative w-8 h-12 overflow-hidden rounded-[4px] transition-opacity ${
+                  className={`relative w-8 h-12 overflow-hidden rounded-[4px] transition-opacity duration-300 ease-in-out ${
                     index === currentPhoto ? 'opacity-100' : 'opacity-40 hover:opacity-60'
                   }`}
                 >
