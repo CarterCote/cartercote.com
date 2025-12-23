@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useId } from 'react';
-import './GlassSurface.css';
+import React, { useEffect, useRef, useState, useId } from 'react';
 
 export interface GlassSurfaceProps {
   children?: React.ReactNode;
@@ -44,6 +43,23 @@ export interface GlassSurfaceProps {
   style?: React.CSSProperties;
 }
 
+const useDarkMode = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDark(mediaQuery.matches);
+
+    const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
+  return isDark;
+};
+
 const GlassSurface: React.FC<GlassSurfaceProps> = ({
   children,
   width = 200,
@@ -66,10 +82,10 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   className = '',
   style = {}
 }) => {
-  const id = useId();
-  const filterId = `glass-filter-${id}`;
-  const redGradId = `red-grad-${id}`;
-  const blueGradId = `blue-grad-${id}`;
+  const uniqueId = useId().replace(/:/g, '-');
+  const filterId = `glass-filter-${uniqueId}`;
+  const redGradId = `red-grad-${uniqueId}`;
+  const blueGradId = `blue-grad-${uniqueId}`;
 
   const containerRef = useRef<HTMLDivElement>(null);
   const feImageRef = useRef<SVGFEImageElement>(null);
@@ -77,6 +93,8 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   const greenChannelRef = useRef<SVGFEDisplacementMapElement>(null);
   const blueChannelRef = useRef<SVGFEDisplacementMapElement>(null);
   const gaussianBlurRef = useRef<SVGFEGaussianBlurElement>(null);
+
+  const isDarkMode = useDarkMode();
 
   const generateDisplacementMap = () => {
     const rect = containerRef.current?.getBoundingClientRect();
@@ -158,20 +176,6 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   }, []);
 
   useEffect(() => {
-    if (!containerRef.current) return;
-
-    const resizeObserver = new ResizeObserver(() => {
-      setTimeout(updateDisplacementMap, 0);
-    });
-
-    resizeObserver.observe(containerRef.current);
-
-    return () => {
-      resizeObserver.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
     setTimeout(updateDisplacementMap, 0);
   }, [width, height]);
 
@@ -190,23 +194,111 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
     return div.style.backdropFilter !== '';
   };
 
-  const containerStyle: React.CSSProperties = {
-    ...style,
-    width: typeof width === 'number' ? `${width}px` : width,
-    height: typeof height === 'number' ? `${height}px` : height,
-    borderRadius: `${borderRadius}px`,
-    '--glass-frost': backgroundOpacity,
-    '--glass-saturation': saturation,
-    '--filter-id': `url(#${filterId})`
-  } as React.CSSProperties;
+  const supportsBackdropFilter = () => {
+    if (typeof window === 'undefined') return false;
+    return CSS.supports('backdrop-filter', 'blur(10px)');
+  };
+
+  const getContainerStyles = (): React.CSSProperties => {
+    const baseStyles: React.CSSProperties = {
+      ...style,
+      width: typeof width === 'number' ? `${width}px` : width,
+      height: typeof height === 'number' ? `${height}px` : height,
+      borderRadius: `${borderRadius}px`,
+      '--glass-frost': backgroundOpacity,
+      '--glass-saturation': saturation
+    } as React.CSSProperties;
+
+    const svgSupported = supportsSVGFilters();
+    const backdropFilterSupported = supportsBackdropFilter();
+
+    if (svgSupported) {
+      return {
+        ...baseStyles,
+        background: isDarkMode ? `hsl(0 0% 0% / ${backgroundOpacity})` : `hsl(0 0% 100% / ${backgroundOpacity})`,
+        backdropFilter: `url(#${filterId}) saturate(${saturation})`,
+        boxShadow: isDarkMode
+          ? `0 0 2px 1px color-mix(in oklch, white, transparent 65%) inset,
+             0 0 10px 4px color-mix(in oklch, white, transparent 85%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset`
+          : `0 0 2px 1px color-mix(in oklch, black, transparent 85%) inset,
+             0 0 10px 4px color-mix(in oklch, black, transparent 90%) inset,
+             0px 4px 16px rgba(17, 17, 26, 0.05),
+             0px 8px 24px rgba(17, 17, 26, 0.05),
+             0px 16px 56px rgba(17, 17, 26, 0.05),
+             0px 4px 16px rgba(17, 17, 26, 0.05) inset,
+             0px 8px 24px rgba(17, 17, 26, 0.05) inset,
+             0px 16px 56px rgba(17, 17, 26, 0.05) inset`
+      };
+    } else {
+      if (isDarkMode) {
+        if (!backdropFilterSupported) {
+          return {
+            ...baseStyles,
+            background: 'rgba(0, 0, 0, 0.4)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            boxShadow: `inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+                        inset 0 -1px 0 0 rgba(255, 255, 255, 0.1)`
+          };
+        } else {
+          return {
+            ...baseStyles,
+            background: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(12px) saturate(1.8) brightness(1.2)',
+            WebkitBackdropFilter: 'blur(12px) saturate(1.8) brightness(1.2)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            boxShadow: `inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+                        inset 0 -1px 0 0 rgba(255, 255, 255, 0.1)`
+          };
+        }
+      } else {
+        if (!backdropFilterSupported) {
+          return {
+            ...baseStyles,
+            background: 'rgba(255, 255, 255, 0.4)',
+            border: '1px solid rgba(255, 255, 255, 0.3)',
+            boxShadow: `inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+                        inset 0 -1px 0 0 rgba(255, 255, 255, 0.3)`
+          };
+        } else {
+          return {
+            ...baseStyles,
+            background: 'rgba(255, 255, 255, 0.25)',
+            backdropFilter: 'blur(12px) saturate(1.8) brightness(1.1)',
+            WebkitBackdropFilter: 'blur(12px) saturate(1.8) brightness(1.1)',
+            border: '1px solid rgba(255, 255, 255, 0.3)',
+            boxShadow: `0 8px 32px 0 rgba(31, 38, 135, 0.2),
+                        0 2px 16px 0 rgba(31, 38, 135, 0.1),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+                        inset 0 -1px 0 0 rgba(255, 255, 255, 0.2)`
+          };
+        }
+      }
+    }
+  };
+
+  const glassSurfaceClasses =
+    'relative flex items-center justify-center overflow-hidden transition-opacity duration-[260ms] ease-out';
+
+  const focusVisibleClasses = isDarkMode
+    ? 'focus-visible:outline-2 focus-visible:outline-[#0A84FF] focus-visible:outline-offset-2'
+    : 'focus-visible:outline-2 focus-visible:outline-[#007AFF] focus-visible:outline-offset-2';
 
   return (
     <div
       ref={containerRef}
-      className={`glass-surface ${supportsSVGFilters() ? 'glass-surface--svg' : 'glass-surface--fallback'} ${className}`}
-      style={containerStyle}
+      className={`${glassSurfaceClasses} ${focusVisibleClasses} ${className}`}
+      style={getContainerStyles()}
     >
-      <svg className="glass-surface__filter" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <defs>
           <filter id={filterId} colorInterpolationFilters="sRGB" x="0%" y="0%" width="100%" height="100%">
             <feImage ref={feImageRef} x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" result="map" />
@@ -257,7 +349,9 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
         </defs>
       </svg>
 
-      <div className="glass-surface__content">{children}</div>
+      <div className="w-full h-full flex items-center justify-center p-1 rounded-[inherit] relative z-10">
+        {children}
+      </div>
     </div>
   );
 };

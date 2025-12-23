@@ -114,13 +114,13 @@ const SecondarySectionContent = () => {
 const BeliefsSection = () => {
   return (
     <motion.div
-      className="mt-24"
+      className="mt-24 md:hidden"
       variants={blurInVariants}
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.8, ease: "easeOut", delay: 1.8 }}
     >
-      <p className="font-aeonik-regular text-[21px] md:text-[18px] leading-[1.5]">
+      <p className="font-aeonik-regular text-[21px] leading-[1.5]">
         if you want to learn more about me, read my thoughts <Link href="/stuff" className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500">here</Link>.
       </p>
     </motion.div>
@@ -130,7 +130,7 @@ const BeliefsSection = () => {
 const LinksSection = () => {
   return (
     <motion.div
-      className="mt-16"
+      className="mt-16 md:hidden"
       variants={blurInVariants}
       initial="hidden"
       animate="visible"
@@ -178,9 +178,9 @@ const LinksSection = () => {
 const Hero = () => {
   return (
     <>
-      <main className="flex min-h-screen w-full flex-col items-center justify-center py-8 md:py-12 lg:py-16">
-        <VideoBackground />
-        <div className="flex flex-col w-full max-w-[800px] mx-auto mt-14 md:mt-0 lg:pt-0 px-6 md:px-12 lg:px-16 justify-center text-6xl font-bold">
+      <VideoBackground />
+      <main className="relative z-[10] flex min-h-screen w-full flex-col items-center justify-center md:justify-end py-8 md:py-16 lg:py-20">
+        <div className="flex flex-col w-full max-w-[800px] md:max-w-none mx-auto mt-14 md:mt-0 lg:pt-0 px-6 md:px-6 lg:px-8 justify-center text-6xl font-bold">
           <IntroSection />
           {/* <IntroSectionContent />
           <SecondarySection />

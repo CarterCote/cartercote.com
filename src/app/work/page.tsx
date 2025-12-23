@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Button from '../../components/Button';
+import VideoBackground from "../../components/sections/VideoBackground";
 import { IoMdClose } from "react-icons/io";
 import { blurInVariants } from "../../lib/animations";
 
@@ -246,8 +247,9 @@ const Work = () => {
 
   return (
     <>
+      <VideoBackground />
       <Navbar />
-      <div className="flex w-full min-h-screen flex-col pt-24 pb-20 items-center justify-center gap-[4px]">
+      <div className="relative z-[10] flex w-full min-h-screen flex-col pt-24 pb-20 items-center justify-center gap-[4px]">
         {/* Projects Grid */}
         <div className="w-[95%] grid grid-cols-1 md:grid-cols-3 gap-[4px]">
           {projects.map((project, index) => (
@@ -335,7 +337,9 @@ const Work = () => {
         />
       )}
 
-      <Footer />
+      <div className="relative z-[10]">
+        <Footer />
+      </div>
     </>
   );
 };

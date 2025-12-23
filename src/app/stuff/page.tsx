@@ -12,13 +12,15 @@ const Stuff = () => {
     <>
       <VideoBackground />
       <Navbar />
-      <div className="flex w-full min-h-screen flex-col pt-32 pb-20 px-8 md:px-20">
+      <div className="relative z-[10] flex w-full min-h-screen flex-col pt-32 pb-20 px-8 md:px-20">
         <div className="max-w-[800px] mx-auto w-full">
           <StuffHeader />
           <StuffContent posts={posts} />
         </div>
       </div>
-      <Footer />
+      <div className="relative z-[10]">
+        <Footer />
+      </div>
     </>
   );
 };

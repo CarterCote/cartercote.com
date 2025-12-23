@@ -29,11 +29,11 @@ const VideoBackground = () => {
     };
   }, []);
 
-  const blur = 5;
+  const blur = 3;
   const videoSource = "home/static.mp4";
 
   return (
-    <div className="z-[-1] w-full h-full bg-black flex items-center justify-center fixed inset-0">
+    <div className="z-[1] w-full h-full bg-black flex items-center justify-center fixed inset-0">
       {isMounted && (
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
