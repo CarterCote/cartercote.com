@@ -1,17 +1,30 @@
-import React, { FC } from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
-import Button from '../../components/Button';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import { TracingBeam } from "../../components/ui/tracing-beam";
 import InteractiveLink from './InteractiveLink';
 import VideoBackground from '../../components/sections/VideoBackground';
 
+const photos = [
+  "/about/about1.jpg",
+  "/about/about2.JPG",
+  "/about/about3.JPG",
+  "/about/about4.jpg",
+  "/about/about5.jpg",
+  "/about/about6.JPG",
+  "/about/about7.jpg",
+];
+
 const awards = [
     {
         name: "Mr. Georgia Tech Semifinalist",
-        desc: "Finalist for GT’s prestigious award recognizing campus leadership and service.",
+        desc: "Finalist for GT's prestigious award recognizing campus leadership and service.",
         year: "2023",
     },
     {
@@ -31,7 +44,7 @@ const awards = [
     },
     {
         name: "Hypepotamus Spotlight",
-        desc: "Recognized for launching Georgia Tech’s first XR Hackathon.",
+        desc: "Recognized for launching Georgia Tech's first XR Hackathon.",
         year: "2023",
     },
     {
@@ -137,45 +150,127 @@ const experiences = [
         imageName: "/work/jpmc.png",
         roleDescription: "Developed an end-to-end API system for scalable resiliency tasks for large transactions, and built a client-facing UI for automated task management used by 5000+ developers."
     },
-    // {
-    //     number: "05",
-    //     position: "GROWTH INTERN",
-    //     year: "2023",
-    //     companyName: "Overtime",
-    //     imageName: "/work/overtime.png",
-    //     roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
-    // },
-    // {
-    //     number: "06",
-    //     position: "GROWTH INTERN",
-    //     year: "2023",
-    //     companyName: "Overtime",
-    //     imageName: "/work/overtime.png",
-    //     roleDescription: "Various design projects, including a site to announce the anticipated release of their browser, Arc, on Windows."
-    // }
 ];
 
 const About = () => {
+  const [currentPhoto, setCurrentPhoto] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    const interval = setInterval(() => {
+      setCurrentPhoto((prev) => (prev + 1) % photos.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [isPlaying]);
+
+  const nextPhoto = () => {
+    setCurrentPhoto((prev) => (prev + 1) % photos.length);
+  };
+
+  const prevPhoto = () => {
+    setCurrentPhoto((prev) => (prev - 1 + photos.length) % photos.length);
+  };
+
   return (
     <>
       <VideoBackground />
       <Navbar />
-      <div className="relative z-[10] flex w-full flex-col pt-32 items-start">
-        <div className="flex flex-col w-full px-8 md:px-22 lg:px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
-          <TracingBeam className="px-0 md:px-2">
-            <div className="flex flex-col w-full align-center justify-center space-y-4 items-start">
-              <div className="flex flex-col w-full align-center justify-center space-y-4 items-center">
-                <p className="w-full font-mono-regular tracking-widest text-center text-[18px] text-gray-500 mb-3">ABOUT</p>
-                <Image
-                  priority
-                  src="/about/aboutMe.jpg"
-                  height={350}
-                  width={231}
-                  alt="Descriptive Text"
-                  className="py-10"
-                />
-                <h1 className="font-voyager-thin text-left text-[44px] md:text-[54px] leading-[125%] tracking-tight mb-3 max-w-[800px]">i'm just a dude that loves making stuff for others :)</h1>
-                <div className="w-full font-aeonik-regular space-y-10 items-center align-center justify-center text-[21px] md:text-[18px] max-w-[800px]">
+      <div className="relative z-[10] flex w-full pt-0 lg:pt-32 overflow-x-hidden">
+        {/* Desktop: Two-column layout */}
+        <div className="hidden lg:flex w-full min-h-screen">
+          {/* Left side - Fixed photo gallery */}
+          <div className="w-1/2 h-screen fixed top-0 left-0 flex flex-col items-left justify-center px-8">
+            <div className="flex flex-col items-left w-[90%] h-[90vh] pt-8">
+              {/* Main photo with arrows */}
+              <div className="relative flex items-center justify-center w-full h-full">
+                <button
+                  onClick={prevPhoto}
+                  className="absolute left-0 z-10 p-2 text-gray-400 hover:text-white transition-colors"
+                  aria-label="Previous photo"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+
+                <div className="relative w-full h-full rounded-[12px] overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentPhoto}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="absolute inset-0"
+                    >
+                      <Image
+                        priority
+                        src={photos[currentPhoto]}
+                        fill
+                        alt={`About photo ${currentPhoto + 1}`}
+                        className="object-cover"
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                  <button
+                    onClick={() => setIsPlaying(!isPlaying)}
+                    className="absolute bottom-4 right-4 z-10 p-2 bg-black/50 rounded-full text-white/70 hover:text-white transition-colors"
+                    aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
+                  >
+                    {isPlaying ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="6" y="4" width="4" height="16" rx="1" />
+                        <rect x="14" y="4" width="4" height="16" rx="1" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5,3 19,12 5,21" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+
+                <button
+                  onClick={nextPhoto}
+                  className="absolute right-0 z-10 p-2 text-gray-400 hover:text-white transition-colors"
+                  aria-label="Next photo"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+
+              {/* Thumbnail row */}
+              <div className="flex gap-2 mt-6">
+                {photos.map((photo, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentPhoto(index)}
+                    className={`relative w-12 h-16 overflow-hidden rounded-[4px] transition-opacity ${
+                      index === currentPhoto ? 'opacity-100' : 'opacity-40 hover:opacity-60'
+                    }`}
+                  >
+                    <Image
+                      src={photo}
+                      fill
+                      alt={`Thumbnail ${index + 1}`}
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Scrollable content with TracingBeam */}
+          <div className="w-1/2 min-h-screen ml-[50%]">
+            <TracingBeam className="pl-12 pr-8" side="left">
+              <div className="flex flex-col items-start max-w-[600px] pb-32">
+                <p className="font-mono-regular tracking-widest text-[18px] text-gray-500 mb-8">ABOUT</p>
+                <h1 className="font-voyager-thin text-left text-[44px] leading-[125%] tracking-tight mb-8">i'm just a dude that loves making stuff for others :)</h1>
+                <div className="w-full font-aeonik-regular space-y-8 text-[18px]">
                   <p className="leading-[150%]">my first side hustle was designing Minecraft game assets + posting them on youtube, when i was 12.
                   i ended up accumulating over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views on my videos</InteractiveLink>.
                   </p>
@@ -199,19 +294,193 @@ const About = () => {
                       i can code-switch as the designer, the software engineer, or growth hacker.
                   </p>
                 </div>
+
+                {/* Experience section */}
+                <div className="flex flex-col w-full py-20">
+                  <p className="font-aeonik-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EXPERIENCE</p>
+                  {experiences.map((exp, index) => (
+                    <div key={index} className="w-full py-6 font-aeonik-regular border-b border-gray-800">
+                      <InteractiveLink
+                        href={exp.link as string}
+                        event={'aboutExperienceClicked'}
+                        newTab={true}
+                      >
+                        <div className="flex flex-row items-center gap-6">
+                          <Image
+                            priority
+                            src={exp.imageName}
+                            height={80}
+                            width={80}
+                            alt="Descriptive Text"
+                            className="rounded-[12px] w-14 h-14 md:w-20 md:h-20"
+                          />
+                          <div className="flex flex-col flex-1">
+                            <div className="flex flex-row justify-between items-start mb-1">
+                              <p className="font-mono-regular text-sm text-gray-500">{exp.position}</p>
+                              <p className="font-mono-regular text-sm text-gray-500">{exp.year}</p>
+                            </div>
+                            <p className="font-voyager-thin tracking-tight text-[24px] md:text-[36px]">{exp.companyName}</p>
+                          </div>
+                        </div>
+                      </InteractiveLink>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Education section */}
+                <div className="w-full py-20">
+                  <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EDUCATION</p>
+                  {education.map((edu, index) => (
+                    <div key={index} className="flex flex-col md:flex-row justify-between md:items-start w-full border-b border-gray-800 py-6">
+                      <div>
+                        <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{edu.name}</p>
+                        <p className="font-mono-regular text-sm text-gray-500">{edu.desc}</p>
+                      </div>
+                      <p className="font-mono-regular text-sm text-gray-500">{edu.year}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Awards section */}
+                <div className="w-full py-20">
+                  <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
+                  {awards.map((award, index) => (
+                    <div key={index} className="flex flex-col md:flex-row justify-between md:items-start w-full border-b border-gray-800 py-6">
+                      <div>
+                        <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{award.name}</p>
+                        <p className="font-mono-regular text-sm text-gray-500">{award.desc}</p>
+                      </div>
+                      <p className="font-mono-regular text-sm text-gray-500">{award.year}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Footer inside right column for desktop */}
+                <div className="w-full mt-20 overflow-hidden">
+                  <footer className="flex flex-col pb-10 items-start">
+                    <div className="flex flex-col gap-y-[0] w-full">
+                      <h1 className="tracking-tight font-aeonik-bold text-[36px] leading-[110%]">LET'S BUILD.</h1>
+                      <h1 className="tracking-tight font-aeonik-bold text-[36px] leading-[70%]">CONNECT WITH ME</h1>
+                      <div className="flex flex-row gap-6 pt-6">
+                        <Link href="https://twitter.com/cartercote_" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
+                          <FaXTwitter className="text-[32px]" />
+                        </Link>
+                        <Link href="https://github.com/cartercote" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
+                          <FaGithub className="text-[32px]" />
+                        </Link>
+                        <Link href="https://linkedin.com/in/carter-cote" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
+                          <FaLinkedin className="text-[32px]" />
+                        </Link>
+                        <Link href="https://instagram.com/carter.cote" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
+                          <FaInstagram className="text-[32px]" />
+                        </Link>
+                      </div>
+                    </div>
+                  </footer>
+                </div>
               </div>
-            {/* <div className="w-1/4 items-center justify-center align-center">
-              <Image
-                priority
-                src="/head/MYMIND.png"
-                height={660}
-                width={570}
-                alt="Descriptive Text"
-                className="opacity-50"
-              />
-            </div> */}
+            </TracingBeam>
+          </div>
+        </div>
+
+        {/* Mobile: Single column layout */}
+        <div className="lg:hidden flex flex-col w-full">
+          {/* Photo - edge to edge */}
+          <div className="relative w-full h-[75vh] mb-6">
+            {/* Top gradient overlay */}
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
+
+            <button
+              onClick={prevPhoto}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 text-gray-400 hover:text-white transition-colors"
+              aria-label="Previous photo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentPhoto}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0"
+              >
+                <Image
+                  priority
+                  src={photos[currentPhoto]}
+                  fill
+                  alt={`About photo ${currentPhoto + 1}`}
+                  className="object-cover"
+                />
+              </motion.div>
+            </AnimatePresence>
+
+            <button
+              onClick={nextPhoto}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 text-gray-400 hover:text-white transition-colors"
+              aria-label="Next photo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+
+            {/* Thumbnail row */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              {photos.map((photo, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentPhoto(index)}
+                  className={`relative w-8 h-12 overflow-hidden rounded-[4px] transition-opacity ${
+                    index === currentPhoto ? 'opacity-100' : 'opacity-40 hover:opacity-60'
+                  }`}
+                >
+                  <Image
+                    src={photo}
+                    fill
+                    alt={`Thumbnail ${index + 1}`}
+                    className="object-cover"
+                  />
+                </button>
+              ))}
             </div>
-          <div className="flex flex-col w-full py-20 max-w-[800px] mx-auto">
+          </div>
+
+          <div className="px-8 pt-8">
+            <p className="font-mono-regular tracking-widest text-[18px] text-gray-500 mb-4">ABOUT</p>
+            <h1 className="font-voyager-thin text-left text-[36px] leading-[125%] tracking-tight mb-8">i'm just a dude that loves making stuff for others :)</h1>
+
+          <div className="w-full font-aeonik-regular space-y-8 text-[18px]">
+            <p className="leading-[150%]">my first side hustle was designing Minecraft game assets + posting them on youtube, when i was 12.
+            i ended up accumulating over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views on my videos</InteractiveLink>.
+            </p>
+            <p className="leading-[150%]">selling minecraft texture packs to youtubers turned into a hobby of designing typographic posters, until a friend of mine told me to explore web.
+            </p>
+            <p className="leading-[150%]">after a couple of freelance gigs, I got frustrated with not having full creative control on how websites worked and looked. this led me to go on to study CS at Georgia Tech.
+            </p>
+            <p className="leading-[150%]">during the peak of covid-19, a group of friends of mine wanted to take action to help our community. we built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>six feet supplies</InteractiveLink>, which delivered over $50k worth of urgent supplies to over 20k people.
+              this taught me the effects of scale, and the ability to impact people through software.
+            </p>
+            <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
+            </p>
+            <p className="leading-[150%]">at 21, i worked on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>musicfy</InteractiveLink>,
+            an ai-voice generation platform with over 5m users;
+            {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>crayo</InteractiveLink>, an ai short-form content generation platform with over 2m users, with over 50k users in the first month;
+            and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>sellraze</InteractiveLink>, a mobile app that uses ai to autofill listings for online selling.
+            </p>
+            <p className="leading-[150%]">i also started a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>startup exchange</InteractiveLink>, which enables college students to learn how to build side projects and grow them into startups. over 30k students at over 40 universities have attended a startup exchange event since fall 2022.
+            </p>
+            <p className="leading-[150%]">today, i am a swiss-army knife that can understand end-users, and design, build, and scale end-solutions.
+                i can code-switch as the designer, the software engineer, or growth hacker.
+            </p>
+          </div>
+
+          {/* Experience section */}
+          <div className="flex flex-col w-full py-20">
             <p className="font-aeonik-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EXPERIENCE</p>
             {experiences.map((exp, index) => (
               <div key={index} className="w-full py-6 font-aeonik-regular border-b border-gray-800">
@@ -227,48 +496,53 @@ const About = () => {
                       height={80}
                       width={80}
                       alt="Descriptive Text"
-                      className="rounded-[12px] w-14 h-14 md:w-20 md:h-20"
+                      className="rounded-[12px] w-14 h-14"
                     />
                     <div className="flex flex-col flex-1">
                       <div className="flex flex-row justify-between items-start mb-1">
                         <p className="font-mono-regular text-sm text-gray-500">{exp.position}</p>
                         <p className="font-mono-regular text-sm text-gray-500">{exp.year}</p>
                       </div>
-                      <p className="font-voyager-thin tracking-tight text-[24px] md:text-[36px]">{exp.companyName}</p>
+                      <p className="font-voyager-thin tracking-tight text-[24px]">{exp.companyName}</p>
                     </div>
                   </div>
                 </InteractiveLink>
               </div>
             ))}
           </div>
-          <div className="w-full py-20 max-w-[800px] mx-auto">
-              <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EDUCATION</p>
-              {education.map((education) => (
-                  <div className="flex flex-col md:flex-row justify-between md:items-start w-full border-b border-gray-800 py-6">
-                      <div>
-                          <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{education.name}</p>
-                          <p className="font-mono-regular text-sm text-gray-500">{education.desc}</p>
-                      </div>
-                      <p className="font-mono-regular text-sm text-gray-500">{education.year}</p>
-                  </div>
-              ))}
+
+          {/* Education section */}
+          <div className="w-full py-20">
+            <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EDUCATION</p>
+            {education.map((edu, index) => (
+              <div key={index} className="flex flex-col justify-between items-start w-full border-b border-gray-800 py-6">
+                <div>
+                  <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{edu.name}</p>
+                  <p className="font-mono-regular text-sm text-gray-500">{edu.desc}</p>
+                </div>
+                <p className="font-mono-regular text-sm text-gray-500">{edu.year}</p>
+              </div>
+            ))}
           </div>
-          <div className="w-full py-20 max-w-[800px] mx-auto">
-              <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
-              {awards.map((award) => (
-                  <div className="flex flex-col md:flex-row justify-between md:items-start w-full border-b border-gray-800 py-6">
-                      <div>
-                          <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{award.name}</p>
-                          <p className="font-mono-regular text-sm text-gray-500">{award.desc}</p>
-                      </div>
-                      <p className="font-mono-regular text-sm text-gray-500">{award.year}</p>
-                  </div>
-              ))}
+
+          {/* Awards section */}
+          <div className="w-full py-20">
+            <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
+            {awards.map((award, index) => (
+              <div key={index} className="flex flex-col justify-between items-start w-full border-b border-gray-800 py-6">
+                <div>
+                  <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{award.name}</p>
+                  <p className="font-mono-regular text-sm text-gray-500">{award.desc}</p>
+                </div>
+                <p className="font-mono-regular text-sm text-gray-500">{award.year}</p>
+              </div>
+            ))}
           </div>
-        </TracingBeam>
+          </div>
         </div>
       </div>
-      <div className="relative z-[10]">
+      {/* Footer for mobile only */}
+      <div className="relative z-[10] lg:hidden">
         <Footer/>
       </div>
     </>

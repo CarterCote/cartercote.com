@@ -12,9 +12,11 @@ import { cn } from "@/utils/cn";
 export const TracingBeam = ({
   children,
   className,
+  side = "left",
 }: {
   children: React.ReactNode;
   className?: string;
+  side?: "left" | "right";
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -51,7 +53,10 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative w-full mx-auto h-full", className)}
     >
-      <div className="absolute -left-4 md:-left-20 top-0 hidden sm:block">
+      <div className={cn(
+        "absolute top-0 hidden sm:block",
+        side === "left" ? "-left-4 md:-left-20" : "-right-4 md:-right-20"
+      )}>
         <motion.div
           transition={{
             duration: 0.2,
@@ -63,7 +68,10 @@ export const TracingBeam = ({
                 ? "none"
                 : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
           }}
-          className="ml-[27px] h-4 w-4 rounded-full border border-neutral-500 shadow-sm flex items-center justify-center"
+          className={cn(
+            "h-4 w-4 rounded-full border border-neutral-500 shadow-sm flex items-center justify-center",
+            side === "left" ? "ml-[27px]" : "mr-[27px] ml-auto"
+          )}
         >
           <motion.div
             transition={{
@@ -83,7 +91,7 @@ export const TracingBeam = ({
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
           height={svgHeight} // Set the SVG height
-          className=" ml-4 block"
+          className={cn("block", side === "left" ? "ml-4" : "mr-4 ml-auto")}
           aria-hidden="true"
         >
           <motion.path
