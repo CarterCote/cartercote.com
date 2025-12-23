@@ -13,7 +13,7 @@ const projects = [
   {
     name: "Phia",
     role: "Chief Product Officer",
-    year: "2025",
+    year: "2025 - NOW",
     description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
     image: "/work/phia.png",
     link: "https://join.phia.com/",

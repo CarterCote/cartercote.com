@@ -67,7 +67,7 @@ const education = [
 const experiences = [
     {
         position: "CPO",
-        year: "2025",
+        year: "2025 - NOW",
         companyName: "Phia",
         link: "https://join.phia.com/",
         imageName: "/work/phiaIcon.png",
@@ -83,7 +83,7 @@ const experiences = [
     },
     {
         position: "FOUNDER",
-        year: "2023-NOW",
+        year: "2023 - NOW",
         companyName: "Startup Exchange",
         link: "https://startup.exchange/",
         imageName: "/work/sxLogo.jpeg",
@@ -218,24 +218,23 @@ const About = () => {
                 <InteractiveLink
                   href={exp.link as string}
                   event={'aboutExperienceClicked'}
+                  newTab={true}
                 >
-                  <div className="flex flex-row items-start justify-between">
-                    <div className="flex flex-row items-center gap-6">
-                      <Image
-                        priority
-                        src={exp.imageName}
-                        height={80}
-                        width={80}
-                        alt="Descriptive Text"
-                        className="rounded-[12px]"
-                      />
-                      <div className="flex flex-col items-start">
-                        <p className="font-mono-regular text-sm pb-1 text-gray-500">{exp.position}</p>
-                        <p className="font-voyager-thin tracking-tight text-[36px]">{exp.companyName}</p>
+                  <div className="flex flex-row items-center gap-6">
+                    <Image
+                      priority
+                      src={exp.imageName}
+                      height={80}
+                      width={80}
+                      alt="Descriptive Text"
+                      className="rounded-[12px]"
+                    />
+                    <div className="flex flex-col flex-1">
+                      <div className="flex flex-row justify-between items-start mb-1">
+                        <p className="font-mono-regular text-sm text-gray-500">{exp.position}</p>
+                        <p className="font-mono-regular text-sm text-gray-500">{exp.year}</p>
                       </div>
-                    </div>
-                    <div className="flex flex-col items-end">
-                      <p className="text-sm text-gray-500">{exp.year}</p>
+                      <p className="font-voyager-thin tracking-tight text-[36px]">{exp.companyName}</p>
                     </div>
                   </div>
                 </InteractiveLink>
