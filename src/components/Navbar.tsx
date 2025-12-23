@@ -58,6 +58,17 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
 
   return (
     <>
+      {/* Progressive blur overlay at top */}
+      <div
+        className="fixed top-0 left-0 right-0 z-40 pointer-events-none h-32"
+        style={{
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+        }}
+      />
+
       {/* Mobile Navbar - centered glass pill */}
       <motion.header
         className="z-50 fixed top-0 left-0 right-0 flex md:hidden items-center justify-center pt-6"
