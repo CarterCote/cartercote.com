@@ -27,10 +27,10 @@ const BlogPost = ({ params }: PageProps) => {
       <div className="flex w-full min-h-screen flex-col pt-32 pb-20 px-8 md:px-20">
         <div className="max-w-[800px] mx-auto w-full">
           <Link
-            href="/blog"
+            href="/stuff"
             className="font-mono-regular text-[14px] text-white/40 hover:text-blue-500 transition-colors mb-8 inline-block"
           >
-            &larr; back to blog
+            &larr; back
           </Link>
 
           <p className="font-mono-regular text-[14px] text-white/40 mb-4">

@@ -258,9 +258,19 @@ const Work = () => {
     <>
       <VideoBackground />
       <Navbar />
-      <div className="relative z-[10] flex w-full min-h-screen flex-col pt-24 pb-20 items-center justify-center gap-[4px]">
+      <div className="relative z-[10] flex w-full min-h-screen flex-col pt-24 pb-20 px-6 lg:px-8 items-center justify-center gap-[4px]">
+        {/* Projects Header */}
+        <motion.div
+          className="w-full mb-6"
+          variants={blurInVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
+          <p className="font-voyager-thin tracking-tight text-left leading-[110%] text-[28px] md:text-[38px]">design isn't just about rounding pixels. it's about shaping worlds, telling stories, and conceptualizing ideas.</p>
+        </motion.div>
         {/* Projects Grid */}
-        <div className="w-[95%] grid grid-cols-1 md:grid-cols-3 gap-[4px]">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-[4px]">
           {projects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -292,16 +302,16 @@ const Work = () => {
 
         {/* Play Section */}
         <motion.div
-          className="w-[95%] mt-16"
+          className="w-full mt-16"
           variants={blurInVariants}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
         >
-          <p className="font-aeonik-bold tracking-tight text-left leading-[100%] text-[16px] mb-2">PLAY</p>
-          <p className="font-voyager-thin tracking-tight text-left leading-[110%] text-[28px] md:text-[38px] mb-6">A collection of impulsive makes, complex emotions, and creative expression.</p>
+          <p className="font-mono-regular tracking-widest text-left text-[18px] text-gray-500 mb-2">PLAY</p>
+          <p className="font-voyager-thin tracking-tight text-left leading-[110%] text-[28px] md:text-[38px] mb-6">here are some of my impulsive makes, complex emotions, and forms of creative expression.</p>
         </motion.div>
-        <div className="w-[95%] grid grid-cols-1 md:grid-cols-5 gap-[4px]">
+        <div className="w-full grid grid-cols-1 md:grid-cols-5 gap-[4px]">
           {playItems.map((item, index) => (
             <motion.div
               key={item.name}

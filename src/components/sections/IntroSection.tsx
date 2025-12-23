@@ -25,9 +25,9 @@ const IntroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
         >
           <h1 className="tracking-tight font-voyager-thin text-[16px] animate-[blink_0.8s_step-end_infinite]">►</h1>
-          <h1 className="tracking-tight font-voyager-thin text-[38px]">hi, i'm carter cote.</h1>
+          <h1 className="tracking-tight font-voyager-thin text-[48px]">hi, i'm carter cote.</h1>
         </motion.div>
-        <div className="flex flex-col w-full align-center justify-center space-y-6 items-start">
+        <div className="flex flex-col w-full align-center justify-center space-y-6 items-start px-5">
           <div className="w-full font-aeonik-regular space-y-8 leading-[1.5] text-[21px]">
             {paragraphs.map((content, index) => (
               <motion.p

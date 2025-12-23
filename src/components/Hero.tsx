@@ -114,7 +114,7 @@ const SecondarySectionContent = () => {
 const BeliefsSection = () => {
   return (
     <motion.div
-      className="mt-24 md:hidden"
+      className="mt-24 md:hidden px-5"
       variants={blurInVariants}
       initial="hidden"
       animate="visible"
@@ -130,7 +130,7 @@ const BeliefsSection = () => {
 const LinksSection = () => {
   return (
     <motion.div
-      className="mt-16 md:hidden"
+      className="mt-16 md:hidden px-5"
       variants={blurInVariants}
       initial="hidden"
       animate="visible"
@@ -180,7 +180,7 @@ const Hero = () => {
     <>
       <VideoBackground />
       <main className="relative z-[10] flex min-h-screen w-full flex-col items-center justify-center md:justify-end py-8 md:py-16 lg:py-20">
-        <div className="flex flex-col w-full max-w-[800px] md:max-w-none mx-auto mt-14 md:mt-0 lg:pt-0 px-6 md:px-6 lg:px-8 justify-center text-6xl font-bold">
+        <div className="flex flex-col w-full max-w-[800px] md:max-w-none mx-auto mt-14 md:mt-0 lg:pt-0 px-2 md:px-6 lg:px-8 justify-center text-6xl font-bold">
           <IntroSection />
           {/* <IntroSectionContent />
           <SecondarySection />

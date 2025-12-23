@@ -165,7 +165,7 @@ const About = () => {
           <TracingBeam className="px-0 md:px-2">
             <div className="flex flex-col w-full align-center justify-center space-y-4 items-start">
               <div className="flex flex-col w-full align-center justify-center space-y-4 items-center">
-                <p className="w-full font-aeonik-bold tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
+                <p className="w-full font-mono-regular tracking-widest text-center text-[18px] text-gray-500 mb-3">ABOUT</p>
                 <Image
                   priority
                   src="/about/aboutMe.jpg"
@@ -174,7 +174,7 @@ const About = () => {
                   alt="Descriptive Text"
                   className="py-10"
                 />
-                <h1 className="font-voyager-thin text-left text-[44px] md:text-[54px] leading-[125%] tracking-tight mb-3 max-w-[800px]">i'm just a dude that loves making stuff for others.</h1>
+                <h1 className="font-voyager-thin text-left text-[44px] md:text-[54px] leading-[125%] tracking-tight mb-3 max-w-[800px]">i'm just a dude that loves making stuff for others :)</h1>
                 <div className="w-full font-aeonik-regular space-y-10 items-center align-center justify-center text-[21px] md:text-[18px] max-w-[800px]">
                   <p className="leading-[150%]">my first side hustle was designing Minecraft game assets + posting them on youtube, when i was 12.
                   i ended up accumulating over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views on my videos</InteractiveLink>.
@@ -227,14 +227,14 @@ const About = () => {
                       height={80}
                       width={80}
                       alt="Descriptive Text"
-                      className="rounded-[12px]"
+                      className="rounded-[12px] w-14 h-14 md:w-20 md:h-20"
                     />
                     <div className="flex flex-col flex-1">
                       <div className="flex flex-row justify-between items-start mb-1">
                         <p className="font-mono-regular text-sm text-gray-500">{exp.position}</p>
                         <p className="font-mono-regular text-sm text-gray-500">{exp.year}</p>
                       </div>
-                      <p className="font-voyager-thin tracking-tight text-[36px]">{exp.companyName}</p>
+                      <p className="font-voyager-thin tracking-tight text-[24px] md:text-[36px]">{exp.companyName}</p>
                     </div>
                   </div>
                 </InteractiveLink>
