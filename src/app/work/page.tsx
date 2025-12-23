@@ -57,6 +57,15 @@ const projects = [
     linkText: "",
   },
   {
+    name: "Summer Chateau by Nicolas Chae",
+    role: "Designer",
+    year: "2023",
+    description: "Worked with Nicolas Chae, former college & lifestyle YouTuber and Princeton alum (and one of my high school inspirations), to design and curate a brand for his photography studio.",
+    image: "/work/summerChateau.png",
+    link: "",
+    linkText: "",
+  },
+  {
     name: "Startup Exchange",
     role: "Founder",
     year: "2022",
