@@ -21,7 +21,7 @@ const awards = [
     },
     {
         name: "Startup Atlanta Community Builder Nominee",
-        desc: "Finalist for an award recognizing my contributions to the Atlanta entrepreneurship ecosystem.",
+        desc: "Award recognizing my contributions to the Atlanta entrepreneurship ecosystem.",
         year: "2023",
     },
     {
@@ -36,7 +36,7 @@ const awards = [
     },
     {
         name: "Banatao Family First-Generation Engineering Scholar",
-        desc: "1 of 6 scholars for $20,000 scholarship for first-gen Filipino-American engineering students.",
+        desc: "1 of 6 for $20,000 scholarship for first-gen Filipino-American engineering students.",
         year: "2020",
     },
     {
