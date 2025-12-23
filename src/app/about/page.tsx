@@ -17,8 +17,9 @@ const photos = [
   "/about/about3.JPG",
   "/about/about4.jpg",
   "/about/about5.jpg",
-  "/about/about6.JPG",
+  "/about/about8.jpg",
   "/about/about7.jpg",
+  "/about/about6.JPG",
 ];
 
 const awards = [
