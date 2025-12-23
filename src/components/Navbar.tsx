@@ -4,6 +4,7 @@ import React from 'react';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import posthog from 'posthog-js';
+import { motion } from 'framer-motion';
 import GlassSurface from "./ui/GlassSurface";
 
 if (typeof window !== "undefined") {
@@ -54,7 +55,12 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
   const activeIndex = getActiveIndex();
 
   return (
-    <header className="z-50 fixed top-0 left-0 right-0 flex items-center justify-center pt-6">
+    <motion.header
+      className="z-50 fixed top-0 left-0 right-0 flex items-center justify-center pt-6"
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <GlassSurface
         width={320}
         height={40}
@@ -92,7 +98,7 @@ const Navbar = ({ minimal }: { minimal?: boolean }) => {
           ))}
         </div>
       </GlassSurface>
-    </header>
+    </motion.header>
   );
 };
 export default Navbar;

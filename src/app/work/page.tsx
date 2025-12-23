@@ -2,10 +2,12 @@
 
 import React, { useState } from 'react';
 import Image from "next/image";
+import { motion } from 'framer-motion';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Button from '../../components/Button';
 import { IoMdClose } from "react-icons/io";
+import { blurInVariants } from "../../lib/animations";
 
 const projects = [
   {
@@ -248,9 +250,17 @@ const Work = () => {
       <div className="flex w-full min-h-screen flex-col pt-24 pb-20 items-center justify-center gap-[4px]">
         {/* Projects Grid */}
         <div className="w-[95%] grid grid-cols-1 md:grid-cols-3 gap-[4px]">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, index) => (
+            <motion.div
               key={project.name}
+              variants={blurInVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 0.3 + index * 0.1,
+              }}
               className="relative aspect-[4/2.88] cursor-pointer group overflow-hidden rounded-[4px]"
               onClick={() => setSelectedProject(project)}
             >
@@ -265,19 +275,33 @@ const Work = () => {
                   {project.name}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Play Section */}
-        <div className="w-[95%] mt-16">
+        <motion.div
+          className="w-[95%] mt-16"
+          variants={blurInVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
+        >
           <p className="font-aeonik-bold tracking-tight text-left leading-[100%] text-[16px] mb-2">PLAY</p>
           <p className="font-voyager-thin tracking-tight text-left leading-[110%] text-[28px] md:text-[38px] mb-6">A collection of impulsive makes, complex emotions, and creative expression.</p>
-        </div>
+        </motion.div>
         <div className="w-[95%] grid grid-cols-1 md:grid-cols-5 gap-[4px]">
-          {playItems.map((item) => (
-            <div
+          {playItems.map((item, index) => (
+            <motion.div
               key={item.name}
+              variants={blurInVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 1.2 + index * 0.1,
+              }}
               className="relative aspect-[4/5] cursor-pointer group overflow-hidden rounded-[4px]"
               onClick={() => setSelectedPlayItem(item)}
             >
@@ -292,7 +316,7 @@ const Work = () => {
                   {item.name}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

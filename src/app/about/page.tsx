@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import { TracingBeam } from "../../components/ui/tracing-beam";
 import InteractiveLink from './InteractiveLink';
+import VideoBackground from '../../components/sections/VideoBackground';
 
 const awards = [
     {
@@ -47,17 +48,17 @@ const awards = [
 
 const education = [
   {
-    name: "MS in Human-Computer Interaction at Stanford University",
+    name: "Stanford University |  MS Human-Computer Interaction",
     desc: "Attending on a full-ride scholarship.",
     year: "2024-2025",
   },
   {
-    name: "MS in Computer Science at Georgia Tech",
+    name: "Georgia Tech |  MS Computer Science",
     desc: "Dropped out to attend Stanford.",
     year: "2024",
   },
   {
-    name: "BS in Computer Science at Georgia Tech",
+    name: "Georgia Tech |  BS Computer Science",
     desc: "Highest honors, minor in Industrial Design.",
     year: "2020-2023",
   },
@@ -65,8 +66,47 @@ const education = [
 
 const experiences = [
     {
-        number: "01",
-        position: "GROWTH INTERN",
+        position: "CPO",
+        year: "2025",
+        companyName: "Phia",
+        link: "https://join.phia.com/",
+        imageName: "/work/phiaIcon.png",
+        roleDescription: ""
+    },
+    {
+        position: "COFOUNDER",
+        year: "2024",
+        companyName: "Sellraze (YC F25)",
+        link: "https://sellraze.com/",
+        imageName: "/work/sellrazeIcon.jpeg",
+        roleDescription: ""
+    },
+    {
+        position: "FOUNDER",
+        year: "2023-NOW",
+        companyName: "Startup Exchange",
+        link: "https://startup.exchange/",
+        imageName: "/work/sxLogo.jpeg",
+        roleDescription: ""
+    },
+    {
+        position: "FOUNDING TEAM",
+        year: "2023-2024",
+        companyName: "Crayo",
+        link: "https://crayo.ai/",
+        imageName: "/work/crayoLogo.png",
+        roleDescription: ""
+    },
+    {
+        position: "FOUNDING DESIGNER",
+        year: "2023",
+        companyName: "Musicfy",
+        link: "https://musicfy.lol/",
+        imageName: "/work/musicfyLogo.png",
+        roleDescription: ""
+    },
+    {
+        position: "GROWTH",
         year: "2023",
         companyName: "Overtime",
         link: "https://overtime.tv/",
@@ -74,8 +114,7 @@ const experiences = [
         roleDescription: "Devised UX strategy to attract university students to Overtime events, driving digital engagement \& sales conversions to grow from <5% to 15% of overall event attendance. Launched ambassador program."
     },
     {
-        number: "02",
-        position: "AI ENGINEER INTERN",
+        position: "SOFTWARE ENGINEER",
         year: "2023",
         companyName: "JPMorgan",
         link: "https://www.jpmorgan.com/global",
@@ -83,7 +122,6 @@ const experiences = [
         roleDescription: "Automated compatibility testing by training and deploying multimodal classifiers, reducing manual testing by 90%. Developed a summarization tool and a high-volume ML inference API."
     },
     {
-        number: "03",
         position: "PRODUCT DESIGNER",
         year: "2022",
         companyName: "CreatorDAO",
@@ -92,8 +130,7 @@ const experiences = [
         roleDescription: "Designed web components and assets for strategic projects. Backed by a16z, Audacious Ventures, Gary Tan."
     },
     {
-        number: "04",
-        position: "SOFTWARE ENGINEER INTERN",
+        position: "SOFTWARE ENGINEER",
         year: "2022",
         companyName: "JPMorgan Chase & Co.",
         link: "https://www.jpmorganchase.com/",
@@ -119,12 +156,9 @@ const experiences = [
 ];
 
 const About = () => {
-    const groupedExperiences = [];
-    for (let i = 0; i < experiences.length; i += 2) {
-      groupedExperiences.push(experiences.slice(i, i + 2));
-    }
   return (
     <>
+      <VideoBackground />
       <Navbar />
       <div className="flex w-full flex-col pt-32 items-start">
         <div className="flex flex-col w-full px-8 md:px-22 lg:px-20 items-start justify-center text-6xl font-bold gap-y-4 ">
@@ -177,63 +211,58 @@ const About = () => {
               />
             </div> */}
             </div>
-          <div className="flex flex-col w-full py-20">
+          <div className="flex flex-col w-full py-20 max-w-[800px] mx-auto">
             <p className="font-aeonik-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EXPERIENCE</p>
-            {groupedExperiences.map((group, index) => (
-            <div key={index} className="flex flex-col md:flex-row w-full justify-between md:space-x-10 border-b pb-10 border-gray-800">
-              {group.map((exp, idx) => (
-                <div key={idx} className="w-full py-10 font-aeonik-regular">
-                  <InteractiveLink 
-                    href={exp.link as string}
-                    event={'aboutExperienceClicked'}
-                  >
-                    <div className="flex flex-row items-start align-start ">
-                      <div className="flex flex-col w-1/6">
-                        <p className="font-mono-regular text-sm pb-5 text-gray-500">{exp.number}</p>
-                        <Image
-                          priority
-                          src={exp.imageName}
-                          height={118}
-                          width={118}
-                          alt="Descriptive Text"
-                        />
-                      </div>
-                      <div className="ml-10 w-9/12 items-start">
-                        <p className="font-mono-regular text-sm pb-5 text-gray-500">{exp.position}</p>
-                        <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{exp.companyName}</p>
-                        <p className="text-[18px] mt-4 leading-[150%] text-gray-400">{exp.roleDescription}</p>
-                      </div>
-                      <div className="flex flex-col w-1/12 items-end">
-                        <p className="text-sm pb-5 text-gray-500">{exp.year}</p>
+            {experiences.map((exp, index) => (
+              <div key={index} className="w-full py-6 font-aeonik-regular border-b border-gray-800">
+                <InteractiveLink
+                  href={exp.link as string}
+                  event={'aboutExperienceClicked'}
+                >
+                  <div className="flex flex-row items-start justify-between">
+                    <div className="flex flex-row items-center gap-6">
+                      <Image
+                        priority
+                        src={exp.imageName}
+                        height={80}
+                        width={80}
+                        alt="Descriptive Text"
+                        className="rounded-[12px]"
+                      />
+                      <div className="flex flex-col items-start">
+                        <p className="font-mono-regular text-sm pb-1 text-gray-500">{exp.position}</p>
+                        <p className="font-voyager-thin tracking-tight text-[36px]">{exp.companyName}</p>
                       </div>
                     </div>
-                  </InteractiveLink>
-                </div>
-              ))}
-            </div>
+                    <div className="flex flex-col items-end">
+                      <p className="text-sm text-gray-500">{exp.year}</p>
+                    </div>
+                  </div>
+                </InteractiveLink>
+              </div>
             ))}
           </div>
-          <div className="w-full py-20">
+          <div className="w-full py-20 max-w-[800px] mx-auto">
               <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">EDUCATION</p>
               {education.map((education) => (
-                  <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
+                  <div className="flex flex-col md:flex-row justify-between md:items-start w-full border-b border-gray-800 py-6">
                       <div>
-                          <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{education.name}</p>
-                          <p className="font-aeonik-regular text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{education.desc}</p>
+                          <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{education.name}</p>
+                          <p className="font-mono-regular text-sm text-gray-500">{education.desc}</p>
                       </div>
-                      <p className="font-aeonik-regular tracking-tight text-[18px] md:text-[21px] mb-3">{education.year}</p>
+                      <p className="font-mono-regular text-sm text-gray-500">{education.year}</p>
                   </div>
               ))}
           </div>
-          <div className="w-full py-20">
+          <div className="w-full py-20 max-w-[800px] mx-auto">
               <p className="font-mono-regular tracking-widest text-[18px] border-b border-gray-400 pb-3">AWARDS</p>
               {awards.map((award) => (
-                  <div className="flex flex-col md:flex-row justify-between md:items-end w-full border-b border-gray-800 pt-10">
+                  <div className="flex flex-col md:flex-row justify-between md:items-start w-full border-b border-gray-800 py-6">
                       <div>
-                          <p className="font-voyager-thin tracking-tight text-[36px] mb-3">{award.name}</p>
-                          <p className="font-aeonik-regular text-gray-400 tracking-tight text-[18px] md:text-[21px] mb-3">{award.desc}</p>
+                          <p className="font-voyager-thin tracking-tight text-[24px] mb-1">{award.name}</p>
+                          <p className="font-mono-regular text-sm text-gray-500">{award.desc}</p>
                       </div>
-                      <p className="font-aeonik-regular tracking-tight text-[18px] md:text-[21px] mb-3">{award.year}</p>
+                      <p className="font-mono-regular text-sm text-gray-500">{award.year}</p>
                   </div>
               ))}
           </div>

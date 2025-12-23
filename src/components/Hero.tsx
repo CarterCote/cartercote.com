@@ -4,10 +4,12 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import posthog from 'posthog-js';
+import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import VideoBackground from './sections/VideoBackground';
 import IntroSection from './sections/IntroSection';
+import { blurInVariants } from '../lib/animations';
 
 if (typeof window !== "undefined") {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' });
@@ -111,17 +113,29 @@ const SecondarySectionContent = () => {
 
 const BeliefsSection = () => {
   return (
-    <div className="mt-32">
+    <motion.div
+      className="mt-24"
+      variants={blurInVariants}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.8, ease: "easeOut", delay: 1.8 }}
+    >
       <p className="font-aeonik-regular text-[21px] md:text-[18px] leading-[1.5]">
         if you want to learn more about me, read my thoughts <Link href="/stuff" className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500">here</Link>.
       </p>
-    </div>
+    </motion.div>
   );
 };
 
 const LinksSection = () => {
   return (
-    <div className="mt-16">
+    <motion.div
+      className="mt-16"
+      variants={blurInVariants}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.8, ease: "easeOut", delay: 2.0 }}
+    >
       <h2 className="font-aeonik-bold text-[16px] mb-4">links</h2>
       <div className="flex flex-row space-x-6 items-center">
         <Link
@@ -157,7 +171,7 @@ const LinksSection = () => {
           <FaInstagram />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
