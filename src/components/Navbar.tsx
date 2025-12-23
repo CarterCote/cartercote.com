@@ -25,16 +25,16 @@ export const navLinks = [
     link: "/",
   },
   {
-    text: "ABOUT",
-    link: "/about",
-  },
-  {
     text: "WORK",
     link: "/work",
   },
   {
     text: "STUFF",
     link: "/stuff",
+  },
+  {
+    text: "ABOUT",
+    link: "/about",
   },
 ];
 
