@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { blurInVariants } from "../lib/animations";
 
-const categories = ["THOUGHTS", "READS", "SONGS", "BELIEFS"] as const;
+const categories = ["THOUGHTS", "BELIEFS", "READS", "SONGS"] as const;
 type Category = (typeof categories)[number];
 
 interface Post {
