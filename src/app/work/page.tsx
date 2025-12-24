@@ -66,6 +66,15 @@ const projects = [
     linkText: "",
   },
   {
+    name: "Sellraze Billboard",
+    role: "Founding Engineer",
+    year: "2024",
+    description: "Using AI to build the fastest way to sell online. Led all design. Built React Native mobile app alongside founding team. Led SEO, growth, and GTM strategy, leading to over 10,000 impressions and 1,500 users in two months.",
+    image: "/work/sellRazeBillboard.jpg",
+    link: "http://sellraze.com",
+    linkText: "VIEW LANDING PAGE",
+  },
+  {
     name: "Startup Exchange",
     role: "Founder",
     year: "2022",
