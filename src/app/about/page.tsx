@@ -23,7 +23,7 @@ const Subtitle = ({ children }: { children: React.ReactNode }) => (
 const BioContent = () => (
   <div className="w-full font-aeonik-regular space-y-8 text-[18px]">
     <P>at 12, my first side hustle was designing Minecraft game assets + posting them on youtube. i ended up with 4+ million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million Youtube views</InteractiveLink>.</P>
-    <P>selling Minecraft designs to youtubers led to a hobby of designing typographic posters. i had no clue how this would shape my future. i just thought it was fun!</P>
+    <P>youtube and minecraft both led me to a hobby of designing typographic posters. i had no clue how this would shape my future. i just thought it was fun!</P>
     <Subtitle>one day in high school, a friend of mine told me to explore web. it changed everything.</Subtitle>
     <P>then, after some freelance gigs, I got frustrated with lacking full creative control on how websites looked and functioned. this led me to study CS at Georgia Tech.</P>
     <P>before college, a group of friends and I wanted to help our community during the peak of covid. we built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>six feet supplies</InteractiveLink>, which delivered over $50k worth of urgent supplies to over 20k people. this taught me the ability to impact people through software, and the effects of scale.</P>
