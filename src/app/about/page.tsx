@@ -162,7 +162,7 @@ const BioContent = () => (
     </p>
     <p className="leading-[150%]">selling Minecraft designs to youtubers led to a hobby of designing typographic posters. i had no idea clue how this would shape my future. i just thought it was fun!
     </p>
-    <p className="leading-[150%]">one day in high school, a friend of mine told me to explore web. it changed everything.
+    <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight">one day in high school, a friend of mine told me to explore web. it changed everything.
     </p>
     <p className="leading-[150%]">after some freelance gigs, I got frustrated lacking full creative control on how websites looked and functioned. this led me to study CS at Georgia Tech.
     </p>
@@ -173,15 +173,16 @@ const BioContent = () => (
     </p>
     <p className="leading-[150%]">pathways.me became the creation I've been most proud of in my life. I even channeled that passion into teaching design, project ideation, and branding to high school students.
     </p>
-    <p className="leading-[150%]">i found true fulfillment in wanting to help the next generation, and to close systemic gaps for others to succeed.
-      except, the road ahead to build in edtech seemed daunting and contained endless variables out of my control...
+    <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight">i found true fulfillment in wanting to help the next generation, and to close systemic gaps for others to succeed.
+    </p>
+    <p className="leading-[150%]">except, the road ahead to build in edtech seemed daunting and contained endless variables out of my control...
     </p>
     <p className="leading-[150%]">disheartened, I spent my underclassmen years at Georgia Tech to soul search with other interests, with the hope of eventually coming back to education. beyond CS, I studied Industrial Design and Cognitive Psychology.
     </p>
     <p className="leading-[150%]">i joined a research lab on campus, interned at startups and big companies, and even explored other interests like growth & photography.
       i even had the chance to take photos for Lebron James Jr., NLE Choppa, Vic Blends, Georgia Tech's Football Team, and more.
     </p>
-    <p className="leading-[150%]">by junior year, I felt experienced but unfulfilled. I felt lost in my pursuit of the original goal to build software and help people.
+    <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight">by junior year, I felt experienced but unfulfilled. I felt lost in my pursuit of the original goal to build software and help people.
     </p>
     <p className="leading-[150%]">to join the dialog, I got involved on tech twitter, meeting different ambitious people and learning about the problems that other young ambitious people were solving.
     </p>
@@ -195,11 +196,14 @@ const BioContent = () => (
     </p>
     <p className="leading-[150%]">i was building the set of tools that i wanted to design, build, and scale anything. but once again, I felt unfulfilled.
     </p>
-    <p className="leading-[150%]">to start over, I decided to pursue a masters at Stanford. it granted me the chance to tap back into my deepest passion of building technology in education.
+    <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight">to start over, I decided to pursue a masters at Stanford.
+    </p>
+    <p className="leading-[150%]">stanford granted me the chance to tap back into my deepest passion of building technology in education. 
+      I took classes from world-class professors, met exceptionally bright people, and lived on a campus that felt like heaven on earth.
     </p>
     <p className="leading-[150%]">things changed pretty quickly for me when I had the unique opportunity to build Phia and to redefine the shopping category in consumer. the story continues to be written.
     </p>
-    <p className="leading-[150%]">today, i approach work as a swiss-army knife.
+    <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight">today, i approach work as a swiss-army knife.
     </p>
     <p className="leading-[150%]">i pry deep into an end-user's feelings and emotions, and take note of what is said and not said. i take my ideas and spread them around Figma like an open canvas, and converge concepts while taking light inspiration from proven concepts. i obsess over the details through frontend and Swift development.
       i analyze funnel data & event logging for gaps and opportunities.
