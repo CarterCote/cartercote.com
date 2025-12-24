@@ -288,7 +288,10 @@ const About = () => {
                   </p>
                   <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
                   </p>
-                  <p className="leading-[150%]">pathways.me became the creation I've been most proud of in my life. I found true fulfillment in wanting to help the next generation, and to close systemic gaps for others to succeed. 
+                  <p className="leading-[150%]">pathways.me became the creation I've been most proud of in my life. I even channeled that passion into teaching design, project ideation, and branding to high school students.
+                    however, the road ahead to build in edtech seemed daunting and contained endless variables out of my control. 
+                  </p>
+                  <p className="leading-[150%]">I found true fulfillment in wanting to help the next generation, and to close systemic gaps for others to succeed. 
                     however, the road ahead to build in edtech seemed daunting and contained endless variables out of my control. 
                   </p>
                   <p className="leading-[150%]">disheartened, I spent my underclassmen years at Georgia Tech to soul search, and to explore other interests, with the hope of eventually coming back to education.
