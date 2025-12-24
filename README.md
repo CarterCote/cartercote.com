@@ -2,14 +2,18 @@
 This is my personal portfolio website, built to showcase my projects, designs, passions, and work experiences!
 
 
-![Site](https://i.imgur.com/jHlRtw5.png)
+![Site](https://imgur.com/a/pEWCswG)
 
-### Tech Stack
+### stuff i use
 
-* React
-* Next.js
-* Tailwind
-* Posthog
+* Next.js 14
+* React 18
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* Three.js / React Three Fiber
+* Radix UI
+* PostHog
 * Vercel
 
 Visit site here: +http://www.cartercote.com
