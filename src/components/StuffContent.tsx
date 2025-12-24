@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { blurInVariants } from "../lib/animations";
 
-const categories = ["THOUGHTS", "BELIEFS", "READS", "SONGS"] as const;
+const categories = ["THOUGHTS", "BELIEFS", "CONTENT"] as const;
 type Category = (typeof categories)[number];
 
 interface Post {
@@ -97,13 +97,7 @@ const StuffContent = ({ posts }: StuffContentProps) => {
         </>
       )}
 
-      {activeCategory === "READS" && (
-        <p className="font-aeonik-regular text-[18px] text-white/60">
-          coming soon.
-        </p>
-      )}
-
-      {activeCategory === "SONGS" && (
+      {activeCategory === "CONTENT" && (
         <p className="font-aeonik-regular text-[18px] text-white/60">
           coming soon.
         </p>
