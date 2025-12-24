@@ -164,39 +164,39 @@ const BioContent = () => (
     </p>
     <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight pt-4">one day in high school, a friend of mine told me to explore web. it changed everything.
     </p>
-    <p className="leading-[150%]">after some freelance gigs, I got frustrated lacking full creative control on how websites looked and functioned. this led me to study CS at Georgia Tech.
+    <p className="leading-[150%]">after some freelance gigs, I got frustrated with lacking full creative control on how websites looked and functioned. this led me to study CS at Georgia Tech.
     </p>
     <p className="leading-[150%]">at the peak of covid, a group of friends and I wanted to take action to help our community. we built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>six feet supplies</InteractiveLink>, which delivered over $50k worth of urgent supplies to over 20k people.
       this taught me the ability to impact people through software, and the effects of scale.
     </p>
-    <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path, most of which are the first in their family to pursue a 4-year degree. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students, aiming to close information gaps associated with discovering and pursuing careers.
+    <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path, most of whom are the first in their family to pursue a 4-year degree. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students, aiming to close information gaps associated with discovering and pursuing careers.
     </p>
     <p className="leading-[150%]">pathways.me became the creation I've been most proud of in my life. I even channeled that passion into teaching design, project ideation, and branding to high school students.
     </p>
     <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight pt-4">i found true fulfillment in wanting to help the next generation, and to close systemic gaps for others to succeed.
     </p>
-    <p className="leading-[150%]">except, the road ahead to build in edtech seemed daunting and contained endless variables out of my control...
+    <p className="leading-[150%]">except, the road ahead to build in edtech seemed daunting and had endless variables out of my control...
     </p>
-    <p className="leading-[150%]">disheartened, I spent my underclassmen years at Georgia Tech to soul search with other interests, with the hope of eventually coming back to education. beyond CS, I studied Industrial Design and Cognitive Psychology.
+    <p className="leading-[150%]">disheartened, I spent my underclassmen years at Georgia Tech exploring other interests, with the hope of eventually coming back to education. beyond CS, I studied Industrial Design and Cognitive Psychology.
     </p>
     <p className="leading-[150%]">i joined a research lab on campus, interned at startups and big companies, and even explored other interests like growth & photography.
-      i even had the chance to take photos for Lebron James Jr., NLE Choppa, Vic Blends, Georgia Tech's Football Team, and more.
+      i even had the chance to take photos for LeBron James Jr., NLE Choppa, Vic Blends, Georgia Tech's Football Team, and more.
     </p>
     <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight pt-4">by junior year, I felt experienced but unfulfilled. I felt lost in my pursuit of the original goal to build software and help people.
     </p>
-    <p className="leading-[150%]">to join the dialog, I got involved on tech twitter, meeting different ambitious people and learning about the problems that other young ambitious people were solving.
+    <p className="leading-[150%]">to join the dialog, I got involved on tech twitter, meeting ambitious people and learning about the problems they were solving.
     </p>
     <p className="leading-[150%]">this led me to work on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>musicfy</InteractiveLink>, an ai music platform with over 5m users,
     {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>crayo</InteractiveLink>, an ai short-form content generation platform (went from 0 → 2m users), with over 50k users in the first month;
     and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>sellraze</InteractiveLink>, a mobile app that allows you to sell anything online with just a picture.
     </p>
-    <p className="leading-[150%]">in parallel, I wanted to find likeminded peers, and to help them pursue their most ambitious, creative visions. this led me to start a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>startup exchange</InteractiveLink>, which enables college students to develop the self-awareness, goals, & mindset needed to build startups and pursue the untraditional path.
+    <p className="leading-[150%]">in parallel, I wanted to find like-minded peers, and to help them pursue their most ambitious, creative visions. this led me to start a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>startup exchange</InteractiveLink>, which enables college students to develop the self-awareness, goals, & mindset needed to build startups and pursue the untraditional path.
     </p>
     <p className="leading-[150%]">over 50k students at over 40 universities have attended a startup exchange event since fall 2022. vik and I traveled across the US to host SX events. we wanted to build a movement, a culture of finding yourself and finding your people during the insanely long, intimidating journey of building something.
     </p>
     <p className="leading-[150%]">i learned a lot. and did a lot. each role had its own responsibilities and learnings. each team I've been on hit 7-figures ARR.
     </p>
-    <p className="leading-[150%]">i was building the set of tools that i wanted to design, build, and scale anything. but once again, I felt unfulfilled.
+    <p className="leading-[150%]">i was building the set of tools i needed to design, build, and scale anything. but once again, I felt unfulfilled.
     </p>
     <p className="font-voyager-thin text-left text-[24px] md:text-[32px] leading-[120%] tracking-tight pt-4">to start over, I decided to pursue a masters at Stanford.
     </p>
