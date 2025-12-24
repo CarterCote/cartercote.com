@@ -22,9 +22,9 @@ const projects = [
   },
   {
     name: "SellRaze",
-    role: "Founding Engineer",
+    role: "Co-Founder",
     year: "2024",
-    description: "Using AI to build the fastest way to sell online. Led all design. Built React Native mobile app alongside founding team. Led SEO, growth, and GTM strategy, leading to over 10,000 impressions and 1,500 users in two months.",
+    description: "Sell from just a picture. Led all design and growth. 0 -> 300K users and 7-figures ARR.",
     image: "/work/sellraze.png",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
@@ -67,9 +67,9 @@ const projects = [
   },
   {
     name: "Sellraze Billboard",
-    role: "Founding Engineer",
+    role: "Co-Founder",
     year: "2024",
-    description: "Using AI to build the fastest way to sell online. Led all design. Built React Native mobile app alongside founding team. Led SEO, growth, and GTM strategy, leading to over 10,000 impressions and 1,500 users in two months.",
+    description: "Sell from just a picture. Led all design and growth. 0 -> 300K users and 7-figures ARR.",
     image: "/work/sellRazeBillboard.jpg",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
