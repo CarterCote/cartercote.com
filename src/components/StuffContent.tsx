@@ -117,8 +117,8 @@ const StuffContent = ({ posts }: StuffContentProps) => {
           <div className="flex gap-3 text-[18px] mt-12">
             <span className="font-mono-regular text-white/60">2.</span>
             <div>
-              <span className="font-aeonik-bold text-white">TASTE IS A MUSCLE AND A WAY OF THINKING FOR GENERATING IDEAS.</span>
-              <p className="font-aeonik-regular text-white/60 text-[16px] mt-1">it is trained through self-reflection, discovery of new insights, and remaining chronically involved in the dialog</p>
+              <span className="font-aeonik-bold text-white">TASTE IS A MUSCLE THAT FUELS IDEAS.</span>
+              <p className="font-aeonik-regular text-white/60 text-[16px] mt-1">it is trained through self-reflection, discovery of new insights, and remaining actively involved in the dialogue</p>
             </div>
           </div>
           <div className="flex gap-3 text-[18px] mt-12">
