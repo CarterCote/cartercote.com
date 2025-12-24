@@ -155,6 +155,61 @@ const experiences = [
     },
 ];
 
+const BioContent = () => (
+  <div className="w-full font-aeonik-regular space-y-8 text-[18px]">
+    <p className="leading-[150%]">at 12, my first side hustle was designing Minecraft game assets + posting them on youtube.
+    i ended up with 4+ million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million Youtube views</InteractiveLink>.
+    </p>
+    <p className="leading-[150%]">selling Minecraft designs to youtubers led to a hobby of designing typographic posters. i had no idea clue how this would shape my future. i just thought it was fun!
+    </p>
+    <p className="leading-[150%]">one day in high school, a friend of mine told me to explore web. it changed everything.
+    </p>
+    <p className="leading-[150%]">after some freelance gigs, I got frustrated lacking full creative control on how websites looked and functioned. this led me to study CS at Georgia Tech.
+    </p>
+    <p className="leading-[150%]">at the peak of covid, a group of friends and I wanted to take action to help our community. we built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>six feet supplies</InteractiveLink>, which delivered over $50k worth of urgent supplies to over 20k people.
+      this taught me the ability to impact people through software, and the effects of scale.
+    </p>
+    <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path, most of which are the first in their family to pursue a 4-year degree. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students, aiming to close information gaps associated with discovering and pursuing careers.
+    </p>
+    <p className="leading-[150%]">pathways.me became the creation I've been most proud of in my life. I even channeled that passion into teaching design, project ideation, and branding to high school students.
+    </p>
+    <p className="leading-[150%]">i found true fulfillment in wanting to help the next generation, and to close systemic gaps for others to succeed.
+      except, the road ahead to build in edtech seemed daunting and contained endless variables out of my control...
+    </p>
+    <p className="leading-[150%]">disheartened, I spent my underclassmen years at Georgia Tech to soul search with other interests, with the hope of eventually coming back to education. beyond CS, I studied Industrial Design and Cognitive Psychology.
+    </p>
+    <p className="leading-[150%]">i joined a research lab on campus, interned at startups and big companies, and even explored other interests like growth & photography.
+      i even had the chance to take photos for Lebron James Jr., NLE Choppa, Vic Blends, Georgia Tech's Football Team, and more.
+    </p>
+    <p className="leading-[150%]">by junior year, I felt experienced but unfulfilled. I felt lost in my pursuit of the original goal to build software and help people.
+    </p>
+    <p className="leading-[150%]">to join the dialog, I got involved on tech twitter, meeting different ambitious people and learning about the problems that other young ambitious people were solving.
+    </p>
+    <p className="leading-[150%]">this led me to work on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>musicfy</InteractiveLink>, an ai music platform with over 5m users,
+    {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>crayo</InteractiveLink>, an ai short-form content generation platform (went from 0 → 2m users), with over 50k users in the first month;
+    and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>sellraze</InteractiveLink>, a mobile app that allows you to sell anything online with just a picture.
+    </p>
+    <p className="leading-[150%]">in parallel, I wanted to find likeminded peers, and to help them pursue their most ambitious, creative visions. this led me to start a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>startup exchange</InteractiveLink>, which enables college students to develop the self-awareness, goals, & mindset needed to build startups and pursue the untraditional path. over 50k students at over 40 universities have attended a startup exchange event since fall 2022.
+    </p>
+    <p className="leading-[150%]">i learned a lot. and did a lot. each role had its own responsibilities and learnings. each team I've been on hit 7-figures ARR.
+    </p>
+    <p className="leading-[150%]">i was building the set of tools that i wanted to design, build, and scale anything. but once again, I felt unfulfilled.
+    </p>
+    <p className="leading-[150%]">to start over, I decided to pursue a masters at Stanford. it granted me the chance to tap back into my deepest passion of building technology in education.
+    </p>
+    <p className="leading-[150%]">things changed pretty quickly for me when I had the unique opportunity to build Phia and to redefine the shopping category in consumer. the story continues to be written.
+    </p>
+    <p className="leading-[150%]">today, i approach work as a swiss-army knife.
+    </p>
+    <p className="leading-[150%]">i pry deep into an end-user's feelings and emotions, and take note of what is said and not said. i take my ideas and spread them around Figma like an open canvas, and converge concepts while taking light inspiration from proven concepts. i obsess over the details through frontend and Swift development.
+      i analyze funnel data & event logging for gaps and opportunities.
+    </p>
+    <p className="leading-[150%]">
+      to be continued!
+    </p>
+  </div>
+);
+
 const About = () => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -273,59 +328,7 @@ const About = () => {
               <div className="flex flex-col items-start max-w-[600px] pb-32">
                 <p className="font-mono-regular tracking-widest text-[18px] text-gray-500 mb-8">ABOUT</p>
                 <h1 className="font-voyager-thin text-left text-[44px] leading-[125%] tracking-tight mb-8">i'm just a dude that loves making stuff for others :)</h1>
-                <div className="w-full font-aeonik-regular space-y-8 text-[18px]">
-                  <p className="leading-[150%]">at 12, my first side hustle was designing Minecraft game assets + posting them on youtube.
-                  i ended up with 4+ million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million Youtube views</InteractiveLink>.
-                  </p>
-                  <p className="leading-[150%]">selling Minecraft designs to youtubers led to a hobby of designing typographic posters. i had no idea clue how this would shape my future. i just thought it was fun!
-                  </p>
-                  <p className="leading-[150%]">one day in high school, a friend of mine told me to explore web. it changed everything.
-                  </p>
-                  <p className="leading-[150%]">after some freelance gigs, I got frustrated lacking full creative control on how websites looked and functioned. this led me to study CS at Georgia Tech.
-                  </p>
-                  <p className="leading-[150%]">at the peak of covid, a group of friends of mine wanted to take action to help our community. we built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>six feet supplies</InteractiveLink>, which delivered over $50k worth of urgent supplies to over 20k people.
-                    this taught me the effects of scale, and the ability to impact people through software.
-                  </p>
-                  <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
-                  </p>
-                  <p className="leading-[150%]">pathways.me became the creation I've been most proud of in my life. I even channeled that passion into teaching design, project ideation, and branding to high school students.
-                    however, the road ahead to build in edtech seemed daunting and contained endless variables out of my control. 
-                  </p>
-                  <p className="leading-[150%]">I found true fulfillment in wanting to help the next generation, and to close systemic gaps for others to succeed. 
-                    however, the road ahead to build in edtech seemed daunting and contained endless variables out of my control. 
-                  </p>
-                  <p className="leading-[150%]">disheartened, I spent my underclassmen years at Georgia Tech to soul search, and to explore other interests, with the hope of eventually coming back to education.
-                  </p>
-                  <p className="leading-[150%]">i joined a research lab on campus, interned at startups and big companies, and even explored other interests like growth & photography.
-                    i even had the chance to take photos for NLE Choppa, Lebron James Jr., Vic Blends, Georgia Tech Football, and more.
-                  </p>
-                  <p className="leading-[150%]">by junior year, I felt experienced but unfulfilled. I felt lost in pursuit of my original goal to build software and to help people.
-                  </p>
-                  <p className="leading-[150%]">to join the dialog, I got involved in tech twitter, meeting different people and gaining an understanding of the problems that other young ambitious people were solving.
-                  </p>
-                  <p className="leading-[150%]">this led me to working on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>musicfy</InteractiveLink>, an ai-voice generation platform with over 5m users,
-                  {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>crayo</InteractiveLink>, an ai short-form content generation platform (went from 0 → over 2m users), with over 50k users in the first month;
-                  and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>sellraze</InteractiveLink>, a mobile app that uses ai to autofill listings for online selling.
-                  </p>
-                  <p className="leading-[150%]">in parallel, I wanted to find likeminded peers and to help them bring their creative visions to life. this led me to start a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>startup exchange</InteractiveLink>, a nonprofit that enables college students to develop the self-awareness, goals, & mindset needed to build ambitious projects. over 50k students at over 40 universities have attended a startup exchange event since fall 2022.
-                  </p>
-                  <p className="leading-[150%]">i learned a lot. and did a lot. each role had its own set of responsibilities and learnings.
-                  </p>
-                  <p className="leading-[150%]">i was building the set of tools that i needed to design, build, and scale. but once again, I felt unfulfilled.
-                  </p>
-                  <p className="leading-[150%]">to start over, I decided to pursue a masters at Stanford. it granted me the chance to tap back into my deepest passion of building technology in education.
-                  </p>
-                  <p className="leading-[150%]">things changed pretty quickly for me when I had the unique opportunity to build Phia and to redefine the shopping category in consumer. the story continues to be written.
-                  </p>
-                  <p className="leading-[150%]">today, i approach work as a swiss-army knife.
-                  </p>
-                  <p className="leading-[150%]">i pry deep into an end-user's feelings and emotions, and take note of what is said and not said. i take my ideas and spread them around Figma like an open canvas, and converge concepts while taking light inspiration from proven concepts. i obsess over the details through frontend and Swift development.
-                    i analyze funnel data & event logging for gaps and opportunities.
-                  </p>
-                  <p className="leading-[150%]">
-                    to be continued!
-                  </p>
-                </div>
+                <BioContent />
 
                 {/* Experience section */}
                 <div className="flex flex-col w-full py-20">
@@ -485,31 +488,7 @@ const About = () => {
           <div className="px-8 pt-8">
             <p className="font-mono-regular tracking-widest text-[18px] text-gray-500 mb-4">ABOUT</p>
             <h1 className="font-voyager-thin text-left text-[36px] leading-[125%] tracking-tight mb-8">i'm just a dude that loves making stuff for others :)</h1>
-
-          <div className="w-full font-aeonik-regular space-y-8 text-[18px]">
-            <p className="leading-[150%]">my first side hustle was designing Minecraft game assets + posting them on youtube, when i was 12.
-            i ended up accumulating over 4 million downloads of my work and <InteractiveLink href="https://youtube.com/cartercote" event="aboutYoutubeClicked">1.3 million views on my videos</InteractiveLink>.
-            </p>
-            <p className="leading-[150%]">selling minecraft texture packs to youtubers turned into a hobby of designing typographic posters, until a friend of mine told me to explore web.
-            </p>
-            <p className="leading-[150%]">after a couple of freelance gigs, I got frustrated with not having full creative control on how websites worked and looked. this led me to go on to study CS at Georgia Tech.
-            </p>
-            <p className="leading-[150%]">during the peak of covid-19, a group of friends of mine wanted to take action to help our community. we built <InteractiveLink href="https://canyonsnews.com/local-student-leaders-are-expanding-a-successful-grocery-delivery-service/" event='aboutSixFeetClicked' underline={true} newTab={true}>six feet supplies</InteractiveLink>, which delivered over $50k worth of urgent supplies to over 20k people.
-              this taught me the effects of scale, and the ability to impact people through software.
-            </p>
-            <p className="leading-[150%]">building that project enabled me to explore and solidify my own career aspirations. to give back, I wanted to help other students in my community to explore their path. in response, I built <InteractiveLink href="http://pathways.me" event='aboutPathwaysClicked' underline={true} newTab={true}>pathways.me</InteractiveLink> for high school students in an effort to close information gaps associated with discovering and pursuing careers.
-            </p>
-            <p className="leading-[150%]">at 21, i worked on <InteractiveLink href="https://create.musicfy.lol" event='aboutMusicfyClicked' underline={true} newTab={true}>musicfy</InteractiveLink>,
-            an ai-voice generation platform with over 5m users;
-            {' '}<InteractiveLink href="http://crayo.ai" event='aboutCrayoClicked' underline={true} newTab={true}>crayo</InteractiveLink>, an ai short-form content generation platform with over 2m users, with over 50k users in the first month;
-            and <InteractiveLink href="http://sellraze.com" event='aboutSellrazeClicked' underline={true} newTab={true}>sellraze</InteractiveLink>, a mobile app that uses ai to autofill listings for online selling.
-            </p>
-            <p className="leading-[150%]">i also started a nonprofit called <InteractiveLink href="http://startup.exchange" event='aboutStartupExchangeClicked' underline={true} newTab={true}>startup exchange</InteractiveLink>, which enables college students to learn how to build side projects and grow them into startups. over 30k students at over 40 universities have attended a startup exchange event since fall 2022.
-            </p>
-            <p className="leading-[150%]">today, i am a swiss-army knife that can understand end-users, and design, build, and scale end-solutions.
-                i can code-switch as the designer, the software engineer, or growth hacker.
-            </p>
-          </div>
+            <BioContent />
 
           {/* Experience section */}
           <div className="flex flex-col w-full py-20">
