@@ -12,11 +12,38 @@ import { blurInVariants } from "../../lib/animations";
 
 const projects = [
   {
-    name: "Phia",
+    name: "Discovery Feed, Phia",
     role: "Chief Product Officer",
     year: "2025 - NOW",
     description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
-    image: "/work/phia.png",
+    image: "/work/phia1.webp",
+    link: "https://join.phia.com/",
+    linkText: "VIEW PROJECT",
+  },
+  {
+    name: "Digital Closet & Outfit Planning, Phia",
+    role: "Chief Product Officer",
+    year: "2025 - NOW",
+    description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
+    image: "/work/phia2.webp",
+    link: "https://join.phia.com/",
+    linkText: "VIEW PROJECT",
+  },
+  {
+    name: "Scrollable Outfit Feed, Phia",
+    role: "Chief Product Officer",
+    year: "2025 - NOW",
+    description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
+    image: "/work/phia3.webp",
+    link: "https://join.phia.com/",
+    linkText: "VIEW PROJECT",
+  },
+  {
+    name: "Phia iOS Mobile Safari Extension",
+    role: "Chief Product Officer",
+    year: "2025 - NOW",
+    description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
+    image: "/work/phia4.webp",
     link: "https://join.phia.com/",
     linkText: "VIEW PROJECT",
   },
@@ -193,12 +220,6 @@ const ProjectModal = ({
             <h2 className="font-voyager-thin text-[32px] md:text-[40px]">{project.name}</h2>
             <p className="font-aeonik-regular text-white/60 text-[16px]">{project.year}</p>
           </div>
-
-          <p className="font-aeonik-regular text-white/70 text-[14px] mb-4">{project.role}</p>
-
-          <p className="font-aeonik-regular text-[16px] leading-[150%] mb-8">
-            {project.description}
-          </p>
 
           {project.link && project.linkText && (
             <a
