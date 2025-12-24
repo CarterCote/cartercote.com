@@ -2,7 +2,7 @@
 This is my personal portfolio website, built to showcase my projects, designs, passions, and work experiences!
 
 
-![Site](https://imgur.com/a/pEWCswG)
+![Site](https://i.imgur.com/a/pEWCswG)
 
 ### stuff i use
 
