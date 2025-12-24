@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Button from '../../components/Button';
@@ -191,34 +191,42 @@ const ProjectModal = ({
   onClose: () => void;
 }) => {
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
       onClick={onClose}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
     >
-      <div
-        className="relative bg-[#111] rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-        onClick={(e) => e.stopPropagation()}
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 z-50 text-white/70 hover:text-white transition-colors"
       >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 text-white/70 hover:text-white transition-colors"
-        >
-          <IoMdClose size={28} />
-        </button>
+        <IoMdClose size={32} />
+      </button>
 
+      <motion.div
+        className="relative max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.3 }}
+      >
         <div className="relative w-full aspect-video">
           <Image
             src={project.image}
             fill
             alt={project.name}
-            className="object-cover rounded-t-2xl"
+            className="object-cover rounded-lg"
           />
         </div>
 
-        <div className="p-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+        <div className="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
             <h2 className="font-voyager-thin text-[32px] md:text-[40px]">{project.name}</h2>
-            <p className="font-aeonik-regular text-white/60 text-[16px]">{project.year}</p>
+            <p className="font-aeonik-regular text-white/60 text-[16px] mt-1">{project.year}</p>
           </div>
 
           {project.link && project.linkText && (
@@ -226,14 +234,14 @@ const ProjectModal = ({
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border border-white rounded-lg px-6 py-3 text-sm font-graebenbach-mono-regular hover:bg-blue-600 hover:border-blue-600 transition duration-300"
+              className="inline-block border border-white rounded-lg px-6 py-3 text-sm font-graebenbach-mono-regular hover:bg-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap cursor-pointer"
             >
               {project.linkText}
             </a>
           )}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -283,6 +291,32 @@ const PlayModal = ({
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedPlayItem, setSelectedPlayItem] = useState<PlayItem | null>(null);
+
+  const isModalOpen = selectedProject || selectedPlayItem;
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedProject(null);
+        setSelectedPlayItem(null);
+      }
+    };
+    if (isModalOpen) {
+      window.addEventListener('keydown', handleEscape);
+    }
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isModalOpen]);
 
   return (
     <>
@@ -372,19 +406,23 @@ const Work = () => {
         </div>
       </div>
 
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
+      <AnimatePresence>
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </AnimatePresence>
 
-      {selectedPlayItem && (
-        <PlayModal
-          item={selectedPlayItem}
-          onClose={() => setSelectedPlayItem(null)}
-        />
-      )}
+      <AnimatePresence>
+        {selectedPlayItem && (
+          <PlayModal
+            item={selectedPlayItem}
+            onClose={() => setSelectedPlayItem(null)}
+          />
+        )}
+      </AnimatePresence>
 
       <div className="relative z-[10]">
         <Footer />
