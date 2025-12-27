@@ -9,6 +9,7 @@ export const photos = [
   "/about/about8.jpg",
   "/about/about9.jpg",
   "/about/about10.jpeg",
+  "/about/about11.jpg",
 ];
 
 export const awards = [
