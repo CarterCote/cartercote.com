@@ -19,7 +19,7 @@ const projects = [
   {
     name: "SellRaze",
     description: "Co-Founder. Led design engineering & growth.",
-    image: "/work/sellraze.png",
+    image: "/work/raze.png",
     link: "http://sellraze.com",
   },
   {
