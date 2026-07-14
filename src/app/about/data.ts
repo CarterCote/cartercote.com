@@ -82,7 +82,7 @@ export const experiences = [
     year: "2024",
     companyName: "Sellraze (YC F25)",
     link: "https://sellraze.com/",
-    imageName: "/work/sellrazeIcon.jpeg",
+    imageName: "/work/razeIcon.jpeg",
     roleDescription: "",
   },
   {

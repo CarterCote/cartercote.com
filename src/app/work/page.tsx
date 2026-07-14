@@ -52,7 +52,7 @@ const projects = [
     role: "Co-Founder",
     year: "2024",
     description: "Sell from just a picture. Led all design and growth. 0 -> 300K users and 7-figures ARR.",
-    image: "/work/sellraze.png",
+    image: "/work/raze.png",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
   },
@@ -84,6 +84,26 @@ const projects = [
     linkText: "",
   },
   {
+    name: "SellRaze Demo I",
+    role: "Co-Founder",
+    year: "2024",
+    description: "Sell from just a picture. Led all design and growth. 0 -> 300K users and 7-figures ARR.",
+    image: "",
+    video: "/work/raze_first.mp4",
+    link: "http://sellraze.com",
+    linkText: "VIEW LANDING PAGE",
+  },
+  {
+    name: "SellRaze Demo II",
+    role: "Co-Founder",
+    year: "2024",
+    description: "Sell from just a picture. Led all design and growth. 0 -> 300K users and 7-figures ARR.",
+    image: "",
+    video: "/work/raze_second.mp4",
+    link: "http://sellraze.com",
+    linkText: "VIEW LANDING PAGE",
+  },
+  {
     name: "Summer Chateau by Nicolas Chae",
     role: "Designer",
     year: "2023",
@@ -97,7 +117,7 @@ const projects = [
     role: "Co-Founder",
     year: "2024",
     description: "Sell from just a picture. Led all design and growth. 0 -> 300K users and 7-figures ARR.",
-    image: "/work/sellRazeBillboard.jpg",
+    image: "/work/razeBillboard.jpg",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
   },
@@ -173,6 +193,7 @@ interface Project {
   year: string;
   description: string;
   image: string;
+  video?: string;
   link: string;
   linkText: string;
 }
@@ -215,12 +236,24 @@ const ProjectModal = ({
         transition={{ duration: 0.3 }}
       >
         <div className="relative w-full aspect-video">
-          <Image
-            src={project.image}
-            fill
-            alt={project.name}
-            className="object-cover rounded-lg"
-          />
+          {project.video ? (
+            <video
+              src={project.video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="absolute inset-0 h-full w-full object-cover rounded-lg"
+            />
+          ) : (
+            <Image
+              src={project.image}
+              fill
+              alt={project.name}
+              className="object-cover rounded-lg"
+            />
+          )}
         </div>
 
         <div className="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -349,12 +382,23 @@ const Work = () => {
               className="relative aspect-[4/2.88] cursor-pointer group overflow-hidden rounded-[4px]"
               onClick={() => setSelectedProject(project)}
             >
-              <Image
-                src={project.image}
-                fill
-                alt={project.name}
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+              {project.video ? (
+                <video
+                  src={project.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              ) : (
+                <Image
+                  src={project.image}
+                  fill
+                  alt={project.name}
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              )}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end">
                 <p className="font-aeonik-bold text-white text-[16px] p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {project.name}
