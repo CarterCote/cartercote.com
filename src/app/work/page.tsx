@@ -89,7 +89,7 @@ const projects = [
     year: "2024",
     description: "Sell from just a picture. Led all design and growth. 0 -> 300K users and 7-figures ARR.",
     image: "",
-    video: "/work/raze_first.mp4",
+    video: "/work/raze_first.mov",
     link: "http://sellraze.com",
     linkText: "VIEW LANDING PAGE",
   },
