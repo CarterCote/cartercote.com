@@ -70,8 +70,16 @@ export const education = [
 
 export const experiences = [
   {
+    position: "COFOUNDER",
+    year: "2026 - NOW",
+    companyName: "Ascend Studio",
+    link: "https://ascendstudio.so/",
+    imageName: "/work/ascend.png",
+    roleDescription: "",
+  },
+  {
     position: "CPO",
-    year: "2025 - NOW",
+    year: "2025",
     companyName: "Phia",
     link: "https://join.phia.com/",
     imageName: "/work/phiaIcon.png",
