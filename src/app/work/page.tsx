@@ -14,8 +14,8 @@ const projects = [
   {
     name: "Discovery Feed, Phia",
     role: "Chief Product Officer",
-    year: "2025 - NOW",
-    description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
+    year: "2025",
+    description: "Reimagining the future of shopping your closet. Led design and product. 0 → 1M users in 8 months, raised $30M.",
     image: "/work/phia1.webp",
     link: "https://join.phia.com/",
     linkText: "VIEW PROJECT",
@@ -23,8 +23,8 @@ const projects = [
   {
     name: "Digital Closet & Outfit Planning, Phia",
     role: "Chief Product Officer",
-    year: "2025 - NOW",
-    description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
+    year: "2025",
+    description: "Reimagining the future of shopping your closet. Led design and product. 0 → 1M users in 8 months, raised $30M.",
     image: "/work/phia2.webp",
     link: "https://join.phia.com/",
     linkText: "VIEW PROJECT",
@@ -32,8 +32,8 @@ const projects = [
   {
     name: "Scrollable Outfit Feed, Phia",
     role: "Chief Product Officer",
-    year: "2025 - NOW",
-    description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
+    year: "2025",
+    description: "Reimagining the future of shopping your closet. Led design and product. 0 → 1M users in 8 months, raised $30M.",
     image: "/work/phia3.webp",
     link: "https://join.phia.com/",
     linkText: "VIEW PROJECT",
@@ -41,8 +41,8 @@ const projects = [
   {
     name: "Phia iOS Mobile Safari Extension",
     role: "Chief Product Officer",
-    year: "2025 - NOW",
-    description: "Building the future of shopping your closet. Led design and product. 0 → 900K users in 8 months, raised $30M.",
+    year: "2025",
+    description: "Reimagining the future of shopping your closet. Led design and product. 0 → 1M users in 8 months, raised $30M.",
     image: "/work/phia4.webp",
     link: "https://join.phia.com/",
     linkText: "VIEW PROJECT",
