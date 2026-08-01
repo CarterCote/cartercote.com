@@ -48,7 +48,7 @@ const BioContent = () => (
     <P>stanford enabled me to tap back into my deepest passions — learning and helping others learn. I took classes from world-class professors, met exceptionally bright people, and lived on a campus that felt like heaven on earth.</P>
     <P>things changed pretty quickly for me when I had the unique opportunity to build Phia and to redefine the shopping category in consumer. previously, i contemplated an app studio, or to quickly build and scale consumer apps for quick gains. but i wanted something bigger.</P>
     <P>so, i logged over 60 flights in 2025 to fly back and forth between NY and SF, committing to building Phia while I finished my degree. i have since graduated.</P>
-    <P>in 2026, i left Phia to finally build something of my own. that became ascend studio — the idea i had been circling for years, now with the conviction and the toolkit to actually pursue it. and so, the story continues to be written.</P>
+    <P>in 2026, i left Phia to build something new, and to focus more on intentional craft and personalized experiences. and so, the story continues to be written.</P>
     <Subtitle>today, i approach work as a swiss-army knife.</Subtitle>
     <P>i pry deep into an end-user's feelings and emotions, and take note of what is said and not said. i take my ideas and spread them around Figma like an open canvas, and converge concepts while taking light inspiration from proven concepts. i obsess over the details through frontend and Swift development. i analyze funnel data & event logging for gaps and opportunities.</P>
     <P>to be continued!</P>
