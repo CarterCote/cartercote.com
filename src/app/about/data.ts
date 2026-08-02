@@ -78,7 +78,7 @@ export const experiences = [
     roleDescription: "",
   },
   {
-    position: "CPO",
+    position: "FOUNDING CPO",
     year: "2025",
     companyName: "Phia",
     link: "https://join.phia.com/",
