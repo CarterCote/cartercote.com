@@ -6,6 +6,7 @@ This is my personal portfolio website, built to showcase my projects, designs, p
 
 ### stuff i use
 
+* Node.js 24
 * Next.js 14
 * React 18
 * TypeScript
