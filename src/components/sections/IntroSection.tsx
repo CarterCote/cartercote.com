@@ -9,7 +9,7 @@ const IntroSection = () => {
   const paragraphs = [
     <>i'm a 23 y/o software engineer + designer, and stanford + georgia tech alum.</>,
     <>i'm the co-founder of <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://ascendstudio.so/">ascend studio</Link>. we build proactive, adaptive consumer software for the pursuit of happiness, fulfillment, + self-discovery.</>,
-    <>just before that, I built <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://join.phia.com/">phia</Link>, where I led design + product. in 8 months, we went from 0 → 1M users + raised $35m.</>,
+    <>just before that, I built <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://join.phia.com/">phia</Link>, where I led design + product as the CPO. in 8 months, we went from 0 → 1M users + raised $35m.</>,
     <>i also run <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://www.startup.exchange/">startup exchange</Link>, a nonprofit enabling college students to build the self-awareness, goals, + mindset needed to pursue the nontraditional path.</>,
   ];
 
@@ -72,7 +72,7 @@ const IntroSection = () => {
           >
             <p>i'm a 23 y/o software engineer + designer, and stanford + georgia tech alum.<br />
             i'm the co-founder of <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://ascendstudio.so/">ascend studio</Link>. we build proactive, adaptive consumer software for the pursuit of happiness, fulfillment, + self-discovery.</p>
-            <p>just before that, I built <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://join.phia.com/">phia</Link>, where I led design + product. in 8 months, we went from 0 → 1M users + raised $35m.</p>
+            <p>just before that, I built <Link className="border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://join.phia.com/">phia</Link>, where I led design + product as the CPO. in 8 months, we went from 0 → 1M users + raised $35m.</p>
           </motion.div>
 
           {/* Right column */}
